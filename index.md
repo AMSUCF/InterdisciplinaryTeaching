@@ -234,8 +234,4 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 **Late Work:** All assignment deadlines are at 11:59 PM Orlando, FL USA time. Late work is accepted without penalty for one week after the listed deadline. Extensions beyond one week require contacting the instructors in advance. Discussion posts connected to workshop exercises cannot be extended beyond one week due to their sequential nature.
 
-**Academic Integrity:** All work submitted must be your own and created exclusively for this course. Because this course requires AI use, "your own work" means work where you have made the critical and creative decisions, even when AI tools assisted in production. Submitting AI-generated work without attribution, reflection, or meaningful engagement is a violation of academic integrity.
-
-**Course Accessibility:** The University of Central Florida is committed to providing access and inclusion for all persons with disabilities. Students with disabilities who need accommodations should contact Student Accessibility Services (Ferrell Commons, 7F, Room 185, sas@ucf.edu, 407-823-2371).
-
-**Grade Dissemination:** Grades will be posted in Webcourses within two weeks of submission.
+Refer to the full UCF syllabus for additional course policies.
