@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="trail-scene" aria-hidden="true">
+    <canvas id="trail-canvas"></canvas>
+  </div>
+  <div class="header-content">
+    <h1 class="site-title">
+      <span class="title-pixel">&#9632;</span>
+      {{ site.title }}
+      <span class="title-pixel">&#9632;</span>
+    </h1>
+    <p class="site-tagline">{{ site.description }}</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Syllabus</a>
+    </nav>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <span class="toggle-icon light-icon">&#9788;</span>
+    <span class="toggle-icon dark-icon">&#9790;</span>
+  </button>
+</header>

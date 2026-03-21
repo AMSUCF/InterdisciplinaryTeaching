@@ -1,0 +1,25 @@
+title: Interdisciplinary Teaching in the Age of AI
+description: ENG 6813 — Summer C 2026
+baseurl: "/InterdisciplinaryTeaching"
+url: "" # set to your GitHub Pages URL, e.g. https://username.github.io
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
