@@ -4,7 +4,7 @@ title: Interdisciplinary Teaching
 ---
 
 -   **Instructors:** Dr. Anastasia Salter and Dr. Mel Stanfill
--   **Office Hours:** Wednesday 12 - 2 PM via Zoom
+-   **Office Hours:** Wednesday 12 - 2 PM via Zoom (in person in TCH 325 on workshop weeks)
 -   **Course Number:** ENG 6813
 -   **Email:** anastasia at ucf; mel.stanfill at ucf
 -   **Term:** Summer C 2026 (May 12 - August 1)
@@ -45,7 +45,7 @@ Over twelve weeks, students will:
 
 -   **Explore teaching theory**, engaging with learning theories, assessment strategies, active learning, backward design, and universal design for learning as foundations for effective course design.
 -   **Design a course** from the ground up (or redesign an existing one), producing a complete syllabus, a signature assignment, and an AI-integrated exercise suitable for their discipline.
--   **Engage with AI tools**, using Anthropic's Claude to experiment with textual analysis, visual analysis, and code, building firsthand experience they can translate into informed pedagogical decisions about AI in their classrooms.
+-   **Engage with agentic AI tools**, using Anthropic's Claude to experiment with textual analysis, visual analysis, and code, building firsthand experience they can translate into informed pedagogical decisions about AI in their classrooms.
 -   **Develop professional materials**, including a teaching statement for the academic job market that reflects thoughtful engagement with interdisciplinary humanities teaching.
 
 Each week, plan on following the module for all asynchronous activities. Each module includes:
@@ -62,11 +62,11 @@ This course is connected to the NEH-funded project *Building a Digital Humanitie
 | May 13 | Workshop 1: Introducing AI for DH Pedagogy |
 | May 27 | Workshop 2: AI for Textual Analysis |
 | June 10 | Workshop 3: AI for Visual Analysis |
-| June 24 | Workshop 4: Machine Learning and Code |
-| July 8 | Workshop 5: Ethical Issues in AI Adoption |
-| July 22 | Workshop 6: Sharing and Sustaining Curriculum |
+| June 24 | Workshop 4: Web and Interactive Applications |
+| July 8 | Workshop 5: Creative Code and Playful Applications |
+| July 22 | Workshop 6: Agentic Futures, Curricular Sustainability |
 
-Students are not required to attend the live workshops but are encouraged to do so. In workshop weeks without major assignment deadlines (Weeks 3, 5, 7, and 9), discussion posts will be AI/pedagogy exercises drawn from the corresponding workshop themes. Week 1's workshop coincides with the introductory discussion, and Week 11's workshop coincides with the teaching statement deadline. Students who attend workshops will reflect on and extend those exercises; students who do not attend will complete the exercises asynchronously using provided materials.
+Students are not required to attend the live workshops but are encouraged to do so: recordings will be made available after each event. In workshop weeks without major assignment deadlines (Weeks 3, 5, 7, and 9), discussion posts will be AI/pedagogy exercises drawn from the corresponding workshop themes. Week 1's workshop coincides with the introductory discussion, and Week 11's workshop coincides with the teaching statement deadline. Students who attend workshops will reflect on and extend those exercises; students who do not attend will complete the exercises asynchronously using provided materials.
 
 ## Course Objectives
 
@@ -84,7 +84,7 @@ Students will be able to:
 
 All readings for this course are open access or available through the UCF Library. Primary texts include:
 
-All readings are articles, blog posts, and open-access resources. There are no required textbooks for this course. The course draws heavily on blog posts and essays from practitioners working at the intersection of AI, technology, and the humanities:
+All readings are articles, blog posts, and open-access resources. There are no required textbooks for this course. The course draws heavily on blog posts and essays from practitioners working at the intersection of AI, technology, and the humanities, and we recommend students consider following new posts from some of these writers:
 
 -   **Ethan Mollick** - [One Useful Thing](https://www.oneusefulthing.org/) - on AI in education and pedagogy
 -   **Simon Willison** - [simonwillison.net](https://simonwillison.net/) - on AI tools, vibe coding, and Claude Artifacts
@@ -207,7 +207,6 @@ This course uses a fully asynchronous online format and relies upon students to 
 ### Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)
 
 -   Gallon, Kim. ["Making a Case for the Black Digital Humanities."](https://dhdebates.gc.cuny.edu/read/untitled/section/fa10e2e1-0c3d-4519-a958-d823aac989eb) *Debates in the Digital Humanities 2016* (University of Minnesota Press).
--   Klein, Julie Thompson. "Interdisciplining Digital Humanities." *Interdisciplining Digital Humanities* (University of Michigan Press, 2015), Chapter 1. (PDF in Webcourses)
 -   Clement, Tanya. "Multiliteracies in the Undergraduate Digital Humanities Curriculum." *Digital Humanities Pedagogy* (2012). (PDF in Webcourses)
 -   ["Writing a Strong Teaching Philosophy Statement in a Job Search."](https://www.insidehighered.com/opinion/career-advice/seeking-faculty-job/2024/02/15/writing-strong-teaching-philosophy-statement) *Inside Higher Ed.* February 15, 2024.
 -   Cohen, Dan. ["AI and Libraries, Archives, and Museums, Loosely Coupled."](https://newsletter.dancohen.org/archive/ai-and-libraries-archives-and-museums-loosely-coupled) *Humane Ingenuity.*
