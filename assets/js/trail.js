@@ -80,6 +80,7 @@
     var color = cssVar('--canvas-wagon');
     var bob = (bobFrame % 2 === 0) ? 0 : PIXEL;
 
+    // --- Wagon body (behind, to the left) ---
     // Wheels
     var wheelColor = '#5a4a2a';
     drawPixelRect(x + PIXEL * 2, y + PIXEL * 2 - bob, PIXEL * 2, PIXEL * 2, wheelColor);
@@ -98,19 +99,19 @@
     drawPixelRect(x + PIXEL * 3, y - PIXEL * 2 - bob, PIXEL * 8, PIXEL, coverColor);
     drawPixelRect(x + PIXEL * 4, y - PIXEL * 3 - bob, PIXEL * 6, PIXEL, coverColor);
 
-    // Oxen (two small rectangles ahead of wagon)
+    // --- Yoke (connects wagon to oxen) ---
+    drawPixelRect(x + PIXEL * 13, y + PIXEL - bob, PIXEL * 3, PIXEL, '#5a4a2a');
+
+    // --- Oxen (ahead, to the right of wagon) ---
     var oxColor = '#6b5030';
-    drawPixelRect(x - PIXEL * 4, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
-    drawPixelRect(x - PIXEL * 8, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
-    // Legs
+    drawPixelRect(x + PIXEL * 16, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
+    drawPixelRect(x + PIXEL * 20, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
+    // Legs (alternate for walking animation)
     var legOff = (bobFrame % 2 === 0) ? 0 : PIXEL;
-    drawPixelRect(x - PIXEL * 4 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x - PIXEL * 2 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x - PIXEL * 8 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x - PIXEL * 6 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    // Yoke
-    drawPixelRect(x - PIXEL * 1, y + PIXEL - bob, PIXEL * 1, PIXEL, '#5a4a2a');
-    drawPixelRect(x - PIXEL * 4, y + PIXEL - bob, PIXEL * 3, PIXEL, '#5a4a2a');
+    drawPixelRect(x + PIXEL * 16 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
+    drawPixelRect(x + PIXEL * 18 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
+    drawPixelRect(x + PIXEL * 20 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
+    drawPixelRect(x + PIXEL * 22 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
   }
 
   function drawCactus(x, baseY, h) {

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Interdisciplinary Teaching in the Age of AI
+title: Interdisciplinary Teaching
 ---
 
 -   **Instructors:** Dr. Anastasia Salter and Dr. Mel Stanfill
--   **Office Hours:** By appointment via Zoom
+-   **Office Hours:** Wednesday 12 - 2 PM via Zoom
 -   **Course Number:** ENG 6813
 -   **Email:** anastasia at ucf; mel.stanfill at ucf
 -   **Term:** Summer C 2026 (May 12 - August 1)
