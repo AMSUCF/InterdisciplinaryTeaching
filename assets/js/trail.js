@@ -229,10 +229,10 @@
     if (isDark) {
       // Night sky: moon and stars
       drawStars(W, groundY);
-      drawMoon(W - 50, 32, 14);
+      drawMoon(W - 100, 32, 14);
     } else {
       // Day sky: sun and clouds
-      drawSun(W - 60, 36, 16);
+      drawSun(W - 110, 36, 16);
 
       var cloudOff = (frameCount * 0.15) % (W + 200);
       drawCloud((cloudOff + 50) % (W + 200) - 100, 24, PIXEL * 10);
