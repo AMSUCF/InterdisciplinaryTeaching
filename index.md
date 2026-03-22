@@ -4,7 +4,8 @@ title: Interdisciplinary Teaching
 ---
 
 -   **Instructors:** Dr. Anastasia Salter and Dr. Mel Stanfill
--   **Office Hours:** Wednesday 12 - 2 PM via Zoom (in person in TCH 325 on workshop weeks)
+-   **Office Hours (Salter):** Wednesday 12 - 2 PM via Zoom (in person in TCH 325 on workshop weeks)
+-   **Office Hours (Stanfill):** TBD
 -   **Course Number:** ENG 6813
 -   **Email:** anastasia at ucf; mel.stanfill at ucf
 -   **Term:** Summer C 2026 (May 12 - August 1)
@@ -29,7 +30,7 @@ title: Interdisciplinary Teaching
   - [Week Six: Active Learning and Student Motivation (Monday, June 15)](#week-six-active-learning-and-student-motivation-monday-june-15)
   - [Week Seven: AI for Code and Digital Humanities (Monday, June 22)](#week-seven-ai-for-code-and-digital-humanities-monday-june-22)
   - [Week Eight: The Syllabus as Document (Monday, June 29)](#week-eight-the-syllabus-as-document-monday-june-29)
-  - [Week Nine: Ethics, Accessibility, and Inclusive Design (Monday, July 6)](#week-nine-ethics-accessibility-and-inclusive-design-monday-july-6)
+  - [Week Nine: Copyright, Accessibility, and Inclusive Design (Monday, July 6)](#week-nine-copyright-accessibility-and-inclusive-design-monday-july-6)
   - [Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)](#week-ten-interdisciplinarity-and-the-academic-job-market-monday-july-13)
   - [Week Eleven: Sharing, Sustaining, and Best Practices (Monday, July 20)](#week-eleven-sharing-sustaining-and-best-practices-monday-july-20)
   - [Week Twelve: Final Portfolio (Monday, July 27)](#week-twelve-final-portfolio-monday-july-27)
@@ -63,21 +64,21 @@ This course is connected to the NEH-funded project *Building a Digital Humanitie
 | May 27 | Workshop 2: AI for Textual Analysis |
 | June 10 | Workshop 3: AI for Visual Analysis |
 | June 24 | Workshop 4: Web and Interactive Applications |
-| July 8 | Workshop 5: Creative Code and Playful Applications |
+| July 8 | Workshop 5: Playful Approaches and Creative Code |
 | July 22 | Workshop 6: Agentic Futures, Curricular Sustainability |
 
-Students are not required to attend the live workshops but are encouraged to do so: recordings will be made available after each event. In workshop weeks without major assignment deadlines (Weeks 3, 5, 7, and 9), discussion posts will be AI/pedagogy exercises drawn from the corresponding workshop themes. Week 1's workshop coincides with the introductory discussion, and Week 11's workshop coincides with the teaching statement deadline. Students who attend workshops will reflect on and extend those exercises; students who do not attend will complete the exercises asynchronously using provided materials.
+Students are not required to attend the live workshops but are encouraged to do so: workshops will be streamed and recordings will be made available after each event. In workshop weeks without major assignment deadlines (Weeks 3, 5, 7, and 9), discussion posts will be AI/pedagogy exercises drawn from the corresponding workshop themes. Week 1's workshop coincides with the introductory discussion, and Week 11's workshop coincides with the teaching statement deadline. Students who attend workshops will reflect on and extend those exercises; students who do not attend will complete the exercises asynchronously using provided materials.
 
 ## Course Objectives
 
 Students will be able to:
 
-1.  Differentiate between various learning theories and their implications for teaching in the humanities.
+1.  Engage with humanities and digital humanities approaches to pedagogy, thinking through assessment strategies and effective course design.
 2.  Make informed decisions about teaching strategies and pedagogical philosophies, including policies around AI use.
 3.  Compose a meaningful teaching statement that reflects current best practices in teaching and learning.
 4.  Design student-centered in-person and online courses, including a syllabus that follows an institutional standard, clearly written assignments, rubrics, and learning modules.
-5.  Apply principles of backward design, active learning, and universal design for learning to interdisciplinary humanities courses.
-6.  Critically evaluate the role of generative AI tools in humanities pedagogy, including their ethical, cultural, and labor implications.
+5.  Explore best practices for accessibility and universal design in interdisciplinary humanities courses.
+6.  Critically evaluate the role of generative AI tools in humanities pedagogy, including their cultural and labor implications.
 7.  Use generative AI tools (Claude Artifacts, Claude Code Web) to create and assess pedagogical materials.
 
 ## Materials and Texts
@@ -103,14 +104,14 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 
 | Points | Assignment Summary | Due |
 |--------|--------------------|-----|
-| 5 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Friday, May 15 |
-| 40 | **Discussion Posts** - Discussions alternate between course design milestones and AI/pedagogy exercises (8 posts, 5 points each). No discussion posts are due in weeks when major assignments are due. | Weekly |
-| 15 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
-| 15 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
-| 15 | **Teaching Statement** - A one-page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
-| 10 | **Final Portfolio & Reflection** - A compiled portfolio of your course materials with a 750-1000 word reflective essay on your growth and next steps. | August 1 |
+| 50 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Friday, May 15 |
+| 240 | **Discussion Posts** - Discussions alternate between course design milestones and AI/pedagogy exercises (8 posts, 30 points each). No discussion posts are due in weeks when major assignments are due. | Weekly |
+| 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
+| 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
+| 150 | **Teaching Statement** - A one-page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
+| 160 | **Final Portfolio & Reflection** - A compiled portfolio of your course materials with a 750-1000 word reflective essay on your growth and next steps. | August 1 |
 
-Grades are calculated out of 100 following a standard letter scale.
+Grades are calculated out of 1000 following a standard letter scale.
 
 Late work is accepted without penalty for one week after the listed deadline. If circumstances require extension beyond that deadline, please reach out to the instructors immediately. Discussion posts connected to workshop exercises cannot be extended beyond one week due to their sequential nature.
 
@@ -178,7 +179,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 ### Week Seven: AI for Code and Digital Humanities (Monday, June 22)
 
-*NEH Workshop 4: Machine Learning and Code (June 24, 10 AM - noon, CHDR)*
+*NEH Workshop 4: Web and Interactive Applications (June 24, 10 AM - noon, CHDR)*
 
 -   Martin, Meredith. ["Command Lines for the Humanities."](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2) *PMLA* 139.3 (2024): 541-547.
 -   Willison, Simon. ["Not All AI-Assisted Programming is Vibe Coding (But Vibe Coding Rocks)."](https://simonwillison.net/2025/Mar/19/vibe-coding/) *simonwillison.net.* March 19, 2025.
@@ -193,16 +194,17 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Mollick, Ethan. ["Democratizing the Future of Education."](https://www.oneusefulthing.org/p/democratizing-the-future-of-education) *One Useful Thing.*
 -   **Due: Signature Assignment (final version with rubric)**
 
-### Week Nine: Ethics, Accessibility, and Inclusive Design (Monday, July 6)
+### Week Nine: Copyright, Accessibility, and Inclusive Design (Monday, July 6)
 
-*NEH Workshop 5: Ethical Issues in AI Adoption (July 8, 10 AM - noon, CHDR)*
+*NEH Workshop 5: Playful Approaches and Creative Code (July 8, 10 AM - noon, CHDR)*
 
+-   Kies and Stanfill. "From Algorithms to Attribution: Teaching AI and Copyright." (PDF in Webcourses)
+-   Johnson, Emily K. and Anastasia Salter. "Designing Playfully for a Distant Future." *Playful Pedagogy in the Pandemic: Pivoting to Game-Based Learning* (Routledge, 2022). (PDF in Webcourses)
 -   ["Universal Design for Learning: Pleasure, Accessibility, and the Radical Possibilities of Good Design."](https://vp.commons.gc.cuny.edu/2023/03/20/universal-design-for-learning-pleasure-accessibility-and-the-radical-possibilities-of-good-design/) *Visible Pedagogy*, CUNY Graduate Center. March 20, 2023.
 -   Watch: [UDL at a Glance](https://www.youtube.com/watch?v=bDvKnY0g6e4) (CAST)
 -   Explore: [UCF Digital Accessibility Guides](https://www.ucf.edu/accessibility/digital-accessibility-guides/) (skim)
 -   Mollick, Ethan. ["15 Times to Use AI, and 5 Not To."](https://www.oneusefulthing.org/p/15-times-to-use-ai-and-5-not-to) *One Useful Thing.*
--   Farrell, Henry. ["After Software Eats the World, What Comes Out the Other End?"](https://www.programmablemutter.com/p/after-software-eats-the-world-what) *Programmable Mutter.* October 3, 2024.
--   **Discussion: Workshop Exercise - Ethical Issues in AI Adoption.** This exercise connects to the workshop's focus on copyright, environmental costs, and labor impacts of AI. Using Claude Code Web, draft an AI policy statement for your course syllabus. Then critically evaluate it: what ethical assumptions does it make? How does it address accessibility, equity of access to AI tools, and the labor behind the models? Apply UDL principles to consider whether your course design offers multiple means of engagement, representation, and action/expression.
+-   **Discussion: Workshop Exercise - Playful Approaches and Creative Code.** This exercise connects to the workshop's focus on copyright, accessibility, and playful pedagogy in AI adoption. Using Claude Code Web, draft an AI policy statement for your course syllabus that addresses copyright and attribution for AI-generated content. Then critically evaluate it: how does it address copyright, accessibility, equity of access to AI tools, and the labor behind the models? Apply UDL principles to consider whether your course design offers multiple means of engagement, representation, and action/expression.
 
 ### Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)
 
@@ -214,7 +216,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 ### Week Eleven: Sharing, Sustaining, and Best Practices (Monday, July 20)
 
-*NEH Workshop 6: Sharing and Sustaining Curriculum (July 22, 10 AM - noon, CHDR)*
+*NEH Workshop 6: Agentic Futures, Curricular Sustainability (July 22, 10 AM - noon, CHDR)*
 
 -   Cohen, Dan. ["The Reboot of Digital Humanities Now."](https://newsletter.dancohen.org/archive/the-reboot-of-digital-humanities-now) *Humane Ingenuity.*
 -   Cohen, Dan. ["Books, AI, and the Public Good."](https://newsletter.dancohen.org/archive/books-ai-and-the-public-good) *Humane Ingenuity.*

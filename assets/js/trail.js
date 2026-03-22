@@ -79,39 +79,76 @@
   function drawWagon(x, y, bobFrame) {
     var color = cssVar('--canvas-wagon');
     var bob = (bobFrame % 2 === 0) ? 0 : PIXEL;
-
-    // --- Wagon body (behind, to the left) ---
-    // Wheels
-    var wheelColor = '#5a4a2a';
-    drawPixelRect(x + PIXEL * 2, y + PIXEL * 2 - bob, PIXEL * 2, PIXEL * 2, wheelColor);
-    drawPixelRect(x + PIXEL * 10, y + PIXEL * 2 - bob, PIXEL * 2, PIXEL * 2, wheelColor);
-
-    // Body
-    drawPixelRect(x + PIXEL, y - bob, PIXEL * 12, PIXEL * 2, color);
-
-    // Canopy (arc)
-    drawPixelRect(x + PIXEL * 2, y - PIXEL * 2 - bob, PIXEL * 10, PIXEL, color);
-    drawPixelRect(x + PIXEL * 3, y - PIXEL * 3 - bob, PIXEL * 8, PIXEL, color);
-    drawPixelRect(x + PIXEL * 4, y - PIXEL * 4 - bob, PIXEL * 6, PIXEL, color);
-
-    // Canopy cover (lighter)
+    var woodColor = '#5a4a2a';
     var coverColor = '#e8dcc0';
-    drawPixelRect(x + PIXEL * 3, y - PIXEL * 2 - bob, PIXEL * 8, PIXEL, coverColor);
-    drawPixelRect(x + PIXEL * 4, y - PIXEL * 3 - bob, PIXEL * 6, PIXEL, coverColor);
 
-    // --- Yoke (connects wagon to oxen) ---
-    drawPixelRect(x + PIXEL * 13, y + PIXEL - bob, PIXEL * 3, PIXEL, '#5a4a2a');
+    // --- Wheels (larger with spoke cross) ---
+    var wheelR = PIXEL * 3;
+    // Rear wheel
+    var rwx = x + PIXEL * 3, rwy = y + PIXEL * 3 - bob;
+    drawPixelRect(rwx, rwy, PIXEL, PIXEL, woodColor);
+    drawPixelRect(rwx - PIXEL, rwy - PIXEL, PIXEL * 3, PIXEL, woodColor);
+    drawPixelRect(rwx - PIXEL, rwy + PIXEL, PIXEL * 3, PIXEL, woodColor);
+    drawPixelRect(rwx, rwy - PIXEL * 2, PIXEL, PIXEL, woodColor);
+    drawPixelRect(rwx, rwy + PIXEL * 2, PIXEL, PIXEL, woodColor);
+    drawPixelRect(rwx - PIXEL * 2, rwy, PIXEL, PIXEL, woodColor);
+    drawPixelRect(rwx + PIXEL * 2, rwy, PIXEL, PIXEL, woodColor);
+    // Front wheel
+    var fwx = x + PIXEL * 11, fwy = y + PIXEL * 3 - bob;
+    drawPixelRect(fwx, fwy, PIXEL, PIXEL, woodColor);
+    drawPixelRect(fwx - PIXEL, fwy - PIXEL, PIXEL * 3, PIXEL, woodColor);
+    drawPixelRect(fwx - PIXEL, fwy + PIXEL, PIXEL * 3, PIXEL, woodColor);
+    drawPixelRect(fwx, fwy - PIXEL * 2, PIXEL, PIXEL, woodColor);
+    drawPixelRect(fwx, fwy + PIXEL * 2, PIXEL, PIXEL, woodColor);
+    drawPixelRect(fwx - PIXEL * 2, fwy, PIXEL, PIXEL, woodColor);
+    drawPixelRect(fwx + PIXEL * 2, fwy, PIXEL, PIXEL, woodColor);
+
+    // --- Wagon bed (flat base between wheels) ---
+    drawPixelRect(x + PIXEL, y + PIXEL - bob, PIXEL * 13, PIXEL, woodColor);
+    // Side walls
+    drawPixelRect(x + PIXEL, y - bob, PIXEL * 13, PIXEL, color);
+    drawPixelRect(x + PIXEL, y - PIXEL - bob, PIXEL, PIXEL * 2, woodColor);
+    drawPixelRect(x + PIXEL * 13, y - PIXEL - bob, PIXEL, PIXEL * 2, woodColor);
+
+    // --- Canopy hoops (the distinctive covered wagon arches) ---
+    // Three hoops
+    drawPixelRect(x + PIXEL * 2, y - PIXEL * 2 - bob, PIXEL, PIXEL * 2, woodColor);
+    drawPixelRect(x + PIXEL * 7, y - PIXEL * 2 - bob, PIXEL, PIXEL * 2, woodColor);
+    drawPixelRect(x + PIXEL * 12, y - PIXEL * 2 - bob, PIXEL, PIXEL * 2, woodColor);
+    // Hoop tops
+    drawPixelRect(x + PIXEL * 2, y - PIXEL * 5 - bob, PIXEL, PIXEL, woodColor);
+    drawPixelRect(x + PIXEL * 7, y - PIXEL * 6 - bob, PIXEL, PIXEL, woodColor);
+    drawPixelRect(x + PIXEL * 12, y - PIXEL * 5 - bob, PIXEL, PIXEL, woodColor);
+
+    // --- Canvas cover (white bonnet shape) ---
+    // Bottom edge
+    drawPixelRect(x + PIXEL * 2, y - PIXEL * 2 - bob, PIXEL * 11, PIXEL, coverColor);
+    // Middle
+    drawPixelRect(x + PIXEL * 2, y - PIXEL * 3 - bob, PIXEL * 11, PIXEL, coverColor);
+    drawPixelRect(x + PIXEL * 3, y - PIXEL * 4 - bob, PIXEL * 9, PIXEL, coverColor);
+    // Top (arched)
+    drawPixelRect(x + PIXEL * 3, y - PIXEL * 5 - bob, PIXEL * 9, PIXEL, coverColor);
+    drawPixelRect(x + PIXEL * 4, y - PIXEL * 6 - bob, PIXEL * 7, PIXEL, coverColor);
+
+    // --- Yoke / tongue (connects wagon to oxen) ---
+    drawPixelRect(x + PIXEL * 14, y + PIXEL * 2 - bob, PIXEL * 4, PIXEL, woodColor);
 
     // --- Oxen (ahead, to the right of wagon) ---
     var oxColor = '#6b5030';
-    drawPixelRect(x + PIXEL * 16, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
-    drawPixelRect(x + PIXEL * 20, y - bob, PIXEL * 3, PIXEL * 2, oxColor);
-    // Legs (alternate for walking animation)
+    var oxDark = '#4a3820';
+    // Ox 1 body
+    drawPixelRect(x + PIXEL * 18, y - bob, PIXEL * 4, PIXEL * 3, oxColor);
+    // Ox 1 head (extends forward and up)
+    drawPixelRect(x + PIXEL * 22, y - PIXEL - bob, PIXEL * 2, PIXEL * 2, oxColor);
+    // Ox 1 horns
+    drawPixelRect(x + PIXEL * 22, y - PIXEL * 2 - bob, PIXEL, PIXEL, oxDark);
+    drawPixelRect(x + PIXEL * 24, y - PIXEL * 2 - bob, PIXEL, PIXEL, oxDark);
+    // Ox 1 legs (alternate for walking)
     var legOff = (bobFrame % 2 === 0) ? 0 : PIXEL;
-    drawPixelRect(x + PIXEL * 16 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x + PIXEL * 18 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x + PIXEL * 20 + legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
-    drawPixelRect(x + PIXEL * 22 - legOff, y + PIXEL * 2 - bob, PIXEL, PIXEL, oxColor);
+    drawPixelRect(x + PIXEL * 18 + legOff, y + PIXEL * 3 - bob, PIXEL, PIXEL * 2, oxColor);
+    drawPixelRect(x + PIXEL * 21 - legOff, y + PIXEL * 3 - bob, PIXEL, PIXEL * 2, oxColor);
+    // Ox 1 tail
+    drawPixelRect(x + PIXEL * 17, y - bob, PIXEL, PIXEL * 2, oxDark);
   }
 
   function drawCactus(x, baseY, h) {
