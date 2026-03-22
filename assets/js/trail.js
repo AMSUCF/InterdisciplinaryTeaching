@@ -76,6 +76,51 @@
     }
   }
 
+  function drawMoon(x, y, r) {
+    var moonColor = '#e8e0c0';
+    var shadowColor = cssVar('--canvas-sky');
+    // Full circle
+    for (var dy = -r; dy <= r; dy += PIXEL) {
+      for (var dx = -r; dx <= r; dx += PIXEL) {
+        if (dx * dx + dy * dy <= r * r) {
+          drawPixelRect(x + dx, y + dy, PIXEL, PIXEL, moonColor);
+        }
+      }
+    }
+    // Cut out a circle offset to the right to make a crescent
+    var offset = r * 0.6;
+    for (var dy = -r; dy <= r; dy += PIXEL) {
+      for (var dx = -r; dx <= r; dx += PIXEL) {
+        if ((dx - offset) * (dx - offset) + dy * dy <= r * r * 0.85) {
+          drawPixelRect(x + dx, y + dy, PIXEL, PIXEL, shadowColor);
+        }
+      }
+    }
+  }
+
+  function drawStars(W, groundY) {
+    // Deterministic star positions using a simple hash
+    var starColor = '#d8d8b8';
+    var dimStarColor = '#888870';
+    var positions = [
+      [0.08, 0.15], [0.15, 0.35], [0.22, 0.08], [0.28, 0.52],
+      [0.35, 0.2], [0.42, 0.42], [0.48, 0.12], [0.55, 0.55],
+      [0.62, 0.28], [0.68, 0.08], [0.75, 0.45], [0.82, 0.18],
+      [0.88, 0.38], [0.93, 0.1], [0.12, 0.58], [0.38, 0.06],
+      [0.52, 0.35], [0.72, 0.52], [0.85, 0.06], [0.18, 0.48]
+    ];
+    for (var i = 0; i < positions.length; i++) {
+      var sx = positions[i][0] * W;
+      var sy = positions[i][1] * groundY;
+      // Twinkle: some stars blink on/off
+      var twinkle = (i + Math.floor(frameCount / 20)) % 5 === 0;
+      if (!twinkle) {
+        var color = (i % 3 === 0) ? dimStarColor : starColor;
+        drawPixelRect(sx, sy, PIXEL, PIXEL, color);
+      }
+    }
+  }
+
   function drawWagon(x, y, bobFrame) {
     var color = cssVar('--canvas-wagon');
     var bob = (bobFrame % 2 === 0) ? 0 : PIXEL;
@@ -175,18 +220,25 @@
 
     var groundY = H * 0.65;
 
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
     // Sky
     ctx.fillStyle = skyColor;
     ctx.fillRect(0, 0, W, groundY);
 
-    // Sun
-    drawSun(W - 60, 36, 16);
+    if (isDark) {
+      // Night sky: moon and stars
+      drawStars(W, groundY);
+      drawMoon(W - 50, 32, 14);
+    } else {
+      // Day sky: sun and clouds
+      drawSun(W - 60, 36, 16);
 
-    // Clouds (drift slowly)
-    var cloudOff = (frameCount * 0.15) % (W + 200);
-    drawCloud((cloudOff + 50) % (W + 200) - 100, 24, PIXEL * 10);
-    drawCloud((cloudOff + W * 0.4 + 120) % (W + 200) - 100, 40, PIXEL * 8);
-    drawCloud((cloudOff + W * 0.7 + 200) % (W + 200) - 100, 16, PIXEL * 12);
+      var cloudOff = (frameCount * 0.15) % (W + 200);
+      drawCloud((cloudOff + 50) % (W + 200) - 100, 24, PIXEL * 10);
+      drawCloud((cloudOff + W * 0.4 + 120) % (W + 200) - 100, 40, PIXEL * 8);
+      drawCloud((cloudOff + W * 0.7 + 200) % (W + 200) - 100, 16, PIXEL * 12);
+    }
 
     // Mountains
     drawMountain(W * 0.15, groundY, H * 0.35, W * 0.18, mountainColor);

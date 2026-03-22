@@ -44,7 +44,7 @@ This section of ENG 6813 is integrated with the NEH-funded project *Building a D
 
 Over twelve weeks, students will:
 
--   **Explore teaching theory**, engaging with learning theories, assessment strategies, active learning, backward design, and universal design for learning as foundations for effective course design.
+-   **Explore interdisciplinary humanities approaches to pedagogy**, with attention to course outcomes, assessment strategies, active learning, universal design, accessibility, and teaching effectively across modalities.
 -   **Design a course** from the ground up (or redesign an existing one), producing a complete syllabus, a signature assignment, and an AI-integrated exercise suitable for their discipline.
 -   **Engage with agentic AI tools**, using Anthropic's Claude to experiment with textual analysis, visual analysis, and code, building firsthand experience they can translate into informed pedagogical decisions about AI in their classrooms.
 -   **Develop professional materials**, including a teaching statement for the academic job market that reflects thoughtful engagement with interdisciplinary humanities teaching.
