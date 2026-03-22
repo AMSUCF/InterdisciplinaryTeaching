@@ -4,8 +4,8 @@ title: Interdisciplinary Teaching
 ---
 
 -   **Instructors:** Dr. Anastasia Salter and Dr. Mel Stanfill
--   **Office Hours (Salter):** Wednesday 12 - 2 PM via Zoom (in person in TCH 325 on workshop weeks)
--   **Office Hours (Stanfill):** TBD
+-   **Office Hours (Salter):** Wednesday 12 - 1 PM via Zoom (in person in TCH 325 on workshop weeks)
+-   **Office Hours (Stanfill):** Wednesday 9 - 10 AM via Zoom (in person in TCH 325 on workshop weeks)
 -   **Course Number:** ENG 6813
 -   **Email:** anastasia at ucf; mel.stanfill at ucf
 -   **Term:** Summer C 2026 (May 12 - August 1)
