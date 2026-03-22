@@ -83,8 +83,6 @@ Students will be able to:
 
 ## Materials and Texts
 
-All readings for this course are open access or available through the UCF Library. Primary texts include:
-
 All readings are articles, blog posts, and open-access resources. There are no required textbooks for this course. The course draws heavily on blog posts and essays from practitioners working at the intersection of AI, technology, and the humanities, and we recommend students consider following new posts from some of these writers:
 
 -   **Ethan Mollick** - [One Useful Thing](https://www.oneusefulthing.org/) - on AI in education and pedagogy
