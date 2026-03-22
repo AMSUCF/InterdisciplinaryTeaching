@@ -29,8 +29,8 @@ title: Interdisciplinary Teaching
   - [Week Five: AI for Visual Analysis (Monday, June 8)](#week-five-ai-for-visual-analysis-monday-june-8)
   - [Week Six: Active Learning and Student Motivation (Monday, June 15)](#week-six-active-learning-and-student-motivation-monday-june-15)
   - [Week Seven: AI for Code and Digital Humanities (Monday, June 22)](#week-seven-ai-for-code-and-digital-humanities-monday-june-22)
-  - [Week Eight: The Syllabus as Document (Monday, June 29)](#week-eight-the-syllabus-as-document-monday-june-29)
-  - [Week Nine: Copyright, Accessibility, and Inclusive Design (Monday, July 6)](#week-nine-copyright-accessibility-and-inclusive-design-monday-july-6)
+  - [Week Eight: Imagining the Syllabus (Monday, June 29)](#week-eight-imagining-the-syllabus-monday-june-29)
+  - [Week Nine: Playful, Accessible, and Inclusive Design (Monday, July 6)](#week-nine-playful-accessible-and-inclusive-design-monday-july-6)
   - [Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)](#week-ten-interdisciplinarity-and-the-academic-job-market-monday-july-13)
   - [Week Eleven: Sharing, Sustaining, and Best Practices (Monday, July 20)](#week-eleven-sharing-sustaining-and-best-practices-monday-july-20)
   - [Week Twelve: Final Portfolio (Monday, July 27)](#week-twelve-final-portfolio-monday-july-27)
@@ -131,14 +131,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 *NEH Workshop 1: Introducing AI for DH Pedagogy (May 13, 10 AM - noon, CHDR)*
 
 -   Locke, Brandon. ["Digital Humanities Pedagogy as Essential Liberal Education: A Framework for Curriculum Development."](https://www.digitalhumanities.org/dhq/vol/11/3/000303/000303.html) *DHQ: Digital Humanities Quarterly* 11.3 (2017).
--   Explore: [Guide to Teaching at UCF](https://fctl.ucf.edu/) (skim)
+-   Croxall, Brian and Diane K. Jakacki. ["What We Teach When We Teach DH."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/c2790674-f5bb-41b7-9938-a47a4d2fb308#intro) *What We Teach When We Teach DH.*
 -   Mollick, Ethan. ["My class required AI. Here's what I've learned so far."](https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive) *One Useful Thing.*
 -   **Due: Activity Verification (Friday, May 15)**
 -   **Discussion: Introduce yourself and describe your teaching experience** (current or anticipated). What courses do you teach or hope to teach? What is your initial relationship with AI tools in your own work?
 
 ### Week Two: Learning Theories and Course Design (Monday, May 18)
 
--   Amineh, Roya Jafari and Hanieh Davatgari Asl. "Review of Constructivism and Social Constructivism." *Journal of Social Sciences, Literature and Languages* 1.1 (2015): 9-16. (PDF in Webcourses)
+-   Mahony, Simon, Julianne Nyhan, Melissa Terras and Ulrich Tiedau. ["Digital Humanities Pedagogy: Integrative Learning and New Ways of Thinking About Studying the Humanities."](https://www.dhi.ac.uk/books/dhc2014/digital-humanities-pedagogy/) *Proceedings of the Digital Humanities Congress 2014.*
 -   Brier, Stephen and Joshua Wilner. ["Teaching Digital Humanities for Transfer."](https://dhq.digitalhumanities.org/vol/12/2/000394/000394.html) *DHQ: Digital Humanities Quarterly* 12.2 (2018).
 -   Read/Watch: [Bloom's Taxonomy](https://teaching.uic.edu/cate-teaching-guides/syllabus-course-design/blooms-taxonomy-of-educational-objectives/) (UIC Center for the Advancement of Teaching Excellence)
 -   Mollick, Ethan. ["Assigning AI: Seven Ways of Using AI in Class."](https://www.oneusefulthing.org/p/assigning-ai-seven-ways-of-using) *One Useful Thing.*
@@ -148,14 +148,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 *NEH Workshop 2: AI for Textual Analysis (May 27, 10 AM - noon, CHDR)*
 
--   Underwood, Ted. ["A Genealogy of Distant Reading."](https://digitalhumanities.org/dhq/vol/11/2/000317/000317.html) *DHQ: Digital Humanities Quarterly* 11.2 (2017).
+-   Houston, Natalie M. ["Text Analysis."](https://digitalpedagogy.hcommons.org/keyword/Text-Analysis/) *Digital Pedagogy in the Humanities.*
 -   Underwood, Ted. ["A More Interesting Upside of AI."](https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/) *The Stone and the Shell.* July 2, 2025.
 -   Cohen, Dan. ["The Writing Is on the Wall for Handwriting Recognition."](https://newsletter.dancohen.org/archive/the-writing-is-on-the-wall-for-handwriting-recognition/) *Humane Ingenuity.*
--   **Discussion: Workshop Exercise - Textual Analysis.** Using Claude Artifacts, upload or paste a text relevant to your discipline and use Claude to analyze it (summarize themes, identify patterns, compare passages, or explore a corpus). Reflect on the strengths and limitations of AI-assisted textual analysis compared to traditional close reading. What would students learn from this exercise?
+-   **Discussion: Workshop Exercise - Textual Analysis.** Using Claude Projects and Artifacts, upload a set of texts relevant to your discipline and use Claude to analyze it (identify patterns, compare passages, build a concordance, and/or explore a corpus). Reflect on the strengths and limitations of AI-assisted textual analysis compared to traditional close reading. What would students learn from this exercise?
 
 ### Week Four: Assignment Design and Assessment (Monday, June 1)
 
--   Reynolds, Heather L. and Kevin D. Kearns. "A Planning Tool for Incorporating Backward Design, Active Learning, and Authentic Assessment in the College Classroom." *College Teaching* 65.1 (2017): 17-27. (PDF in Webcourses)
+-   Clark, J. Elizabeth. ["Assessment."](https://digitalpedagogy.hcommons.org/keyword/Assessment/) *Digital Pedagogy in the Humanities.*
 -   Read/Watch: [Backward Design](https://pressbooks.pub/etsu/chapter/understanding-by-design-ubd-and-the-backward-design-framework/) (Open Guide to Teaching and Learning in Higher Education)
 -   Mollick, Ethan. ["The Homework Apocalypse."](https://www.oneusefulthing.org/p/the-homework-apocalypse) *One Useful Thing.*
 -   **Discussion: Signature Assignment Draft.** Present a draft of the main assignment for your course. Describe the learning objectives, how it connects to your course goals through backward design, how it will be assessed, and how you have considered the role of AI in how students might complete it.
@@ -164,14 +164,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 *NEH Workshop 3: AI for Visual Analysis (June 10, 10 AM - noon, CHDR)*
 
--   Risam, Roopika and Alex Gil. ["Introduction: The Questions of Minimal Computing."](https://www.digitalhumanities.org/dhq/vol/16/2/000646/000646.html) *DHQ: Digital Humanities Quarterly* 16.2 (2022).
--   Willison, Simon. ["Everything I Built with Claude Artifacts This Week."](https://simonwillison.net/2024/Oct/21/claude-artifacts/) *simonwillison.net.* October 21, 2024.
+-   Sinclair, Stéfan and Geoffrey Rockwell. ["Visualization."](https://digitalpedagogy.hcommons.org/keyword/Visualization) *Digital Pedagogy in the Humanities.*
+-   Kies and Stanfill. "From Algorithms to Attribution: Teaching AI and Copyright." (PDF in Webcourses)
 -   Cohen, Dan. ["A Museum's Sublime Hallucinations."](https://newsletter.dancohen.org/archive/a-museums-sublime-hallucinations) *Humane Ingenuity.*
--   **Discussion: Workshop Exercise - Visual Analysis.** Using Claude Artifacts, upload an image or set of images relevant to your discipline (archival photographs, artwork, maps, data visualizations) and use Claude to analyze, describe, or interpret them. Reflect on how AI reads visual material compared to trained humanistic interpretation. What does AI notice, what does it miss, and what would students learn from critically evaluating AI-assisted visual analysis?
+-   **Discussion: Workshop Exercise - Visual Analysis.** Using Claude Artifacts, upload an set of images relevant to your discipline that are either in the public domain or you have the right to use (archival photographs, artwork, maps, data visualizations) and use Claude to analyze, describe, or interpret them. Reflect on how AI reads visual material compared to trained humanistic interpretation. What does AI notice, what does it miss, and what would students learn from critically evaluating AI-assisted visual analysis? Try building metadata and creating a visual tools for exploring the images.
 
 ### Week Six: Active Learning and Student Motivation (Monday, June 15)
 
--   Savonick, Danica. ["Teaching DH on a Shoestring: Minimalist Digital Humanities Pedagogy."](https://cuny.manifoldapp.org/read/teaching-dh-on-a-shoestring-minimalist-digital-humanities-pedagogy/section/c9b61bdc-77a6-4283-9a01-5aab70730508) *The Journal of Interactive Technology and Pedagogy* 21 (2022).
+-   Langmead, Alison and Annette Vee. ["Teaching the Digital Humanities to a Broad Undergraduate Population."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/62f66e44-1e01-495a-a9a5-6880682381e6#ch03) *What We Teach When We Teach DH*
 -   Prince, Alanna and Cara Marta Messina. ["Black Digital Humanities for the Rising Generation."](https://dhq.digitalhumanities.org/vol/16/3/000645/000645.html) *DHQ: Digital Humanities Quarterly* 16.3 (2022).
 -   Mollick, Ethan. ["Using AI to Make Teaching Easier and More Impactful."](https://www.oneusefulthing.org/p/using-ai-to-make-teaching-easier) *One Useful Thing.*
 -   Cohen, Dan. ["Books Are Big AI's Achilles' Heel."](https://newsletter.dancohen.org/archive/humane-ingenuity-53-books-are-big-ais-achilles-heel) *Humane Ingenuity.*
@@ -187,29 +187,26 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Cohen, Dan. ["The Index and the Vector."](https://newsletter.dancohen.org/archive/the-index-and-the-vector) *Humane Ingenuity.*
 -   **Discussion: Workshop Exercise - Machine Learning and Code.** Using Claude Code Web, build a small interactive project relevant to your discipline (a text analysis tool, a timeline, a quiz, a data explorer). No prior coding experience is required. Reflect on the experience of co-authoring code with AI and what this means for humanities pedagogy. *(This week marks the transition from Claude Artifacts to Claude Code Web for exercises.)*
 
-### Week Eight: The Syllabus as Document (Monday, June 29)
+### Week Eight: Imagining the Syllabus (Monday, June 29)
 
--   Orr et al. "The Syllabus as Curriculum." (PDF in Webcourses)
--   Palmer, Carole L. et al. ["Foundations of Data Curation: The Pedagogy and Practice of 'Purposeful Work' with Research Data."](https://www.archivejournal.net/essays/foundations-of-data-curation-the-pedagogy-and-practice-of-purposeful-work-with-research-data/) *Archive Journal* 3 (2013).
+-   Cohen, Scott. ["Digital Humanities across the Curriculum, or How to Wear the Digital Halo."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/92790007-c160-434a-9ac8-bc16514354c9#ch09) *What We Teach When We Teach DH*
+-   McGinn, Emily and Lauren Coats. ["Born-Pedagogical DH: Learning While Teaching"](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/cf1ea393-3133-4f7e-a588-87d8c9e53ab8#ch01) *What We Teach When We Teach DH*
 -   Mollick, Ethan. ["Democratizing the Future of Education."](https://www.oneusefulthing.org/p/democratizing-the-future-of-education) *One Useful Thing.*
 -   **Due: Signature Assignment (final version with rubric)**
 
-### Week Nine: Copyright, Accessibility, and Inclusive Design (Monday, July 6)
+### Week Nine: Playful, Accessible, and Inclusive Design (Monday, July 6)
 
 *NEH Workshop 5: Playful Approaches and Creative Code (July 8, 10 AM - noon, CHDR)*
 
--   Kies and Stanfill. "From Algorithms to Attribution: Teaching AI and Copyright." (PDF in Webcourses)
 -   Johnson, Emily K. and Anastasia Salter. "Designing Playfully for a Distant Future." *Playful Pedagogy in the Pandemic: Pivoting to Game-Based Learning* (Routledge, 2022). (PDF in Webcourses)
 -   ["Universal Design for Learning: Pleasure, Accessibility, and the Radical Possibilities of Good Design."](https://vp.commons.gc.cuny.edu/2023/03/20/universal-design-for-learning-pleasure-accessibility-and-the-radical-possibilities-of-good-design/) *Visible Pedagogy*, CUNY Graduate Center. March 20, 2023.
--   Watch: [UDL at a Glance](https://www.youtube.com/watch?v=bDvKnY0g6e4) (CAST)
 -   Explore: [UCF Digital Accessibility Guides](https://www.ucf.edu/accessibility/digital-accessibility-guides/) (skim)
 -   Mollick, Ethan. ["15 Times to Use AI, and 5 Not To."](https://www.oneusefulthing.org/p/15-times-to-use-ai-and-5-not-to) *One Useful Thing.*
 -   **Discussion: Workshop Exercise - Playful Approaches and Creative Code.** This exercise connects to the workshop's focus on copyright, accessibility, and playful pedagogy in AI adoption. Using Claude Code Web, draft an AI policy statement for your course syllabus that addresses copyright and attribution for AI-generated content. Then critically evaluate it: how does it address copyright, accessibility, equity of access to AI tools, and the labor behind the models? Apply UDL principles to consider whether your course design offers multiple means of engagement, representation, and action/expression.
 
 ### Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)
 
--   Gallon, Kim. ["Making a Case for the Black Digital Humanities."](https://dhdebates.gc.cuny.edu/read/untitled/section/fa10e2e1-0c3d-4519-a958-d823aac989eb) *Debates in the Digital Humanities 2016* (University of Minnesota Press).
--   Clement, Tanya. "Multiliteracies in the Undergraduate Digital Humanities Curriculum." *Digital Humanities Pedagogy* (2012). (PDF in Webcourses)
+-   Hopwood, Elizabeth and Kyle Roberts. ["What's the Value of a Gradaute Digital Humanities Degree?"](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/dd8cbf70-d959-4634-88d0-ec236087dd81#ch12) *What We Teach When We Teach DH*
 -   ["Writing a Strong Teaching Philosophy Statement in a Job Search."](https://www.insidehighered.com/opinion/career-advice/seeking-faculty-job/2024/02/15/writing-strong-teaching-philosophy-statement) *Inside Higher Ed.* February 15, 2024.
 -   Cohen, Dan. ["AI and Libraries, Archives, and Museums, Loosely Coupled."](https://newsletter.dancohen.org/archive/ai-and-libraries-archives-and-museums-loosely-coupled) *Humane Ingenuity.*
 -   **Due: Course Syllabus (final version)**
