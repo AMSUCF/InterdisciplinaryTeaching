@@ -1,0 +1,5 @@
+canvas_config.yaml
+.canvas_sync_state.json
+__pycache__/
+*.pyc
+.pytest_cache/
