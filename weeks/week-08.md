@@ -4,7 +4,6 @@ title: "Imagining the Syllabus"
 starts: 2026-06-29
 assignments:
   - title: "Signature Assignment"
-    type: assignment
     points: 200
     due: 2026-07-05
 ---

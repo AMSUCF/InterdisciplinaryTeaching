@@ -4,7 +4,6 @@ title: "Interdisciplinarity and the Academic Job Market"
 starts: 2026-07-13
 assignments:
   - title: "Course Syllabus"
-    type: assignment
     points: 200
     due: 2026-07-19
 ---

@@ -4,7 +4,6 @@ title: "Final Portfolio"
 starts: 2026-07-27
 assignments:
   - title: "Final Portfolio & Reflection"
-    type: assignment
     points: 160
     due: 2026-08-01
 ---

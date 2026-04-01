@@ -69,7 +69,7 @@ def cmd_init(config, weeks_dir, state: SyncState):
 def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
     week_key = week.file_key
     week_state = state.get_week(week_key) or {}
-    apply_all = force
+    apply_all_ref = [force]
 
     console.print(f"\n[bold]Pushing {week.module_name}...[/bold]")
 
@@ -88,15 +88,24 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
         cs.add_module_item(module_id, "Page", page_url, week.module_name)
         console.print(f"  [green]Created page[/green] (url={page_url})")
     else:
-        page = cs.get_page(week_state["page_url"])
-        local_fields = {"title": week.module_name, "body": week.body_html}
-        remote_fields = {"title": page.title, "body": page.body or ""}
-        diffs = compute_diff(local_fields, remote_fields)
-        if diffs:
-            display_diff(f"Page \"{week.module_name}\"", diffs, console)
-            if apply_all or _confirm(f"Page \"{week.module_name}\"", apply_all_ref=[apply_all]):
-                cs.update_page(week_state["page_url"], **local_fields)
-                console.print("  [green]Updated page[/green]")
+        try:
+            page = cs.get_page(week_state["page_url"])
+        except Exception:
+            console.print(f"  [yellow]Page no longer exists in Canvas, recreating...[/yellow]")
+            page_url = cs.create_page(week)
+            week_state["page_url"] = page_url
+            cs.add_module_item(module_id, "Page", page_url, week.module_name)
+            console.print(f"  [green]Recreated page[/green] (url={page_url})")
+            page = None
+        if page is not None:
+            local_fields = {"title": week.module_name, "body": week.body_html}
+            remote_fields = {"title": page.title, "body": page.body or ""}
+            diffs = compute_diff(local_fields, remote_fields)
+            if diffs:
+                display_diff(f"Page \"{week.module_name}\"", diffs, console)
+                if _confirm(f"Page \"{week.module_name}\"", apply_all_ref):
+                    cs.update_page(week_state["page_url"], **local_fields)
+                    console.print("  [green]Updated page[/green]")
 
     # Assignments
     existing_assignments = {a["title"]: a for a in week_state.get("assignments", [])}
@@ -109,23 +118,32 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
             console.print(f"  [green]Created assignment[/green] \"{assignment.title}\" (id={aid})")
         else:
             entry = existing_assignments[assignment.title]
-            canvas_a = cs.get_assignment(entry["canvas_id"])
-            local_fields = {
-                "name": assignment.title,
-                "points_possible": assignment.points,
-                "due_at": assignment.due_datetime.isoformat(),
-            }
-            remote_fields = {
-                "name": getattr(canvas_a, "name", ""),
-                "points_possible": getattr(canvas_a, "points_possible", 0),
-                "due_at": getattr(canvas_a, "due_at", ""),
-            }
-            diffs = compute_diff(local_fields, remote_fields)
-            if diffs:
-                display_diff(f"Assignment \"{assignment.title}\"", diffs, console)
-                if apply_all or _confirm(f"Assignment \"{assignment.title}\"", apply_all_ref=[apply_all]):
-                    cs.update_assignment(entry["canvas_id"], **local_fields)
-                    console.print(f"  [green]Updated assignment[/green] \"{assignment.title}\"")
+            try:
+                canvas_a = cs.get_assignment(entry["canvas_id"])
+            except Exception:
+                console.print(f"  [yellow]Assignment \"{assignment.title}\" no longer exists, recreating...[/yellow]")
+                aid = cs.create_assignment(assignment)
+                entry = {"title": assignment.title, "canvas_id": aid}
+                cs.add_module_item(module_id, "Assignment", aid, assignment.title)
+                console.print(f"  [green]Recreated assignment[/green] \"{assignment.title}\" (id={aid})")
+                canvas_a = None
+            if canvas_a is not None:
+                local_fields = {
+                    "name": assignment.title,
+                    "points_possible": assignment.points,
+                    "due_at": assignment.due_datetime.isoformat(),
+                }
+                remote_fields = {
+                    "name": getattr(canvas_a, "name", ""),
+                    "points_possible": getattr(canvas_a, "points_possible", 0),
+                    "due_at": getattr(canvas_a, "due_at", ""),
+                }
+                diffs = compute_diff(local_fields, remote_fields)
+                if diffs:
+                    display_diff(f"Assignment \"{assignment.title}\"", diffs, console)
+                    if _confirm(f"Assignment \"{assignment.title}\"", apply_all_ref):
+                        cs.update_assignment(entry["canvas_id"], **local_fields)
+                        console.print(f"  [green]Updated assignment[/green] \"{assignment.title}\"")
             new_assignments.append(entry)
     week_state["assignments"] = new_assignments
 
@@ -138,21 +156,30 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
             cs.add_module_item(module_id, "Discussion", did, week.discussion.title)
             console.print(f"  [green]Created discussion[/green] \"{week.discussion.title}\" (id={did})")
         else:
-            topic = cs.get_discussion(week_state["discussion_id"])
-            local_fields = {
-                "title": week.discussion.title,
-                "message": prompt_html,
-            }
-            remote_fields = {
-                "title": getattr(topic, "title", ""),
-                "message": getattr(topic, "message", ""),
-            }
-            diffs = compute_diff(local_fields, remote_fields)
-            if diffs:
-                display_diff(f"Discussion \"{week.discussion.title}\"", diffs, console)
-                if apply_all or _confirm(f"Discussion \"{week.discussion.title}\"", apply_all_ref=[apply_all]):
-                    cs.update_discussion(week_state["discussion_id"], **local_fields)
-                    console.print(f"  [green]Updated discussion[/green]")
+            try:
+                topic = cs.get_discussion(week_state["discussion_id"])
+            except Exception:
+                console.print(f"  [yellow]Discussion no longer exists, recreating...[/yellow]")
+                did = cs.create_discussion(week.discussion, prompt_html)
+                week_state["discussion_id"] = did
+                cs.add_module_item(module_id, "Discussion", did, week.discussion.title)
+                console.print(f"  [green]Recreated discussion[/green] (id={did})")
+                topic = None
+            if topic is not None:
+                local_fields = {
+                    "title": week.discussion.title,
+                    "message": prompt_html,
+                }
+                remote_fields = {
+                    "title": getattr(topic, "title", ""),
+                    "message": getattr(topic, "message", ""),
+                }
+                diffs = compute_diff(local_fields, remote_fields)
+                if diffs:
+                    display_diff(f"Discussion \"{week.discussion.title}\"", diffs, console)
+                    if _confirm(f"Discussion \"{week.discussion.title}\"", apply_all_ref):
+                        cs.update_discussion(week_state["discussion_id"], **local_fields)
+                        console.print(f"  [green]Updated discussion[/green]")
 
     week_state["last_synced"] = datetime.now().isoformat()
     state.set_week(week_key, week_state)

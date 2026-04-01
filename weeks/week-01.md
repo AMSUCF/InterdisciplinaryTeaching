@@ -9,7 +9,6 @@ workshop:
   location: CHDR
 assignments:
   - title: "Activity Verification"
-    type: assignment
     points: 50
     due: 2026-05-15
 discussion:

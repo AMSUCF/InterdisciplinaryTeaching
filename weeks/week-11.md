@@ -9,7 +9,6 @@ workshop:
   location: CHDR
 assignments:
   - title: "Teaching Statement"
-    type: assignment
     points: 150
     due: 2026-07-26
 ---
