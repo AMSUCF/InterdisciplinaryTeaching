@@ -8,6 +8,8 @@ discussion:
   due: 2026-06-07
 ---
 
+How do we design assignments that are meaningful, rigorous, and resilient in an era of generative AI? This week examines backward design, rubric construction, and the challenge of assessment when students have access to powerful AI tools. You'll draft the signature assignment for your course.
+
 ## Readings
 
 - Clark, J. Elizabeth. ["Assessment."](https://digitalpedagogy.hcommons.org/keyword/Assessment/) *Digital Pedagogy in the Humanities.*

@@ -11,6 +11,7 @@ class Config:
     api_url: str
     api_key: str
     course_id: int
+    course_start: str = ""
 
 
 def load_config(path: str) -> Config:
@@ -20,4 +21,5 @@ def load_config(path: str) -> Config:
         api_url=data["api_url"],
         api_key=data["api_key"],
         course_id=data["course_id"],
+        course_start=str(data.get("course_start", "")),
     )

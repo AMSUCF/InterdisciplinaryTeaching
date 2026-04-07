@@ -31,7 +31,7 @@ def display_diff(object_label: str, diffs: list[FieldDiff], console: Optional[Co
         return
     console.print(f"\n  [bold]{object_label}:[/bold]")
     for d in diffs:
-        console.print(f"    [red]{d.field}:[/red] {d.old_value} [yellow]→[/yellow] {d.new_value}")
+        console.print(f"    [red]{d.field}:[/red] {d.old_value} [yellow]->[/yellow] {d.new_value}")
 
 
 def prompt_confirm(object_label: str) -> str:

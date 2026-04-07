@@ -13,6 +13,10 @@ discussion:
   due: 2026-06-14
 ---
 
+This week turns to visual analysis — how AI interprets images, maps, artworks, and visualizations, and what that means for humanities teaching. We'll also examine the copyright and attribution questions that arise when AI engages with visual material.
+
+*NEH Workshop 3: AI for Visual Analysis (June 10, 10 AM - noon, CHDR)* — This workshop explores AI tools for interpreting and working with visual materials in humanities courses. Students who attend will reflect on and extend the discussion exercise; those who do not will complete it asynchronously.
+
 ## Readings
 
 - Sinclair, Stéfan and Geoffrey Rockwell. ["Visualization."](https://digitalpedagogy.hcommons.org/keyword/Visualization) *Digital Pedagogy in the Humanities.*

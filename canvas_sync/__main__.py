@@ -53,7 +53,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def cmd_init(config, weeks_dir, state: SyncState):
     cs = CanvasSync(config)
-    weeks = load_all_weeks(weeks_dir)
+    weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
     console.print(f"Creating {len(weeks)} modules in Canvas...")
     for week in weeks:
         module_id = cs.create_module(week)
@@ -130,13 +130,21 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
             if canvas_a is not None:
                 local_fields = {
                     "name": assignment.title,
+                    "description": assignment.description,
                     "points_possible": assignment.points,
                     "due_at": assignment.due_datetime.isoformat(),
+                    "unlock_at": assignment.unlock_datetime.isoformat(),
+                    "lock_at": assignment.lock_datetime.isoformat(),
+                    "submission_types": [assignment.submission_type],
                 }
                 remote_fields = {
                     "name": getattr(canvas_a, "name", ""),
+                    "description": getattr(canvas_a, "description", "") or "",
                     "points_possible": getattr(canvas_a, "points_possible", 0),
                     "due_at": getattr(canvas_a, "due_at", ""),
+                    "unlock_at": getattr(canvas_a, "unlock_at", "") or "",
+                    "lock_at": getattr(canvas_a, "lock_at", "") or "",
+                    "submission_types": getattr(canvas_a, "submission_types", []),
                 }
                 diffs = compute_diff(local_fields, remote_fields)
                 if diffs:
@@ -204,13 +212,13 @@ def _confirm(label: str, apply_all_ref: list) -> bool:
 def cmd_push(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False, force=False):
     cs = CanvasSync(config)
     if all_weeks:
-        weeks = load_all_weeks(weeks_dir)
+        weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
     else:
         path = os.path.join(weeks_dir, f"week-{week_num:02d}.md")
         if not os.path.exists(path):
             console.print(f"[red]File not found: {path}[/red]")
             sys.exit(1)
-        weeks = [parse_week_file(path)]
+        weeks = [parse_week_file(path, course_start=config.course_start)]
 
     for week in weeks:
         _push_week(cs, week, state, force)
@@ -218,7 +226,7 @@ def cmd_push(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False
 
 
 def cmd_status(config, weeks_dir, state: SyncState):
-    weeks = load_all_weeks(weeks_dir)
+    weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
     table = Table(title="Canvas Sync Status")
     table.add_column("Week", style="bold")
     table.add_column("Module")
@@ -245,13 +253,13 @@ def cmd_status(config, weeks_dir, state: SyncState):
 def cmd_diff(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False):
     cs = CanvasSync(config)
     if all_weeks:
-        weeks = load_all_weeks(weeks_dir)
+        weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
     else:
         path = os.path.join(weeks_dir, f"week-{week_num:02d}.md")
         if not os.path.exists(path):
             console.print(f"[red]File not found: {path}[/red]")
             sys.exit(1)
-        weeks = [parse_week_file(path)]
+        weeks = [parse_week_file(path, course_start=config.course_start)]
 
     any_changes = False
     for week in weeks:
@@ -282,13 +290,21 @@ def cmd_diff(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False
                 canvas_a = cs.get_assignment(entry["canvas_id"])
                 local_fields = {
                     "name": assignment.title,
+                    "description": assignment.description,
                     "points_possible": assignment.points,
                     "due_at": assignment.due_datetime.isoformat(),
+                    "unlock_at": assignment.unlock_datetime.isoformat(),
+                    "lock_at": assignment.lock_datetime.isoformat(),
+                    "submission_types": [assignment.submission_type],
                 }
                 remote_fields = {
                     "name": getattr(canvas_a, "name", ""),
+                    "description": getattr(canvas_a, "description", "") or "",
                     "points_possible": getattr(canvas_a, "points_possible", 0),
                     "due_at": getattr(canvas_a, "due_at", ""),
+                    "unlock_at": getattr(canvas_a, "unlock_at", "") or "",
+                    "lock_at": getattr(canvas_a, "lock_at", "") or "",
+                    "submission_types": getattr(canvas_a, "submission_types", []),
                 }
                 diffs = compute_diff(local_fields, remote_fields)
                 if diffs:

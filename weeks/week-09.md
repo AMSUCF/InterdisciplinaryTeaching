@@ -13,6 +13,10 @@ discussion:
   due: 2026-07-12
 ---
 
+How do we design courses that are playful, accessible, and inclusive? This week brings together Universal Design for Learning (UDL) principles with creative and playful approaches to pedagogy. You'll also draft an AI policy for your syllabus and critically evaluate it through the lens of copyright, accessibility, and equity.
+
+*NEH Workshop 5: Playful Approaches and Creative Code (July 8, 10 AM - noon, CHDR)* — This workshop explores playful pedagogy, copyright considerations, and accessibility in AI-integrated courses. Students who attend will reflect on and extend the discussion exercise; those who do not will complete it asynchronously.
+
 ## Readings
 
 - Johnson, Emily K. and Anastasia Salter. "Designing Playfully for a Distant Future." *Playful Pedagogy in the Pandemic: Pivoting to Game-Based Learning* (Routledge, 2022). (PDF in Webcourses)

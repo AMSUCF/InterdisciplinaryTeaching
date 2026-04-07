@@ -8,6 +8,8 @@ discussion:
   due: 2026-06-21
 ---
 
+How do we keep students engaged, especially in online and asynchronous modalities? This week explores active learning strategies, student motivation, and inclusive approaches to digital humanities pedagogy. You'll design an AI-integrated exercise for your course that puts active learning principles into practice.
+
 ## Readings
 
 - Langmead, Alison and Annette Vee. ["Teaching the Digital Humanities to a Broad Undergraduate Population."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/62f66e44-1e01-495a-a9a5-6880682381e6#ch03) *What We Teach When We Teach DH*

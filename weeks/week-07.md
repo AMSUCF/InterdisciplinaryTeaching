@@ -13,6 +13,10 @@ discussion:
   due: 2026-06-28
 ---
 
+This week marks the transition from Claude Artifacts to Claude Code Web. We'll explore what it means for humanists to engage with code — not as software engineers, but as scholars who can use AI to build tools, prototypes, and interactive projects. No prior coding experience is required.
+
+*NEH Workshop 4: Web and Interactive Applications (June 24, 10 AM - noon, CHDR)* — This workshop introduces Claude Code Web and explores building interactive digital humanities projects with AI assistance. Students who attend will reflect on and extend the discussion exercise; those who do not will complete it asynchronously.
+
 ## Readings
 
 - Martin, Meredith. ["Command Lines for the Humanities."](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2) *PMLA* 139.3 (2024): 541-547.

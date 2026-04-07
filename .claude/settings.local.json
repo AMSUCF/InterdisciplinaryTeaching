@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(systeminfo)",
+      "Bash(wmic path:*)",
+      "Bash(powershell:*)",
+      "WebFetch(domain:ollama.com)"
+    ]
+  }
+}

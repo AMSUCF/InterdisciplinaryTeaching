@@ -33,21 +33,41 @@ class Assignment:
     title: str
     points: int
     due: str
-    submission_type: str = "online_text_entry"
+    course_start: str = ""
+    description: str = ""
+    submission_type: str = "online_upload"
 
     @classmethod
-    def from_dict(cls, data: dict) -> Assignment:
+    def from_dict(cls, data: dict, course_start: str = "") -> Assignment:
         return cls(
             title=data["title"],
             points=data["points"],
             due=str(data["due"]),
-            submission_type=data.get("submission_type", "online_text_entry"),
+            course_start=course_start,
+            description=data.get("description", ""),
+            submission_type=data.get("submission_type", "online_upload"),
         )
 
     @property
     def due_datetime(self) -> datetime:
         date = datetime.strptime(self.due, "%Y-%m-%d")
         return date.replace(hour=23, minute=59, second=0, tzinfo=EASTERN)
+
+    @property
+    def unlock_datetime(self) -> datetime:
+        from datetime import timedelta
+        three_weeks_before = self.due_datetime - timedelta(weeks=3)
+        if self.course_start:
+            course_start_dt = datetime.strptime(self.course_start, "%Y-%m-%d")
+            course_start_dt = course_start_dt.replace(hour=0, minute=0, second=0, tzinfo=EASTERN)
+            if three_weeks_before < course_start_dt:
+                return course_start_dt
+        return three_weeks_before
+
+    @property
+    def lock_datetime(self) -> datetime:
+        from datetime import timedelta
+        return self.due_datetime + timedelta(weeks=1)
 
 
 @dataclass
@@ -82,6 +102,8 @@ class Week:
 
     @property
     def module_name(self) -> str:
+        if self.week == 0:
+            return self.title
         return f"Week {self.week}: {self.title}"
 
     @property

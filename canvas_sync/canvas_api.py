@@ -32,8 +32,11 @@ class CanvasSync:
         result = self._course.create_assignment(
             assignment={
                 "name": assignment.title,
+                "description": assignment.description,
                 "points_possible": assignment.points,
                 "due_at": assignment.due_datetime.isoformat(),
+                "unlock_at": assignment.unlock_datetime.isoformat(),
+                "lock_at": assignment.lock_datetime.isoformat(),
                 "submission_types": [assignment.submission_type],
                 "published": False,
             }
@@ -80,7 +83,7 @@ class CanvasSync:
 
     def update_discussion(self, topic_id: int, **fields) -> None:
         topic = self._course.get_discussion_topic(topic_id)
-        topic.edit(**fields)
+        topic.update(**fields)
 
     def object_exists(self, getter, obj_id) -> bool:
         try:

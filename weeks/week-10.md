@@ -8,6 +8,14 @@ assignments:
     due: 2026-07-19
 ---
 
+This week addresses the professional dimension of interdisciplinary teaching: how does teaching across disciplines position you on the academic job market? We'll examine the value of digital humanities credentials, strategies for articulating interdisciplinary expertise, and how to write a teaching philosophy statement.
+
+**No discussion post this week.** Focus on completing your Course Syllabus.
+
+## Assignments
+
+- **Course Syllabus** (200 points) — A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. Due July 19.
+
 ## Readings
 
 - Hopwood, Elizabeth and Kyle Roberts. ["What's the Value of a Gradaute Digital Humanities Degree?"](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/dd8cbf70-d959-4634-88d0-ec236087dd81#ch12) *What We Teach When We Teach DH*
