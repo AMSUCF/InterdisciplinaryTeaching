@@ -4,7 +4,7 @@ Course materials for **ENG 6813: Interdisciplinary Teaching**, Summer C 2026 at 
 
 **Instructors:** Dr. Anastasia Salter and Dr. Mel Stanfill
 
-**Course site:** [https://anastasiasalter.github.io/InterdisciplinaryTeaching/](https://anastasiasalter.github.io/InterdisciplinaryTeaching/)
+**Course site:** [https://anastasiasalter.net/InterdisciplinaryTeaching/](https://anastasiasalter.net/InterdisciplinaryTeaching/)
 
 ## Repository Structure
 
