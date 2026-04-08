@@ -124,7 +124,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 
 ## Weekly Schedule
 
-### Week One: Welcome and Interdisciplinary Teaching (Monday, May 11)
+### [Week One: Welcome and Interdisciplinary Teaching (Monday, May 11)](weeks/week-01.html)
 
 *NEH Workshop 1: Introducing AI for DH Pedagogy (May 13, 10 AM - noon, CHDR)*
 
@@ -134,7 +134,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   **Due: Activity Verification (Friday, May 15)**
 -   **Discussion: Introduce yourself and describe your teaching experience** (current or anticipated). What courses do you teach or hope to teach? What is your initial relationship with AI tools in your own work?
 
-### Week Two: Learning Theories and Course Design (Monday, May 18)
+### [Week Two: Learning Theories and Course Design (Monday, May 18)](weeks/week-02.html)
 
 -   Mahony, Simon, Julianne Nyhan, Melissa Terras and Ulrich Tiedau. ["Digital Humanities Pedagogy: Integrative Learning and New Ways of Thinking About Studying the Humanities."](https://www.dhi.ac.uk/books/dhc2014/digital-humanities-pedagogy/) *Proceedings of the Digital Humanities Congress 2014.*
 -   Brier, Stephen and Joshua Wilner. ["Teaching Digital Humanities for Transfer."](https://dhq.digitalhumanities.org/vol/12/2/000394/000394.html) *DHQ: Digital Humanities Quarterly* 12.2 (2018).
@@ -142,7 +142,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Mollick, Ethan. ["Assigning AI: Seven Ways of Using AI in Class."](https://www.oneusefulthing.org/p/assigning-ai-seven-ways-of-using) *One Useful Thing.*
 -   **Discussion: Course Design Plan.** Identify the course you plan to design or redesign this semester. Describe the institutional context, student audience, learning objectives, and your goals. How do you envision structuring the course, and what role (if any) might AI tools play?
 
-### Week Three: AI for Textual Analysis (Monday, May 25)
+### [Week Three: AI for Textual Analysis (Monday, May 25)](weeks/week-03.html)
 
 *NEH Workshop 2: AI for Textual Analysis (May 27, 10 AM - noon, CHDR)*
 
@@ -151,14 +151,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Cohen, Dan. ["The Writing Is on the Wall for Handwriting Recognition."](https://newsletter.dancohen.org/archive/the-writing-is-on-the-wall-for-handwriting-recognition/) *Humane Ingenuity.*
 -   **Discussion: Workshop Exercise - Textual Analysis.** Using Claude Projects and Artifacts, upload a set of texts relevant to your discipline and use Claude to analyze it (identify patterns, compare passages, build a concordance, and/or explore a corpus). Reflect on the strengths and limitations of AI-assisted textual analysis compared to traditional close reading. What would students learn from this exercise?
 
-### Week Four: Assignment Design and Assessment (Monday, June 1)
+### [Week Four: Assignment Design and Assessment (Monday, June 1)](weeks/week-04.html)
 
 -   Clark, J. Elizabeth. ["Assessment."](https://digitalpedagogy.hcommons.org/keyword/Assessment/) *Digital Pedagogy in the Humanities.*
 -   Read/Watch: [Backward Design](https://pressbooks.pub/etsu/chapter/understanding-by-design-ubd-and-the-backward-design-framework/) (Open Guide to Teaching and Learning in Higher Education)
 -   Mollick, Ethan. ["The Homework Apocalypse."](https://www.oneusefulthing.org/p/the-homework-apocalypse) *One Useful Thing.*
 -   **Discussion: Signature Assignment Draft.** Present a draft of the main assignment for your course. Describe the learning objectives, how it connects to your course goals through backward design, how it will be assessed, and how you have considered the role of AI in how students might complete it.
 
-### Week Five: AI for Visual Analysis (Monday, June 8)
+### [Week Five: AI for Visual Analysis (Monday, June 8)](weeks/week-05.html)
 
 *NEH Workshop 3: AI for Visual Analysis (June 10, 10 AM - noon, CHDR)*
 
@@ -167,7 +167,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Cohen, Dan. ["A Museum's Sublime Hallucinations."](https://newsletter.dancohen.org/archive/a-museums-sublime-hallucinations) *Humane Ingenuity.*
 -   **Discussion: Workshop Exercise - Visual Analysis.** Using Claude Artifacts, upload an set of images relevant to your discipline that are either in the public domain or you have the right to use (archival photographs, artwork, maps, data visualizations) and use Claude to analyze, describe, or interpret them. Reflect on how AI reads visual material compared to trained humanistic interpretation. What does AI notice, what does it miss, and what would students learn from critically evaluating AI-assisted visual analysis? Try building metadata and creating a visual tools for exploring the images.
 
-### Week Six: Active Learning and Student Motivation (Monday, June 15)
+### [Week Six: Active Learning and Student Motivation (Monday, June 15)](weeks/week-06.html)
 
 -   Langmead, Alison and Annette Vee. ["Teaching the Digital Humanities to a Broad Undergraduate Population."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/62f66e44-1e01-495a-a9a5-6880682381e6#ch03) *What We Teach When We Teach DH*
 -   Prince, Alanna and Cara Marta Messina. ["Black Digital Humanities for the Rising Generation."](https://dhq.digitalhumanities.org/vol/16/3/000645/000645.html) *DHQ: Digital Humanities Quarterly* 16.3 (2022).
@@ -175,7 +175,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Cohen, Dan. ["Books Are Big AI's Achilles' Heel."](https://newsletter.dancohen.org/archive/humane-ingenuity-53-books-are-big-ais-achilles-heel) *Humane Ingenuity.*
 -   **Discussion: AI Exercise Design.** Design an AI-related exercise for your course. How does this exercise use active learning principles? What would students do with AI, and what would they learn? How does this exercise connect to your course's learning objectives? Use Claude Artifacts to prototype or model the exercise.
 
-### Week Seven: AI for Code and Digital Humanities (Monday, June 22)
+### [Week Seven: AI for Code and Digital Humanities (Monday, June 22)](weeks/week-07.html)
 
 *NEH Workshop 4: Web and Interactive Applications (June 24, 10 AM - noon, CHDR)*
 
@@ -185,14 +185,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Cohen, Dan. ["The Index and the Vector."](https://newsletter.dancohen.org/archive/the-index-and-the-vector) *Humane Ingenuity.*
 -   **Discussion: Workshop Exercise - Machine Learning and Code.** Using Claude Code Web, build a small interactive project relevant to your discipline (a text analysis tool, a timeline, a quiz, a data explorer). No prior coding experience is required. Reflect on the experience of co-authoring code with AI and what this means for humanities pedagogy. *(This week marks the transition from Claude Artifacts to Claude Code Web for exercises.)*
 
-### Week Eight: Imagining the Syllabus (Monday, June 29)
+### [Week Eight: Imagining the Syllabus (Monday, June 29)](weeks/week-08.html)
 
 -   Cohen, Scott. ["Digital Humanities across the Curriculum, or How to Wear the Digital Halo."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/92790007-c160-434a-9ac8-bc16514354c9#ch09) *What We Teach When We Teach DH*
 -   McGinn, Emily and Lauren Coats. ["Born-Pedagogical DH: Learning While Teaching"](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/cf1ea393-3133-4f7e-a588-87d8c9e53ab8#ch01) *What We Teach When We Teach DH*
 -   Mollick, Ethan. ["Democratizing the Future of Education."](https://www.oneusefulthing.org/p/democratizing-the-future-of-education) *One Useful Thing.*
 -   **Due: Signature Assignment (final version with rubric)**
 
-### Week Nine: Playful, Accessible, and Inclusive Design (Monday, July 6)
+### [Week Nine: Playful, Accessible, and Inclusive Design (Monday, July 6)](weeks/week-09.html)
 
 *NEH Workshop 5: Playful Approaches and Creative Code (July 8, 10 AM - noon, CHDR)*
 
@@ -202,14 +202,14 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Mollick, Ethan. ["15 Times to Use AI, and 5 Not To."](https://www.oneusefulthing.org/p/15-times-to-use-ai-and-5-not-to) *One Useful Thing.*
 -   **Discussion: Workshop Exercise - Playful Approaches and Creative Code.** This exercise connects to the workshop's focus on copyright, accessibility, and playful pedagogy in AI adoption. Using Claude Code Web, draft an AI policy statement for your course syllabus that addresses copyright and attribution for AI-generated content. Then critically evaluate it: how does it address copyright, accessibility, equity of access to AI tools, and the labor behind the models? Apply UDL principles to consider whether your course design offers multiple means of engagement, representation, and action/expression.
 
-### Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)
+### [Week Ten: Interdisciplinarity and the Academic Job Market (Monday, July 13)](weeks/week-10.html)
 
 -   Hopwood, Elizabeth and Kyle Roberts. ["What's the Value of a Gradaute Digital Humanities Degree?"](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/dd8cbf70-d959-4634-88d0-ec236087dd81#ch12) *What We Teach When We Teach DH*
 -   ["Writing a Strong Teaching Philosophy Statement in a Job Search."](https://www.insidehighered.com/opinion/career-advice/seeking-faculty-job/2024/02/15/writing-strong-teaching-philosophy-statement) *Inside Higher Ed.* February 15, 2024.
 -   Cohen, Dan. ["AI and Libraries, Archives, and Museums, Loosely Coupled."](https://newsletter.dancohen.org/archive/ai-and-libraries-archives-and-museums-loosely-coupled) *Humane Ingenuity.*
 -   **Due: Course Syllabus (final version)**
 
-### Week Eleven: Sharing, Sustaining, and Best Practices (Monday, July 20)
+### [Week Eleven: Sharing, Sustaining, and Best Practices (Monday, July 20)](weeks/week-11.html)
 
 *NEH Workshop 6: Agentic Futures, Curricular Sustainability (July 22, 10 AM - noon, CHDR)*
 
@@ -218,7 +218,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Willison, Simon. ["2025: The Year in LLMs."](https://simonwillison.net/2025/Dec/31/the-year-in-llms/) *simonwillison.net.* December 31, 2025.
 -   **Due: Teaching Statement (final version)** — This week's workshop on sharing and sustaining curriculum connects to the open-access mission of the NEH project. Students are encouraged to attend and consider how their course materials might be shared via GitHub or Humanities Commons.
 
-### Week Twelve: Final Portfolio (Monday, July 27)
+### [Week Twelve: Final Portfolio (Monday, July 27)](weeks/week-12.html)
 
 -   Mollick, Ethan. ["On Holding Back the Strange AI Tide."](https://www.oneusefulthing.org/p/on-holding-back-the-strange-ai-tide) *One Useful Thing.*
 -   Mollick, Ethan. ["The Future of Education in a World of AI."](https://www.oneusefulthing.org/p/the-future-of-education-in-a-world) *One Useful Thing.*
