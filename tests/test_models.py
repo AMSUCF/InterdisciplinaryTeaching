@@ -119,3 +119,65 @@ def test_week_due_datetime():
     assert dt.hour == 23
     assert dt.minute == 59
     assert str(dt.tzinfo) == "US/Eastern" or "Eastern" in str(dt.tzinfo)
+
+
+def test_week_slides_default_none():
+    w = Week(
+        week=2,
+        title="Learning Theories",
+        starts="2026-05-18",
+        body_markdown="## Readings",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+    )
+    assert w.slides is None
+    assert w.slides_section_html("https://example.com/slides/") is None
+
+
+def test_week_slides_section_html_renders_iframe():
+    w = Week(
+        week=1,
+        title="Welcome",
+        starts="2026-05-11",
+        body_markdown="## Readings",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+        slides="week-01",
+    )
+    html = w.slides_section_html("https://example.com/slides/")
+    assert html is not None
+    # Header
+    assert "<h2>Slides</h2>" in html
+    # Iframe with full URL
+    assert 'src="https://example.com/slides/week-01/"' in html
+    # Responsive wrapper inline styles (Canvas strips classes)
+    assert "padding-bottom:56.25%" in html
+    # Allowfullscreen and lazy loading
+    assert "allowfullscreen" in html
+    assert 'loading="lazy"' in html
+    # Fallback link
+    assert 'href="https://example.com/slides/week-01/"' in html
+    assert "Open slides in a new tab" in html
+
+
+def test_week_slides_section_html_handles_trailing_slash():
+    """slides_base_url with or without trailing slash should both produce the same URL."""
+    w_with_slug = Week(
+        week=1,
+        title="W",
+        starts="2026-05-11",
+        body_markdown="",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+        slides="week-01",
+    )
+    with_slash = w_with_slug.slides_section_html("https://example.com/slides/")
+    without_slash = w_with_slug.slides_section_html("https://example.com/slides")
+    # Both should produce a URL ending in /slides/week-01/
+    assert "/slides/week-01/" in with_slash
+    assert "/slides/week-01/" in without_slash
+    # And not /slides//week-01/ from the with-slash variant
+    assert "/slides//week-01/" not in with_slash

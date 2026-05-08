@@ -99,6 +99,7 @@ class Week:
     workshop: Optional[Workshop]
     assignments: list[Assignment] = field(default_factory=list)
     discussion: Optional[Discussion] = None
+    slides: Optional[str] = None
 
     @property
     def module_name(self) -> str:
@@ -122,6 +123,27 @@ class Week:
         prompt_md = next_heading[0].strip()
         md = markdown.Markdown(extensions=["tables", "fenced_code"])
         return md.convert(prompt_md)
+
+    def slides_section_html(self, base_url: str) -> Optional[str]:
+        """Render the iframe block to embed the deck in a Canvas page.
+
+        Returns None when no slide deck is configured for this week.
+        Inline styles are used (not classes) because Canvas strips
+        unknown CSS classes from page bodies.
+        """
+        if not self.slides:
+            return None
+        url = f"{base_url.rstrip('/')}/{self.slides}/"
+        return (
+            "<h2>Slides</h2>\n"
+            '<div class="slides-embed" style="position:relative; '
+            'padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%;">\n'
+            f'  <iframe src="{url}" '
+            'style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" '
+            'allowfullscreen loading="lazy" title="Week Slides"></iframe>\n'
+            "</div>\n"
+            f'<p><a href="{url}" target="_blank" rel="noopener">Open slides in a new tab</a></p>\n'
+        )
 
     @property
     def file_key(self) -> str:
