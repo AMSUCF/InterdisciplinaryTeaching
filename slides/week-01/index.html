@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 — Week 1 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-01/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>ENG 6813<br/>Interdisciplinary Teaching</h1>
+        <p class="subtitle">Salter &amp; Stanfill &middot; Summer C 2026</p>
+      </section>
+
+      <!-- 2. COURSE DESCRIPTION -->
+      <section>
+        <h1>Course Description</h1>
+        <p>Theory and practice of designing interdisciplinary courses and curricula for the humanities. For graduate students who plan to seek faculty positions or who want to strengthen their teaching practice.</p>
+        <p>Engages foundational questions of pedagogy &mdash; how people learn, how to design effective assignments and assessments, how to build inclusive and student-centered courses &mdash; while addressing the challenges and opportunities of generative AI in the humanities classroom.</p>
+      </section>
+
+      <!-- 3. OVERVIEW -->
+      <section>
+        <h1>Over Twelve Weeks</h1>
+        <ul>
+          <li>Explore interdisciplinary humanities approaches to pedagogy.</li>
+          <li>Design a course from the ground up (or redesign an existing one).</li>
+          <li>Engage with agentic AI tools (Anthropic&rsquo;s Claude).</li>
+          <li>Develop professional materials, including a teaching statement.</li>
+        </ul>
+      </section>
+
+      <!-- 4. NEH WORKSHOP INTEGRATION -->
+      <section>
+        <h1>NEH Workshop Integration</h1>
+        <p>Connected to the NEH project <em>Building a Digital Humanities Generative AI Learning Community</em>. Optional live workshops, biweekly at CHDR, 10 AM &ndash; noon:</p>
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Workshop</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>May 13</td><td>Introducing AI for DH Pedagogy</td></tr>
+            <tr><td>May 27</td><td>AI for Textual Analysis</td></tr>
+            <tr><td>June 10</td><td>AI for Visual Analysis</td></tr>
+            <tr><td>June 24</td><td>Web and Interactive Applications</td></tr>
+            <tr><td>July 8</td><td>Playful Approaches and Creative Code</td></tr>
+            <tr><td>July 22</td><td>Agentic Futures, Curricular Sustainability</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 5. COURSE OBJECTIVES -->
+      <section>
+        <h1>Course Objectives</h1>
+        <ol>
+          <li>Engage with humanities and DH approaches to pedagogy.</li>
+          <li>Make informed decisions about teaching strategies, including AI policies.</li>
+          <li>Compose a meaningful teaching statement.</li>
+          <li>Design student-centered in-person and online courses.</li>
+          <li>Explore best practices for accessibility and universal design.</li>
+          <li>Critically evaluate generative AI tools in humanities pedagogy.</li>
+          <li>Use generative AI tools (Claude Artifacts, Claude Code Web) to create and assess pedagogical materials.</li>
+        </ol>
+      </section>
+
+      <!-- 6. TEXTS -->
+      <section>
+        <h1>Texts</h1>
+        <p>No required textbook. Readings are open-access articles, blog posts, and PDFs. We draw heavily on practitioners. Consider following:</p>
+        <ul>
+          <li><strong>Ethan Mollick</strong> &mdash; <em>One Useful Thing</em> (AI in education)</li>
+          <li><strong>Simon Willison</strong> &mdash; <em>simonwillison.net</em> (AI tools, vibe coding)</li>
+          <li><strong>Dan Cohen</strong> &mdash; <em>Humane Ingenuity</em> (AI, DH, cultural heritage)</li>
+          <li><strong>Ted Underwood</strong> &mdash; <em>The Stone and the Shell</em> (distant reading, AI)</li>
+        </ul>
+      </section>
+
+      <!-- 7. ANTHROPIC SUBSCRIPTION -->
+      <section>
+        <h1>Anthropic Subscription</h1>
+        <p>A paid subscription to <strong>Anthropic&rsquo;s Claude</strong> is required for hands-on exercises throughout the semester.</p>
+        <ul>
+          <li><strong>Claude Artifacts</strong> &mdash; used in the first half of the course.</li>
+          <li><strong>Claude Code Web</strong> &mdash; used in the second half.</li>
+        </ul>
+        <p>A paid (Pro) subscription is needed to access the full functionality the course assignments rely on.</p>
+      </section>
+
+      <!-- 8. GRADING -->
+      <section>
+        <h1>Grading</h1>
+        <table>
+          <thead><tr><th>Pts</th><th>Assignment</th><th>Due</th></tr></thead>
+          <tbody>
+            <tr><td>50</td><td>Activity Verification</td><td>May 15</td></tr>
+            <tr><td>240</td><td>Discussion Posts (8 &times; 30)</td><td>Weekly</td></tr>
+            <tr><td>200</td><td>Signature Assignment</td><td>Week 8</td></tr>
+            <tr><td>200</td><td>Course Syllabus</td><td>Week 10</td></tr>
+            <tr><td>150</td><td>Teaching Statement</td><td>Week 11</td></tr>
+            <tr><td>160</td><td>Final Portfolio &amp; Reflection</td><td>August 1</td></tr>
+          </tbody>
+        </table>
+        <p>Total: 1000 points. Late work accepted without penalty for one week after the listed deadline.</p>
+      </section>
+
+      <!-- 9. SECTION HEADER: DH PEDAGOGY -->
+      <section class="section-header">
+        <h1>DH Pedagogy</h1>
+      </section>
+
+      <!-- 10. CROXALL & JAKACKI STACK -->
+      <section>
+        <section>
+          <h1>Teaching as Invisible Labor</h1>
+          <p>Croxall &amp; Jakacki, citing Katharine Harris</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;Teaching is often invisible labor, [even] though it&rsquo;s the largest part of our jobs. Teaching and learning are hard to see not because of their size but instead because the institutions that employ us have chosen to value research and its outputs (publications, chiefly) rather than pedagogy and its results (spread of knowledge, chiefly, and often enlarged and even changed minds). This undervaluing of educational effort continues despite the fact that it is the students, through their tuition dollars, who make possible the time faculty have to research.&rdquo;
+            <span class="attribution">&mdash; Croxall &amp; Jakacki, citing Katharine Harris</span>
+          </blockquote>
+          <aside class="notes">
+            Croxall, Brian and Diane K. Jakacki. "What We Teach When We Teach DH." https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/
+          </aside>
+        </section>
+      </section>
+
+      <!-- 11. LOCKE — FOUR PILLARS STACK -->
+      <section>
+        <section>
+          <h1>DH Pedagogy as Essential Liberal Arts</h1>
+          <p>Brandon Locke &mdash; four learning objectives</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;The framework employed in LEADR consists of four flexible learning objectives that can be packaged and built upon to meet the needs of the course and the desired outcomes of the faculty member and partners. The objectives are 1) Information Literacy, 2) Digital Literacy, 3) Data Literacy, and 4) Computational Analysis.&rdquo;
+            <span class="attribution">&mdash; Locke, <em>DHQ</em> 11.3 (2017)</span>
+          </blockquote>
+          <aside class="notes">
+            Locke, Brandon. "Digital Humanities Pedagogy as Essential Liberal Education." DHQ 11.3 (2017). https://www.digitalhumanities.org/dhq/vol/11/3/000303/000303.html
+          </aside>
+        </section>
+      </section>
+
+      <!-- 12. LOCKE — INFORMATION LITERACY STACK -->
+      <section>
+        <section>
+          <h1>Information Literacy</h1>
+          <p>ACRL Framework &mdash; six frames</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;An overarching set of abilities in which students are consumers and creators of information who can participate successfully in collaborative spaces.&rdquo;
+            <span class="attribution">&mdash; ACRL 2015, via Locke</span>
+          </blockquote>
+          <ul>
+            <li>Authority Is Constructed and Contextual</li>
+            <li>Information Creation as a Process</li>
+            <li>Information Has Value</li>
+            <li>Research as Inquiry</li>
+            <li>Scholarship as Conversation</li>
+            <li>Searching as Strategic Exploration</li>
+          </ul>
+          <aside class="notes">
+            ACRL Framework for Information Literacy for Higher Education (2015), six frames as cited in Locke 2017.
+          </aside>
+        </section>
+      </section>
+
+      <!-- 13. LOCKE — DIGITAL LITERACY STACK -->
+      <section>
+        <section>
+          <h1>Digital Literacy</h1>
+          <p>ALA definition &mdash; cognitive plus technical</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;The ability to use information and communication technologies to find, understand, evaluate, create, and communicate digital information, an ability that requires both cognitive and technical skills.&rdquo;
+            <span class="attribution">&mdash; ALA 2013, via Locke</span>
+          </blockquote>
+          <p>Locke notes substantial overlap with information literacy, and that academic libraries play a key role &mdash; undergraduate students are not nearly as digitally literate as often assumed.</p>
+          <aside class="notes">
+            Locke 2017, citing ALA Digital Literacy report 2013, pp. 1, 5–17.
+          </aside>
+        </section>
+      </section>
+
+      <!-- 14. LOCKE — COMPUTATIONAL ANALYSIS STACK -->
+      <section>
+        <section>
+          <h1>Computational Analysis</h1>
+          <p>Methods grounded in disciplinary methodology</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;A wide-ranging set of tools and methodologies that rely upon computational processes to assist in the asking and exploring of research questions, including but not limited to text mining, network analysis, GIS and web mapping, 3D modeling, desktop fabrication, and topic modeling. These lessons are grounded in disciplinary methodology, and illustrate the ways in which scholars are using computationally-aided methods to ask new questions of their sources, as well as exploring more traditional questions.&rdquo;
+            <span class="attribution">&mdash; Locke, <em>DHQ</em> 11.3 (2017)</span>
+          </blockquote>
+          <aside class="notes">
+            Locke 2017, on computational analysis as a fourth literacy alongside information, digital, and data.
+          </aside>
+        </section>
+      </section>
+
+      <!-- 15. RUSHKOFF STACK -->
+      <section>
+        <section>
+          <h1>Program or Be Programmed</h1>
+          <p>Douglas Rushkoff &mdash; do you have to learn to program?</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;And while I always answer, &lsquo;Yes, you do have to learn to program,&rsquo; the real answer is probably no. You don&rsquo;t. You can get by without becoming a literate participant of the digital age. You may not know what&rsquo;s going on, you may not have much of an impact on the future of our species, and you may begin to feel like technology knows more about you than you know about it &mdash; but no, you don&rsquo;t have to learn to program.&rdquo;
+            <span class="attribution">&mdash; Rushkoff &amp; Purvis, <em>Program or Be Programmed</em> (2011), 7&ndash;8</span>
+          </blockquote>
+          <aside class="notes">
+            Rushkoff and Purvis 2011, pp. 7–8, as cited via Locke 2017.
+          </aside>
+        </section>
+      </section>
+
+      <!-- 16. IMAGE — Mollick AI policy -->
+      <section class="webcomic-no">
+        <h1>An AI Policy</h1>
+        <img src="images/ai-policy.png" alt="Ethan Mollick's syllabus AI policy: students are expected to use AI as a writing/thinking tool, must take responsibility for accuracy and citation, and the AI is treated as a sometimes-unreliable collaborator." />
+        <p class="image-caption">Ethan Mollick&rsquo;s class AI policy</p>
+        <aside class="notes">
+          Image from Mollick, "My class required AI." https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive
+        </aside>
+      </section>
+
+      <!-- 17. MOLLICK — "Without training" STACK -->
+      <section>
+        <section>
+          <h1>Without Training, Everyone Uses AI Wrong</h1>
+          <p>Ethan Mollick &mdash; on bad first prompts</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;I have been hearing reports from teachers about how they are seeing lots of badly-written AI essays, even though ChatGPT is capable of quite good writing. I think I know why. Almost everyone&rsquo;s initial attempts at using AI are bad. Almost everyone&rsquo;s first prompts were very straightforward. They usually pasted in the assignment directly, something like generate a 5 paragraph essay on selecting leaders. Sometimes they went a little further: use an academic tone or write it for an MBA class. The result was almost always a mediocre C&minus; essay. I think this is what most teachers are seeing, and why a lot of people underestimate what ChatGPT can do as a writing tool.&rdquo;
+            <span class="attribution">&mdash; Mollick, <em>One Useful Thing</em></span>
+          </blockquote>
+          <aside class="notes">
+            Mollick, "My class required AI. Here's what I've learned so far." https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive
+          </aside>
+        </section>
+      </section>
+
+      <!-- 18. IMAGE — SMBC webcomic -->
+      <section class="webcomic">
+        <h1>Prompts, briefly</h1>
+        <img src="images/smbc-prompt.png" alt="A Saturday Morning Breakfast Cereal webcomic about how prompts to AI tools shape the output." />
+        <p class="image-caption">Zach Weinersmith, <em>SMBC</em></p>
+        <aside class="notes">
+          Webcomic credit: Saturday Morning Breakfast Cereal (smbc-comics.com). Used here to illustrate Mollick's point that initial prompts are usually bad.
+        </aside>
+      </section>
+
+      <!-- 19. MOLLICK — "Students understand accuracy and bias" STACK -->
+      <section>
+        <section>
+          <h1>Students Understand Accuracy and Bias Issues</h1>
+          <p>Ethan Mollick &mdash; on hallucinations in student work</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;I have seen lots of educators concerned about the fact that the AI lies, frequently and well. But, seeing my students&rsquo; work, I think this is less of a problem than many think. Students understood the unreliability of AI very quickly, and took seriously my policy that they are responsible for the facts in their essays. It was clear that they carefully checked the assertions in the AI work (another learning opportunity!), and many reported finding the usual hallucinations &mdash; made up stories, made up citations &mdash; though the degree to which these problems were overt varied from prompt to prompt.&rdquo;
+            <span class="attribution">&mdash; Mollick, <em>One Useful Thing</em></span>
+          </blockquote>
+          <aside class="notes">
+            Mollick, "My class required AI. Here's what I've learned so far." https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive
+          </aside>
+        </section>
+      </section>
+
+      <!-- 20. IMAGE — xkcd disclaimer -->
+      <section class="webcomic">
+        <h1>Disclaimers</h1>
+        <img src="images/xkcd-disclaimer.png" alt="An xkcd webcomic about disclaimers and trust in AI-generated content." />
+        <p class="image-caption">Randall Munroe, <em>xkcd</em></p>
+        <aside class="notes">
+          Webcomic credit: xkcd (xkcd.com). Paired with Mollick's point about students learning to verify AI-generated content.
+        </aside>
+      </section>
+
+      <!-- 21. MOLLICK — "AI is everywhere already" STACK -->
+      <section>
+        <section>
+          <h1>AI Is Everywhere Already</h1>
+          <p>Ethan Mollick &mdash; the world of teaching is now more complicated</p>
+        </section>
+        <section>
+          <blockquote>
+            &ldquo;Even if I didn&rsquo;t embrace AI, it is also clear that AI is now everywhere in classes. For example, students used it to help them come up with ideas for class projects, even before I even taught them how to do that. As a result, the projects this semester are much better than previous pre-AI classes. This has led to greater project success rates and more engaged teams. On the downside, I find students also raise their hands to ask questions less. I suspect this might be because, as one of them told me, they can later ask ChatGPT to explain things they didn&rsquo;t get without needing to speak in front of the class. The world of teaching is now more complicated in ways that are exciting, as well as a bit unnerving.&rdquo;
+            <span class="attribution">&mdash; Mollick, <em>One Useful Thing</em></span>
+          </blockquote>
+          <aside class="notes">
+            Mollick, "My class required AI. Here's what I've learned so far." https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive
+          </aside>
+        </section>
+      </section>
+
+      <!-- 22. CLOSING — Week 1 to-dos -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>Activity Verification</strong> &mdash; due Friday, May 15.</li>
+          <li><strong>Discussion: Introduce yourself</strong> &mdash; due Sunday, May 17.</li>
+          <li><strong>Optional NEH Workshop 1</strong> &mdash; Tuesday, May 13, 10 AM&ndash;noon, CHDR.</li>
+        </ul>
+        <p>See <code>weeks/week-01.md</code> on Canvas for readings, links, and the discussion prompt.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
