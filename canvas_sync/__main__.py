@@ -82,6 +82,12 @@ def _splice_slides(body_html: str, slides_html: Optional[str]) -> str:
     return body_html[:idx] + slides_html + body_html[idx:]
 
 
+def _render_page_body(cs: CanvasSync, week) -> str:
+    """Render the Canvas page body for a week, splicing in the slide deck if configured."""
+    slides_html = week.slides_section_html(cs.config.slides_base_url)
+    return _splice_slides(week.body_html, slides_html)
+
+
 def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
     week_key = week.file_key
     week_state = state.get_week(week_key) or {}
@@ -99,8 +105,7 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
 
     # Page
     if "page_url" not in week_state:
-        slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
-        body_with_slides = _splice_slides(week.body_html, slides_html)
+        body_with_slides = _render_page_body(cs, week)
         page_url = cs.create_page(week, body_html=body_with_slides)
         week_state["page_url"] = page_url
         cs.add_module_item(module_id, "Page", page_url, week.module_name)
@@ -110,16 +115,14 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
             page = cs.get_page(week_state["page_url"])
         except Exception:
             console.print(f"  [yellow]Page no longer exists in Canvas, recreating...[/yellow]")
-            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
-            body_with_slides = _splice_slides(week.body_html, slides_html)
+            body_with_slides = _render_page_body(cs, week)
             page_url = cs.create_page(week, body_html=body_with_slides)
             week_state["page_url"] = page_url
             cs.add_module_item(module_id, "Page", page_url, week.module_name)
             console.print(f"  [green]Recreated page[/green] (url={page_url})")
             page = None
         if page is not None:
-            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
-            body_with_slides = _splice_slides(week.body_html, slides_html)
+            body_with_slides = _render_page_body(cs, week)
             local_fields = {"title": week.module_name, "body": body_with_slides}
             remote_fields = {"title": page.title, "body": page.body or ""}
             diffs = compute_diff(local_fields, remote_fields)
@@ -295,8 +298,7 @@ def cmd_diff(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False
 
         if "page_url" in ws:
             page = cs.get_page(ws["page_url"])
-            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
-            body_with_slides = _splice_slides(week.body_html, slides_html)
+            body_with_slides = _render_page_body(cs, week)
             local_fields = {"title": week.module_name, "body": body_with_slides}
             remote_fields = {"title": page.title, "body": page.body or ""}
             diffs = compute_diff(local_fields, remote_fields)

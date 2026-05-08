@@ -95,3 +95,34 @@ def test_splice_slides_returns_body_unchanged_when_slides_html_none():
     body = "<p>Hello</p>\n<h2>Readings</h2>\n"
     result = _splice_slides(body, None)
     assert result == body
+
+
+from unittest.mock import MagicMock
+from canvas_sync.__main__ import _render_page_body
+
+
+def test_render_page_body_no_slides_returns_body_html():
+    """When week has no slides, _render_page_body returns body_html unchanged."""
+    cs = MagicMock()
+    cs.config.slides_base_url = "https://example.com/slides/"
+    week = MagicMock()
+    week.slides = None
+    week.body_html = "<p>Hello</p>\n<h2>Readings</h2>\n"
+    week.slides_section_html.return_value = None  # slides_section_html returns None when slides is unset
+    result = _render_page_body(cs, week)
+    assert result == "<p>Hello</p>\n<h2>Readings</h2>\n"
+
+
+def test_render_page_body_with_slides_splices_iframe():
+    """When week has slides, _render_page_body splices the iframe before the first <h2>."""
+    cs = MagicMock()
+    cs.config.slides_base_url = "https://example.com/slides/"
+    week = MagicMock()
+    week.slides = "week-01"
+    week.body_html = "<p>Welcome.</p>\n<h2>Readings</h2>\n"
+    week.slides_section_html.return_value = "<h2>Slides</h2>\n<iframe></iframe>\n"
+    result = _render_page_body(cs, week)
+    assert "<h2>Slides</h2>" in result
+    slides_idx = result.index("<h2>Slides</h2>")
+    readings_idx = result.index("<h2>Readings</h2>")
+    assert slides_idx < readings_idx
