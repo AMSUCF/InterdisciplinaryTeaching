@@ -89,3 +89,34 @@ def test_load_all_weeks_ignores_non_week_files(tmp_path):
     (tmp_path / "README.md").write_text("# Not a week file")
     weeks = load_all_weeks(str(tmp_path))
     assert len(weeks) == 1
+
+
+SAMPLE_WITH_SLIDES = """---
+week: 1
+title: "Welcome and Interdisciplinary Teaching"
+starts: 2026-05-11
+slides: week-01
+assignments:
+  - title: "Activity Verification"
+    points: 50
+    due: 2026-05-15
+---
+
+## Readings
+
+- Some reading
+"""
+
+
+def test_parse_week_file_with_slides(tmp_path):
+    f = tmp_path / "week-01.md"
+    f.write_text(SAMPLE_WITH_SLIDES)
+    week = parse_week_file(str(f))
+    assert week.slides == "week-01"
+
+
+def test_parse_week_file_without_slides_defaults_none(tmp_path):
+    f = tmp_path / "week-01.md"
+    f.write_text(SAMPLE_WEEK_MD)  # SAMPLE_WEEK_MD does not contain a `slides:` field
+    week = parse_week_file(str(f))
+    assert week.slides is None
