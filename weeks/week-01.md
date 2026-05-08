@@ -2,6 +2,7 @@
 week: 1
 title: "Welcome and Interdisciplinary Teaching"
 starts: 2026-05-11
+slides: week-01
 workshop:
   title: "Workshop 1: Introducing AI for DH Pedagogy"
   date: 2026-05-13
