@@ -1,3 +1,7 @@
 api_url: https://webcourses.ucf.edu
 api_key: YOUR_API_KEY_HERE
 course_id: 123456
+# Optional: base URL where reveal.js slide decks are published.
+# Used by the Week.slides_section_html() helper to build iframe URLs
+# for any week with a `slides:` frontmatter field.
+# slides_base_url: https://anastasiasalter.net/InterdisciplinaryTeaching/slides/

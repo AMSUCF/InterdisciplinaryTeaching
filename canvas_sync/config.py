@@ -5,6 +5,8 @@ from dataclasses import dataclass
 
 import yaml
 
+DEFAULT_SLIDES_BASE_URL = "https://anastasiasalter.net/InterdisciplinaryTeaching/slides/"
+
 
 @dataclass
 class Config:
@@ -12,6 +14,7 @@ class Config:
     api_key: str
     course_id: int
     course_start: str = ""
+    slides_base_url: str = DEFAULT_SLIDES_BASE_URL
 
 
 def load_config(path: str) -> Config:
@@ -22,4 +25,5 @@ def load_config(path: str) -> Config:
         api_key=data["api_key"],
         course_id=data["course_id"],
         course_start=str(data.get("course_start", "")),
+        slides_base_url=data.get("slides_base_url", DEFAULT_SLIDES_BASE_URL),
     )

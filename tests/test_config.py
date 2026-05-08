@@ -27,3 +27,26 @@ def test_load_config_missing_field(tmp_path):
 def test_load_config_file_not_found():
     with pytest.raises(FileNotFoundError):
         load_config("/nonexistent/canvas_config.yaml")
+
+
+def test_load_config_default_slides_base_url(tmp_path):
+    config_file = tmp_path / "canvas_config.yaml"
+    config_file.write_text(
+        "api_url: https://webcourses.ucf.edu\n"
+        "api_key: test-key-123\n"
+        "course_id: 99999\n"
+    )
+    cfg = load_config(str(config_file))
+    assert cfg.slides_base_url == "https://anastasiasalter.net/InterdisciplinaryTeaching/slides/"
+
+
+def test_load_config_custom_slides_base_url(tmp_path):
+    config_file = tmp_path / "canvas_config.yaml"
+    config_file.write_text(
+        "api_url: https://webcourses.ucf.edu\n"
+        "api_key: test-key-123\n"
+        "course_id: 99999\n"
+        "slides_base_url: https://example.com/slides/\n"
+    )
+    cfg = load_config(str(config_file))
+    assert cfg.slides_base_url == "https://example.com/slides/"
