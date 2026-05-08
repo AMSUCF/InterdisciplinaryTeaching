@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 from canvasapi import Canvas
 from canvasapi.exceptions import ResourceDoesNotExist
 
@@ -9,6 +11,7 @@ from canvas_sync.models import Assignment, Discussion
 
 class CanvasSync:
     def __init__(self, config: Config):
+        self.config = config
         self._canvas = Canvas(config.api_url, config.api_key)
         self._course = self._canvas.get_course(config.course_id)
 
@@ -18,11 +21,11 @@ class CanvasSync:
         )
         return module.id
 
-    def create_page(self, week) -> str:
+    def create_page(self, week, body_html: Optional[str] = None) -> str:
         page = self._course.create_page(
             wiki_page={
                 "title": week.module_name,
-                "body": week.body_html,
+                "body": body_html if body_html is not None else week.body_html,
                 "published": False,
             }
         )

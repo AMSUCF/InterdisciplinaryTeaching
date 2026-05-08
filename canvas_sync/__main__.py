@@ -5,6 +5,7 @@ import argparse
 import os
 import sys
 from datetime import datetime
+from typing import Optional
 
 from rich.console import Console
 from rich.table import Table
@@ -66,6 +67,21 @@ def cmd_init(config, weeks_dir, state: SyncState):
     console.print("[bold green]Init complete.[/bold green]")
 
 
+def _splice_slides(body_html: str, slides_html: Optional[str]) -> str:
+    """Insert the slides iframe block into a rendered page body.
+
+    Strategy: place the slides block immediately before the first `<h2>`
+    heading. If no `<h2>` is present, append to the end. If `slides_html`
+    is empty or None, return the body unchanged.
+    """
+    if not slides_html:
+        return body_html
+    idx = body_html.find("<h2")
+    if idx == -1:
+        return body_html.rstrip() + "\n" + slides_html
+    return body_html[:idx] + slides_html + body_html[idx:]
+
+
 def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
     week_key = week.file_key
     week_state = state.get_week(week_key) or {}
@@ -83,7 +99,9 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
 
     # Page
     if "page_url" not in week_state:
-        page_url = cs.create_page(week)
+        slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
+        body_with_slides = _splice_slides(week.body_html, slides_html)
+        page_url = cs.create_page(week, body_html=body_with_slides)
         week_state["page_url"] = page_url
         cs.add_module_item(module_id, "Page", page_url, week.module_name)
         console.print(f"  [green]Created page[/green] (url={page_url})")
@@ -92,13 +110,17 @@ def _push_week(cs: CanvasSync, week, state: SyncState, force: bool):
             page = cs.get_page(week_state["page_url"])
         except Exception:
             console.print(f"  [yellow]Page no longer exists in Canvas, recreating...[/yellow]")
-            page_url = cs.create_page(week)
+            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
+            body_with_slides = _splice_slides(week.body_html, slides_html)
+            page_url = cs.create_page(week, body_html=body_with_slides)
             week_state["page_url"] = page_url
             cs.add_module_item(module_id, "Page", page_url, week.module_name)
             console.print(f"  [green]Recreated page[/green] (url={page_url})")
             page = None
         if page is not None:
-            local_fields = {"title": week.module_name, "body": week.body_html}
+            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
+            body_with_slides = _splice_slides(week.body_html, slides_html)
+            local_fields = {"title": week.module_name, "body": body_with_slides}
             remote_fields = {"title": page.title, "body": page.body or ""}
             diffs = compute_diff(local_fields, remote_fields)
             if diffs:
@@ -273,7 +295,9 @@ def cmd_diff(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False
 
         if "page_url" in ws:
             page = cs.get_page(ws["page_url"])
-            local_fields = {"title": week.module_name, "body": week.body_html}
+            slides_html = week.slides_section_html(cs.config.slides_base_url) if week.slides else None
+            body_with_slides = _splice_slides(week.body_html, slides_html)
+            local_fields = {"title": week.module_name, "body": body_with_slides}
             remote_fields = {"title": page.title, "body": page.body or ""}
             diffs = compute_diff(local_fields, remote_fields)
             if diffs:
