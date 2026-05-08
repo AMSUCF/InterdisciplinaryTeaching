@@ -1,0 +1,246 @@
+/* ============================================
+   Custom reveal.js theme — Interdisciplinary Teaching
+   Mirrors site fonts and color tokens from assets/css/style.css.
+   Loaded after reveal.css. Drives off [data-theme] on <html>.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+/* --- Light mode tokens (default) --- */
+:root,
+[data-theme="light"] {
+  --bg: #f5f0e6;
+  --bg-alt: #ebe4d4;
+  --text: #2c2416;
+  --text-muted: #6b5d4d;
+  --heading: #3a2a14;
+  --link: #5b6e28;
+  --link-hover: #3d4a1a;
+  --accent: #7a8b3c;
+  --accent-soft: #c8d4a0;
+  --border: #c9bfa8;
+}
+
+/* --- Dark mode tokens --- */
+[data-theme="dark"] {
+  --bg: #1a1a12;
+  --bg-alt: #242418;
+  --text: #c8c0a8;
+  --text-muted: #8a8068;
+  --heading: #d8d0b0;
+  --link: #a0c040;
+  --link-hover: #c8e060;
+  --accent: #7a8b3c;
+  --accent-soft: #3a4420;
+  --border: #3e3a2c;
+}
+
+/* --- Base reveal surface --- */
+html, body {
+  background: var(--bg);
+}
+
+.reveal {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  padding: 1.5em 1em;
+}
+
+/* --- Headings --- */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: 'Press Start 2P', monospace;
+  color: var(--heading);
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* Press Start 2P is wide; reveal defaults overflow. Scale down. */
+.reveal h1 { font-size: 1.4em; margin-bottom: 0.6em; }
+.reveal h2 { font-size: 1.0em; margin-bottom: 0.5em; color: var(--accent); }
+.reveal h3 { font-size: 0.8em; margin-bottom: 0.4em; color: var(--accent); }
+
+/* Section header / transition slide */
+.reveal section.section-header h1 {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+/* Title slide */
+.reveal section.title-slide {
+  text-align: center;
+}
+.reveal section.title-slide h1 {
+  text-align: center;
+  font-size: 1.2em;
+}
+.reveal section.title-slide .subtitle {
+  font-family: 'VT323', monospace;
+  font-size: 1.6em;
+  color: var(--text-muted);
+  margin-top: 1em;
+}
+
+/* --- Body text --- */
+.reveal p,
+.reveal li {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.7em;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.reveal ul, .reveal ol {
+  margin-left: 1.5em;
+}
+
+.reveal li {
+  margin-bottom: 0.4em;
+}
+
+.reveal strong { color: var(--heading); }
+
+.reveal a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.reveal a:hover {
+  color: var(--link-hover);
+}
+
+/* --- Blockquote (used for long source quotes) --- */
+.reveal blockquote {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: normal;
+  font-size: 0.55em;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg-alt);
+  border-left: 4px solid var(--accent);
+  padding: 1em 1.4em;
+  margin: 0.5em 0;
+  width: 90%;
+  box-shadow: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.reveal blockquote .attribution {
+  display: block;
+  font-family: 'VT323', monospace;
+  font-style: normal;
+  font-size: 1.2em;
+  color: var(--text-muted);
+  margin-top: 0.8em;
+}
+
+/* --- Tables --- */
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.55em;
+  margin: 0.5em 0;
+}
+.reveal table th {
+  background: var(--accent);
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  text-align: left;
+  padding: 0.5em 0.7em;
+}
+.reveal table td {
+  padding: 0.5em 0.7em;
+  border-bottom: 1px solid var(--border);
+}
+.reveal table tr:nth-child(even) td {
+  background: var(--bg-alt);
+}
+
+/* --- Code --- */
+.reveal code {
+  font-family: 'VT323', 'Courier New', monospace;
+  background: var(--bg-alt);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+/* --- Images --- */
+.reveal section img {
+  max-height: 80vh;
+  max-width: 90%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Webcomic slides get a small accent border */
+.reveal section.webcomic img {
+  border: 2px solid var(--accent);
+  background: #fff;  /* xkcd/SMBC are line art on white */
+  padding: 0.4em;
+}
+
+.reveal .image-caption {
+  font-family: 'VT323', monospace;
+  font-size: 1.0em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+/* --- Reveal UI chrome --- */
+.reveal .controls {
+  color: var(--accent);
+}
+.reveal .progress {
+  color: var(--accent);
+  background: var(--bg-alt);
+}
+.reveal .slide-number {
+  font-family: 'VT323', monospace;
+  background: transparent;
+  color: var(--text-muted);
+}
+
+/* --- In-deck dark-mode toggle button --- */
+.deck-theme-toggle {
+  position: fixed;
+  top: 0.6em;
+  right: 0.6em;
+  z-index: 50;
+  background: var(--bg-alt);
+  color: var(--text);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.35em 0.55em;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 1.1em;
+  line-height: 1;
+}
+.deck-theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+[data-theme="light"] .deck-theme-toggle .dark-icon { display: none; }
+[data-theme="dark"] .deck-theme-toggle .light-icon { display: none; }
+
+/* --- Print fallback --- */
+@media print {
+  .deck-theme-toggle { display: none; }
+}
