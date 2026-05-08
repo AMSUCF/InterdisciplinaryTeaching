@@ -16,6 +16,9 @@
 
   <main class="content-wrap">
     <article class="page-content">
+      {% if page.slides %}
+        {% include slides-embed.html slug=page.slides %}
+      {% endif %}
       {{ content }}
     </article>
   </main>
