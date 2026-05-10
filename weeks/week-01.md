@@ -11,7 +11,7 @@ workshop:
 assignments:
   - title: "Activity Verification"
     points: 50
-    due: 2026-05-15
+    due: 2026-05-19
 discussion:
   title: "Introduce yourself and describe your teaching experience"
   points: 30
@@ -30,7 +30,7 @@ Welcome to ENG 6813: Interdisciplinary Teaching. This week introduces the course
 
 ## Assignments
 
-- **Activity Verification** (50 points) — Complete the brief survey posted on Webcourses to confirm your enrollment. Due Friday, May 15.
+- **Activity Verification** (50 points) — Complete the brief survey posted on Webcourses to confirm your enrollment. Due Tuesday, May 19.
 
 ## Discussion Prompt
 

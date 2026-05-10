@@ -78,7 +78,7 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 
 | Points | Assignment Summary | Due |
 |--------|--------------------|-----|
-| 50 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Friday, May 15 |
+| 50 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Tuesday, May 19 |
 | 240 | **Discussion Posts** - Discussions alternate between course design milestones and AI/pedagogy exercises (8 posts, 30 points each). No discussion posts are due in weeks when major assignments are due. | Weekly |
 | 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
 | 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |

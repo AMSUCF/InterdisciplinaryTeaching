@@ -188,8 +188,12 @@ html, body {
 }
 
 /* --- Images --- */
+/* Reveal renders slides in a fixed coordinate space (default 960x700) and
+   scales the container to the viewport, so vh constraints don't apply in
+   slide-space. Cap height in slide-space pixels so heading + image +
+   caption fit within the 700px slide. */
 .reveal section img {
-  max-height: 80vh;
+  max-height: 480px;
   max-width: 90%;
   border: none;
   background: none;

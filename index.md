@@ -102,7 +102,7 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 
 | Points | Assignment Summary | Due |
 |--------|--------------------|-----|
-| 50 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Friday, May 15 |
+| 50 | **Activity Verification** - Complete the brief survey posted on Webcourses to confirm your enrollment. | Tuesday, May 19 |
 | 240 | **Discussion Posts** - Discussions alternate between course design milestones and AI/pedagogy exercises (8 posts, 30 points each). No discussion posts are due in weeks when major assignments are due. | Weekly |
 | 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
 | 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
@@ -131,7 +131,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Locke, Brandon. ["Digital Humanities Pedagogy as Essential Liberal Education: A Framework for Curriculum Development."](https://www.digitalhumanities.org/dhq/vol/11/3/000303/000303.html) *DHQ: Digital Humanities Quarterly* 11.3 (2017).
 -   Croxall, Brian and Diane K. Jakacki. ["What We Teach When We Teach DH."](https://dhdebates.gc.cuny.edu/read/what-we-teach-when-we-teach-dh/section/c2790674-f5bb-41b7-9938-a47a4d2fb308#intro) *What We Teach When We Teach DH.*
 -   Mollick, Ethan. ["My class required AI. Here's what I've learned so far."](https://www.oneusefulthing.org/p/my-class-required-ai-heres-what-ive) *One Useful Thing.*
--   **Due: Activity Verification (Friday, May 15)**
+-   **Due: Activity Verification (Tuesday, May 19)**
 -   **Discussion: Introduce yourself and describe your teaching experience** (current or anticipated). What courses do you teach or hope to teach? What is your initial relationship with AI tools in your own work?
 
 ### [Week Two: Learning Theories and Course Design (Monday, May 18)](weeks/week-02.html)
