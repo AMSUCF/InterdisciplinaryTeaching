@@ -181,3 +181,30 @@ def test_week_slides_section_html_handles_trailing_slash():
     assert "/slides/week-01/" in without_slash
     # And not /slides//week-01/ from the with-slash variant
     assert "/slides//week-01/" not in with_slash
+
+
+def test_week_live_default_false():
+    w = Week(
+        week=2,
+        title="Learning Theories",
+        starts="2026-05-18",
+        body_markdown="## Readings",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+    )
+    assert w.live is False
+
+
+def test_week_live_can_be_set_true():
+    w = Week(
+        week=1,
+        title="Welcome",
+        starts="2026-05-11",
+        body_markdown="## Readings",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+        live=True,
+    )
+    assert w.live is True

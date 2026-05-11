@@ -100,6 +100,7 @@ class Week:
     assignments: list[Assignment] = field(default_factory=list)
     discussion: Optional[Discussion] = None
     slides: Optional[str] = None
+    live: bool = False
 
     @property
     def module_name(self) -> str:
