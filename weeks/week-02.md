@@ -2,6 +2,7 @@
 week: 2
 title: "Learning Theories and Course Design"
 starts: 2026-05-18
+slides: week-02
 discussion:
   title: "Course Design Plan"
   points: 30
