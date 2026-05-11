@@ -280,6 +280,7 @@ def cmd_status(config, weeks_dir, state: SyncState):
     weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
     table = Table(title="Canvas Sync Status")
     table.add_column("Week", style="bold")
+    table.add_column("Live")
     table.add_column("Module")
     table.add_column("Page")
     table.add_column("Assignments")
@@ -287,16 +288,17 @@ def cmd_status(config, weeks_dir, state: SyncState):
     table.add_column("Last Synced")
 
     for week in weeks:
+        live = "[green]✓[/green]" if week.live else ""
         ws = state.get_week(week.file_key)
         if ws is None:
-            table.add_row(week.module_name, "—", "—", "—", "—", "never")
+            table.add_row(week.module_name, live, "—", "—", "—", "—", "never")
         else:
             module = f"[green]✓[/green] {ws.get('module_id', '—')}" if "module_id" in ws else "—"
             page = f"[green]✓[/green]" if "page_url" in ws else "—"
             assigns = str(len(ws.get("assignments", []))) if ws.get("assignments") else "—"
             disc = f"[green]✓[/green]" if "discussion_id" in ws else "—"
             synced = ws.get("last_synced", "never")
-            table.add_row(week.module_name, module, page, assigns, disc, synced)
+            table.add_row(week.module_name, live, module, page, assigns, disc, synced)
 
     console.print(table)
 
