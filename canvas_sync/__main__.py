@@ -41,6 +41,11 @@ def build_parser() -> argparse.ArgumentParser:
     push_group.add_argument("--all", action="store_true", help="Push all weeks")
     push_group.add_argument("--week", type=int, help="Push a specific week number")
     push_p.add_argument("--force", action="store_true", help="Skip confirmation prompts")
+    push_p.add_argument(
+        "--override-live",
+        action="store_true",
+        help="Push even if a week is marked live in its frontmatter",
+    )
 
     status_p = sub.add_parser("status", help="Show sync status for all weeks")  # noqa: F841
 

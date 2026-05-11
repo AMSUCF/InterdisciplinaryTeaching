@@ -126,3 +126,15 @@ def test_render_page_body_with_slides_splices_iframe():
     slides_idx = result.index("<h2>Slides</h2>")
     readings_idx = result.index("<h2>Readings</h2>")
     assert slides_idx < readings_idx
+
+
+def test_push_override_live_default_false():
+    parser = build_parser()
+    args = parser.parse_args(["push", "--week", "1"])
+    assert args.override_live is False
+
+
+def test_push_override_live_true():
+    parser = build_parser()
+    args = parser.parse_args(["push", "--week", "1", "--override-live"])
+    assert args.override_live is True
