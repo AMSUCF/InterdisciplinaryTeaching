@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""commit-msg hook: refuse commits that touch a week which was already
+live in HEAD, unless the commit message contains the literal token
+`[live-edit]`.
+
+Installation (one-time, per clone):
+    git config core.hooksPath .githooks
+
+Bypass for one commit:
+    Include `[live-edit]` anywhere in the commit message, OR run
+    `git commit --no-verify` (universal escape hatch — skips all hooks).
+"""
+from __future__ import annotations
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+# Make canvas_sync importable when the hook runs from the repo root.
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from canvas_sync.live import head_is_live  # noqa: E402
+
+
+OVERRIDE_TOKEN = "[live-edit]"
+
+
+def main(argv):
+    if len(argv) < 2:
+        print("commit-msg hook invoked without a message path; skipping.", file=sys.stderr)
+        return 0
+    msg_path = argv[1]
+    try:
+        message = Path(msg_path).read_text(encoding="utf-8")
+    except OSError as exc:
+        print(f"commit-msg hook: could not read message file ({exc}); skipping.", file=sys.stderr)
+        return 0
+
+    if OVERRIDE_TOKEN in message:
+        return 0
+
+    result = subprocess.run(
+        ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        # If git itself fails here, fall through rather than block.
+        return 0
+
+    staged = [line for line in result.stdout.splitlines() if line.strip()]
+    blocked = []
+    for path in staged:
+        if not path.startswith("weeks/") or not path.endswith(".md"):
+            continue
+        if head_is_live(path, repo_root=str(REPO_ROOT)):
+            blocked.append(path)
+
+    if not blocked:
+        return 0
+
+    sys.stderr.write(
+        "\nThis commit edits week(s) that are already live in HEAD:\n"
+    )
+    for p in blocked:
+        sys.stderr.write(f"  - {p}\n")
+    sys.stderr.write(
+        "\nLive weeks should not be edited without intent. To proceed,\n"
+        f"include the token {OVERRIDE_TOKEN} anywhere in your commit message,\n"
+        "or use `git commit --no-verify` (skips all hooks).\n\n"
+    )
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
