@@ -138,3 +138,41 @@ def test_push_override_live_true():
     parser = build_parser()
     args = parser.parse_args(["push", "--week", "1", "--override-live"])
     assert args.override_live is True
+
+
+from canvas_sync.__main__ import _filter_live_weeks
+from canvas_sync.models import Week
+
+
+def _wk(num, live=False):
+    return Week(
+        week=num,
+        title=f"W{num}",
+        starts="2026-05-11",
+        body_markdown="",
+        workshop=None,
+        assignments=[],
+        discussion=None,
+        live=live,
+    )
+
+
+def test_filter_live_weeks_no_live_pass_through():
+    weeks = [_wk(1, live=False), _wk(2, live=False)]
+    kept, skipped = _filter_live_weeks(weeks, override_live=False)
+    assert [w.week for w in kept] == [1, 2]
+    assert skipped == []
+
+
+def test_filter_live_weeks_skips_when_not_overridden():
+    weeks = [_wk(1, live=True), _wk(2, live=False), _wk(3, live=True)]
+    kept, skipped = _filter_live_weeks(weeks, override_live=False)
+    assert [w.week for w in kept] == [2]
+    assert [w.week for w in skipped] == [1, 3]
+
+
+def test_filter_live_weeks_override_keeps_all():
+    weeks = [_wk(1, live=True), _wk(2, live=False)]
+    kept, skipped = _filter_live_weeks(weeks, override_live=True)
+    assert [w.week for w in kept] == [1, 2]
+    assert skipped == []

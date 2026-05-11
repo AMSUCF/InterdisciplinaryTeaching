@@ -239,7 +239,17 @@ def _confirm(label: str, apply_all_ref: list) -> bool:
     return False
 
 
-def cmd_push(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False, force=False):
+def _filter_live_weeks(weeks, override_live: bool):
+    """Split weeks into (kept, skipped). If override_live is False,
+    weeks with `live: true` go to skipped; otherwise everything is kept."""
+    if override_live:
+        return list(weeks), []
+    kept = [w for w in weeks if not w.live]
+    skipped = [w for w in weeks if w.live]
+    return kept, skipped
+
+
+def cmd_push(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False, force=False, override_live=False):
     cs = CanvasSync(config)
     if all_weeks:
         weeks = load_all_weeks(weeks_dir, course_start=config.course_start)
@@ -250,9 +260,20 @@ def cmd_push(config, weeks_dir, state: SyncState, week_num=None, all_weeks=False
             sys.exit(1)
         weeks = [parse_week_file(path, course_start=config.course_start)]
 
-    for week in weeks:
+    kept, skipped = _filter_live_weeks(weeks, override_live)
+    for w in skipped:
+        console.print(
+            f"[yellow]Skipping {w.module_name}: marked live. "
+            f"Pass --override-live to push anyway.[/yellow]"
+        )
+
+    for week in kept:
         _push_week(cs, week, state, force)
-    console.print("\n[bold green]Push complete.[/bold green]")
+
+    if kept:
+        console.print("\n[bold green]Push complete.[/bold green]")
+    if skipped:
+        sys.exit(2)
 
 
 def cmd_status(config, weeks_dir, state: SyncState):
@@ -369,7 +390,15 @@ def main():
     if args.command == "init":
         cmd_init(config, args.weeks_dir, state)
     elif args.command == "push":
-        cmd_push(config, args.weeks_dir, state, week_num=args.week, all_weeks=args.all, force=args.force)
+        cmd_push(
+            config,
+            args.weeks_dir,
+            state,
+            week_num=args.week,
+            all_weeks=args.all,
+            force=args.force,
+            override_live=args.override_live,
+        )
     elif args.command == "status":
         cmd_status(config, args.weeks_dir, state)
     elif args.command == "diff":
