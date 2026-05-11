@@ -120,3 +120,34 @@ def test_parse_week_file_without_slides_defaults_none(tmp_path):
     f.write_text(SAMPLE_WEEK_MD)  # SAMPLE_WEEK_MD does not contain a `slides:` field
     week = parse_week_file(str(f))
     assert week.slides is None
+
+
+SAMPLE_LIVE = """---
+week: 1
+title: "Welcome"
+starts: 2026-05-11
+live: true
+assignments:
+  - title: "Activity Verification"
+    points: 50
+    due: 2026-05-15
+---
+
+## Readings
+
+- Reading
+"""
+
+
+def test_parse_week_file_with_live_true(tmp_path):
+    f = tmp_path / "week-01.md"
+    f.write_text(SAMPLE_LIVE)
+    week = parse_week_file(str(f))
+    assert week.live is True
+
+
+def test_parse_week_file_without_live_defaults_false(tmp_path):
+    f = tmp_path / "week-01.md"
+    f.write_text(SAMPLE_WEEK_MD)  # SAMPLE_WEEK_MD has no `live:` field; already defined at top of test_parser.py
+    week = parse_week_file(str(f))
+    assert week.live is False

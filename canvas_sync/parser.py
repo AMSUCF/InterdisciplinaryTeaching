@@ -65,6 +65,7 @@ def parse_week_file(path: str, course_start: str = "") -> Week:
         assignments=assignments,
         discussion=discussion,
         slides=meta.get("slides"),
+        live=bool(meta.get("live", False)),
     )
 
 
