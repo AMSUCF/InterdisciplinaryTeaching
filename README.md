@@ -149,6 +149,46 @@ The text under this heading is used as the discussion topic body in Canvas.
 
 The tool stores sync state in `.canvas_sync_state.json`, which maps week keys to Canvas object IDs (module, page URL, assignment IDs, discussion ID). This file is how the tool knows what already exists in Canvas. Do not edit it manually.
 
+## Live Weeks
+
+Once a week is published to students it is *live*: the rendered GitHub Pages page and the Webcourses module may have been edited directly, and unconsidered changes here can overwrite them silently. Mark a week as live by adding `live: true` to its YAML frontmatter:
+
+```yaml
+---
+week: 1
+title: "Welcome and Interdisciplinary Teaching"
+starts: 2026-05-11
+live: true
+...
+---
+```
+
+Two guardrails kick in once that flag is set:
+
+1. **`canvas_sync push` refuses to touch live weeks.** Run with `--override-live` to bypass:
+
+   ```bash
+   python -m canvas_sync push --week 1 --override-live
+   ```
+
+   `status` and `diff` are read-only and remain available. `status` shows a Live column so you can see at a glance which weeks are locked.
+
+2. **A `commit-msg` git hook blocks edits to weeks that were live in `HEAD`.** Bypass for a single commit by including the token `[live-edit]` anywhere in your commit message:
+
+   ```bash
+   git commit -m "fix: typo in week 1 reading list [live-edit]"
+   ```
+
+   `git commit --no-verify` is the universal escape hatch but also skips all other hooks.
+
+   The hook is checked into the repo at `.githooks/commit-msg`. Activate it once per clone with:
+
+   ```bash
+   git config core.hooksPath .githooks
+   ```
+
+The hook reads `HEAD`'s frontmatter (not the staged version), so the commit that promotes a week to live is allowed cleanly without `[live-edit]`. Subsequent edits — and demotions back to draft — do require the token.
+
 ## Development
 
 Run the test suite:
