@@ -3,3 +3,7 @@ canvas_config.yaml
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Source notes for slide decks — kept locally, not published
+slides/*.md
+slides/*.txt

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 3 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-03/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Side-by-side image comparison used on the Cohen handwriting/Gemini slide. */
+    .reveal .image-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2em;
+    }
+    .reveal .image-pair figure {
+      margin: 0;
+      flex: 1 1 0;
+      max-width: 48%;
+    }
+    .reveal .image-pair figure img {
+      max-height: 420px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .reveal .image-pair figcaption {
+      font-family: 'VT323', monospace;
+      font-size: 1.0em;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.4em;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 3<br/>AI for<br/>Textual Analysis</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+      </section>
+
+      <!-- 2. HOUSTON — TEXT ANALYSIS IS FUNDAMENTAL -->
+      <section>
+        <h1>Text Analysis</h1>
+        <p class="slide-subtitle">Natalie M. Houston, <em>Digital Pedagogy in the Humanities</em></p>
+        <blockquote>
+          &ldquo;Text analysis is fundamental to humanities scholarship.&rdquo;
+          <span class="attribution">&mdash; Houston</span>
+        </blockquote>
+        <p>Houston walks through traditional DH ways of using computers to do this. From there we can ask: what does AI add &mdash; and what doesn&rsquo;t it?</p>
+        <aside class="notes">
+          Houston, Natalie M. "Text Analysis." Digital Pedagogy in the Humanities. https://digitalpedagogy.hcommons.org/keyword/Text-Analysis/
+        </aside>
+      </section>
+
+      <!-- 3. HOUSTON — WHAT HUMANISTS DO -->
+      <section>
+        <h1>What Humanists Do</h1>
+        <p class="slide-subtitle">Houston &mdash; the work behind &ldquo;reading&rdquo;</p>
+        <blockquote>
+          &ldquo;Humanists frequently
+          <ul>
+            <li>select or collect texts in order to explore an hypothesis;</li>
+            <li>look for patterns (of words, ideas, symbols, rhetorical or formal structures, etc.) within an individual text or within sets of texts;</li>
+            <li>discover relations (of development, dependence, seriality, association, intention, allusion, intertextuality, etc.) between parts of texts, whole texts, or sets of texts;</li>
+            <li>interpret the significance of these patterns, relations, and texts; and</li>
+            <li>develop arguments for the larger significance of these interpretations.&rdquo;</li>
+          </ul>
+          <span class="attribution">&mdash; Houston</span>
+        </blockquote>
+        <aside class="notes">
+          Houston, "Text Analysis," Digital Pedagogy in the Humanities.
+        </aside>
+      </section>
+
+      <!-- 4. HOUSTON — READING IS ITERATIVE -->
+      <section>
+        <h1>All Of This Is &ldquo;Reading&rdquo;</h1>
+        <p class="slide-subtitle">Houston, on close and distant reading</p>
+        <blockquote>
+          &ldquo;In humanities research, these steps are often iterative and recursive and are rarely labeled as hypothesis, data collection, experimentation, analysis, and argument. Instead, all of these things are called reading.&rdquo;
+          <span class="attribution">&mdash; Houston</span>
+        </blockquote>
+        <p>DH brings a different model that Franco Moretti has termed <em>distant reading</em>, as opposed to the traditional formalist and hermeneutic approach called literary <em>close reading</em> &mdash; though most projects use both.</p>
+        <aside class="notes">
+          Houston, "Text Analysis." Citing Moretti on distant reading.
+        </aside>
+      </section>
+
+      <!-- 5. HOUSTON — NEW WAYS TO EXPLORE -->
+      <section>
+        <h1>New Ways to Explore</h1>
+        <p class="slide-subtitle">Houston &mdash; what digitization opens up</p>
+        <blockquote>
+          &ldquo;Digitization and computational tools offer new ways to explore different levels of address:
+          <ul>
+            <li>large scale digitization changes our access both to specific texts and to new quantities of texts;</li>
+            <li>preparation of texts to make them computationally tractable requires explicit methodological, theoretical, and hermeneutic decisions about the objects and outcomes of research;</li>
+            <li>relational databases and full-text search expand the kinds of research queries that can be pursued;</li>
+            <li>new media forms and new interfaces transform how we understand and perform acts of reading;</li>
+            <li>the widespread availability of computational power and storage offer new ways of curating, displaying, and using collections of texts for human or machine analysis;</li>
+            <li>tools for data visualization and multimodal composition offer new ways of exploring texts and building arguments.&rdquo;</li>
+          </ul>
+          <span class="attribution">&mdash; Houston</span>
+        </blockquote>
+        <aside class="notes">
+          Houston, "Text Analysis," Digital Pedagogy in the Humanities.
+        </aside>
+      </section>
+
+      <!-- 6. HOUSTON — EXPAND OR TRANSFORM -->
+      <section>
+        <h1>Expand &mdash; or Transform</h1>
+        <p class="slide-subtitle">Not even AI specifically &mdash; just basic software</p>
+        <blockquote>
+          &ldquo;Digital technologies can be used to expand the scale of traditional methods (and thereby transform them) or to open entirely new modes and possibilities for text analysis.&rdquo;
+          <span class="attribution">&mdash; Houston</span>
+        </blockquote>
+        <aside class="notes">
+          Houston, "Text Analysis." The framing here predates the current LLM moment but applies cleanly to it.
+        </aside>
+      </section>
+
+      <!-- 7. CROXALL — TEXT PREP AS LABOR -->
+      <section class="webcomic-no">
+        <h1>Croxall &mdash; Text Preparation</h1>
+        <p class="slide-subtitle">Demystifying the labor of text analysis</p>
+        <blockquote>
+          &ldquo;Making the labor of text preparation and cleaning evident to students demystifies the processes of text analysis and opens up conversations about textual transmission more generally.&rdquo;
+          <span class="attribution">&mdash; Croxall, via Houston</span>
+        </blockquote>
+        <img src="images/voyant.png" alt="Screenshot of Voyant Tools, a web-based text analysis environment, showing word frequencies, a Cirrus word cloud, and concordance views of an uploaded corpus." />
+        <aside class="notes">
+          Callback to Week 1's theme of teaching as invisible labor &mdash; show students what goes into the texts and the technologies they use.
+        </aside>
+      </section>
+
+      <!-- 8. ULLYOT — TOOL EXPERTS COLLABORATE -->
+      <section class="webcomic-no">
+        <h1>Ullyot &mdash; Tool Experts</h1>
+        <p class="slide-subtitle">Groups learn individual DH tools, then collaborate</p>
+        <img src="images/tapor.png" alt="Screenshot of TAPoR (Text Analysis Portal for Research), a directory of digital humanities text analysis tools listing options like Voyant, AntConc, and others with descriptions." />
+        <p>In Ullyot&rsquo;s assignment, groups learn individual DH tools, and then groups composed of <em>experts in different tools</em> work together on a project.</p>
+        <aside class="notes">
+          A callback to Bloom's taxonomy and conversational learning: being able to explain something to others is a higher level of mastery.
+        </aside>
+      </section>
+
+      <!-- 9. SINGER — TEI AS INTERPRETATION -->
+      <section class="webcomic-no">
+        <h1>Singer &mdash; TEI Encoding</h1>
+        <p class="slide-subtitle">Practical skills + interpretive choices</p>
+        <blockquote>
+          &ldquo;TEI encoding can serve two purposes: equipping students with practical, project-based skills and exposing the interpretive choices that are at the heart of textual editing and text encoding.&rdquo;
+          <span class="attribution">&mdash; Singer, via Houston</span>
+        </blockquote>
+        <img src="images/tei.png" alt="Screenshot of a TEI-encoded XML document showing structural and interpretive markup tags around the lines and characters of a literary text." />
+        <aside class="notes">
+          This can also scaffold thinking about data labeling &mdash; start with something students can get their head around.
+        </aside>
+      </section>
+
+      <!-- 10. MALONE — DIGITIZED PRIMARY MATERIALS -->
+      <section class="webcomic-no">
+        <h1>Malone &mdash; Digitized Primary Materials</h1>
+        <p class="slide-subtitle">Deepening context for the text</p>
+        <blockquote>
+          &ldquo;Exposing students to primary research with digitized materials deepens the context for their understanding of the text.&rdquo;
+          <span class="attribution">&mdash; Malone, via Houston</span>
+        </blockquote>
+        <img src="images/malone.png" alt="Screenshot of a digitized primary source archive interface showing scanned manuscript pages with associated metadata for student research." />
+        <aside class="notes">
+          Connects to Dan Cohen's reading on digitized handwritten documents later in this deck.
+        </aside>
+      </section>
+
+      <!-- 11. WALSH — COLLATION FOR WRITING -->
+      <section>
+        <h1>Walsh &mdash; Collation for Writing</h1>
+        <p class="slide-subtitle">Comparing multiple copies as a writing pedagogy</p>
+        <blockquote>
+          Walsh uses &ldquo;collation, the comparing of multiple copies or witnesses of a text, for the teaching of writing.&rdquo;
+          <span class="attribution">&mdash; via Houston</span>
+        </blockquote>
+        <p>This is also a way to teach <em>revision</em> &mdash; by seeing how other writers do it.</p>
+        <aside class="notes">
+          A useful prompt for thinking about how an LLM "revises" between drafts, too.
+        </aside>
+      </section>
+
+      <!-- 12. DIERKES-THRUN — MULTIMEDIA ANALYSIS -->
+      <section>
+        <h1>Dierkes-Thrun &mdash; Multimedia</h1>
+        <p class="slide-subtitle">Argumentation, bracketed from writing</p>
+        <blockquote>
+          Dierkes-Thrun&rsquo;s students &ldquo;use multimedia digital technologies to communicate their analyses of a literary text.&rdquo;
+          <span class="attribution">&mdash; via Houston</span>
+        </blockquote>
+        <p>This helps students understand argumentation while bracketing writing.</p>
+        <aside class="notes">
+          Houston, "Text Analysis," sample assignments.
+        </aside>
+      </section>
+
+      <!-- 13. UNDERWOOD — AI AS HORSEPOWER / ELECTRICITY -->
+      <section>
+        <h1>Underwood</h1>
+        <p class="slide-subtitle">AI as general-purpose power</p>
+        <p>If the LLM is the horsepower put into a harness, Underwood frames AI itself as more like <em>electricity</em> or <em>steam power</em>: it can be used for many things, and we should do with it what we find valuable.</p>
+        <aside class="notes">
+          A link forward to Cohen on using AI to connect with other human beings.
+          Source: Underwood, Ted. "A More Interesting Upside of AI." The Stone and the Shell, July 2, 2025. https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/
+        </aside>
+      </section>
+
+      <!-- 14. UNDERWOOD — LANGUAGE, WRITING, MODELS -->
+      <section>
+        <h1>Language &rarr; Writing &rarr; Models</h1>
+        <p class="slide-subtitle">Underwood &mdash; another step change in culture</p>
+        <blockquote>
+          &ldquo;Language vastly magnified our ability to coordinate patterns of collective behavior (culture), and transmit those patterns to our descendants. Writing made cultural patterns even more durable. Now generative language models (and image and sound models) represent another step change in our ability to externalize and manipulate culture.&rdquo;
+          <span class="attribution">&mdash; Underwood</span>
+        </blockquote>
+        <aside class="notes">
+          Underwood, "A More Interesting Upside of AI."
+        </aside>
+      </section>
+
+      <!-- 15. UNDERWOOD — MIDJOURNEY IMAGE -->
+      <section class="webcomic-no">
+        <h1>Externalizing Culture</h1>
+        <p class="slide-subtitle">Underwood &mdash; example image</p>
+        <img src="images/underwood_midjourney.png" alt="A Midjourney image accompanying Ted Underwood's essay 'A More Interesting Upside of AI,' showing an atmospheric AI-generated illustration." />
+        <p class="image-caption">Image from Underwood, &ldquo;A More Interesting Upside of AI.&rdquo;</p>
+        <aside class="notes">
+          Underwood pairs the essay with generated imagery; worth pausing here on what the image is doing in the argument.
+        </aside>
+      </section>
+
+      <!-- 16. UNDERWOOD — WRITING AS STEPPING BACK -->
+      <section>
+        <h1>Writing as Stepping Back</h1>
+        <p class="slide-subtitle">Underwood &mdash; surveying language from above</p>
+        <blockquote>
+          &ldquo;Writing allows us to take a step back from language, survey it, fine-tune it, and construct complex structures where one text argues with two others, each of which footnotes fifty others. It would be hard to imagine science without the ability writing provides to survey language from above and use it as building material.&rdquo;
+          <span class="attribution">&mdash; Underwood</span>
+        </blockquote>
+        <aside class="notes">
+          Underwood, "A More Interesting Upside of AI."
+        </aside>
+      </section>
+
+      <!-- 17. UNDERWOOD — IDEOLOGICAL WEAPONS -->
+      <section>
+        <h1>Models as Pamphlets</h1>
+        <p class="slide-subtitle">Underwood &mdash; on a darker continuity</p>
+        <blockquote>
+          &ldquo;Language models are likely to be used as ideological weapons &mdash; just as pamphlets were, after printing made them possible.&rdquo;
+          <span class="attribution">&mdash; Underwood</span>
+        </blockquote>
+        <aside class="notes">
+          Underwood, "A More Interesting Upside of AI." A useful pivot for talking about classroom AI policy.
+        </aside>
+      </section>
+
+      <!-- 18. COHEN — OPENING RULE -->
+      <section>
+        <h1>Cohen</h1>
+        <p class="slide-subtitle">A Pollan-style rule for AI</p>
+        <blockquote>
+          &ldquo;Use AI, not too much, mostly to connect with the intelligence of other human beings, not AI.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen, <em>Humane Ingenuity</em></span>
+        </blockquote>
+        <aside class="notes">
+          Cohen, Dan. "The Writing Is on the Wall for Handwriting Recognition." Humane Ingenuity. https://newsletter.dancohen.org/archive/the-writing-is-on-the-wall-for-handwriting-recognition/
+        </aside>
+      </section>
+
+      <!-- 19. COHEN — HANDWRITING AS A BOTTLENECK -->
+      <section>
+        <h1>Handwriting as a Bottleneck</h1>
+        <p class="slide-subtitle">Cohen on time-to-interpretation</p>
+        <blockquote>
+          &ldquo;It would have saved me a lot of time getting to the interesting interpretive phase of my research if a computer could have converted his handwriting into machine-readable text, as it already could for typeset text through a process called optical character recognition (OCR).&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          Cohen, "The Writing Is on the Wall for Handwriting Recognition."
+        </aside>
+      </section>
+
+      <!-- 20. COHEN — GEMINI VERBALIZES PALEOGRAPHY -->
+      <section>
+        <h1>Gemini Reads Paleographically</h1>
+        <p class="slide-subtitle">Cohen on showing-your-work</p>
+        <blockquote>
+          &ldquo;It is essentially a verbalization of what you&rsquo;re taught to do in a paleography class: assess the overall document first, determine key features, study letter shapes and strokes across the letter to refine your understanding of the particular script, consider context and word/phrase possibilities, think about the coherence of content, grammar, and usage, identify any contractions, proper names, and other oddities, etc.&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          Cohen, "The Writing Is on the Wall for Handwriting Recognition."
+        </aside>
+      </section>
+
+      <!-- 21. COHEN — GEMINI AS TEACHING ARTIFACT -->
+      <section>
+        <h1>Thinking Traces as Pedagogy</h1>
+        <p class="slide-subtitle">Cohen &mdash; using the model&rsquo;s reasoning with students</p>
+        <blockquote>
+          &ldquo;Take Gemini&rsquo;s 2,000-word thinking analysis of Boole&rsquo;s script. I could imagine using that with students in a paleography class to help them understand the steps in the process of deciphering a letter or manuscript.&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          A concrete example of "AI as tutor" / "AI as coach" from Mollick's typology (Week 2).
+        </aside>
+      </section>
+
+      <!-- 22. COHEN — SIDE BY SIDE EXAMPLE -->
+      <section class="webcomic-no">
+        <h1>Example: Source &amp; Transcription</h1>
+        <p class="slide-subtitle">Cohen &mdash; Boole&rsquo;s handwriting and Gemini&rsquo;s read</p>
+        <div class="image-pair">
+          <figure>
+            <img src="images/handwriting.png" alt="Scan of a handwritten 19th-century letter in cursive script, with looping letterforms and ink showing through from the reverse side of the page." />
+            <figcaption>The handwritten source.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gemini.png" alt="Screenshot of Gemini's interface showing its transcription and step-by-step analysis of the handwritten letter, including its reasoning about letter shapes and word possibilities." />
+            <figcaption>Gemini&rsquo;s transcription &amp; reasoning.</figcaption>
+          </figure>
+        </div>
+        <aside class="notes">
+          Images via Cohen, "The Writing Is on the Wall for Handwriting Recognition."
+        </aside>
+      </section>
+
+      <!-- 23. COHEN — OFFLOAD THE CURLICUE, NOT THE UNDERSTANDING -->
+      <section>
+        <h1>What to Offload &mdash; and What Not To</h1>
+        <p class="slide-subtitle">Cohen &mdash; the line we shouldn&rsquo;t cross</p>
+        <blockquote>
+          Offloading these tasks &ldquo;allows human beings to focus their time on the important, profound work of understanding another human being, rather than staring at a curlicue to grasp if it&rsquo;s an L or an I. Could we also ask Gemini to formulate this broader understanding? Sure we could, but that&rsquo;s the line that we, and our students, should resist crossing.&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          Cohen, "The Writing Is on the Wall for Handwriting Recognition." A good prompt for talking with students about AI assignment policy.
+        </aside>
+      </section>
+
+      <!-- 24. COHEN — HISTORIANS ALREADY OUTSOURCE -->
+      <section>
+        <h1>Historians Already Outsource</h1>
+        <p class="slide-subtitle">Cohen &mdash; on what counts as &ldquo;the work&rdquo;</p>
+        <blockquote>
+          &ldquo;If you talk to historians now, they will admit that they can&rsquo;t spare the expense and time of leafing through letters over a month in a foreign city. Most simply take photos of documents in quick trips to the archives and review them later, at home.&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          The argument: archival "deferral" via photography is already part of practice; AI extends, rather than introduces, the question of which steps are properly outsourced.
+        </aside>
+      </section>
+
+      <!-- 25. CLOSING — Week 3 to-dos -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>NEH Workshop 2: AI for Textual Analysis</strong> &mdash; Wed, May 27, 10 AM &ndash; noon, CHDR.</li>
+          <li><strong>Discussion: Workshop Exercise &mdash; Textual Analysis</strong> &mdash; due Sunday, May 31.</li>
+          <li>Using Claude Projects and Artifacts, upload a set of texts from your discipline and analyze them (patterns, comparisons, concordance, corpus exploration).</li>
+          <li>Readings: Houston; Underwood; Cohen.</li>
+        </ul>
+        <p>See <code>weeks/week-03.md</code> on Canvas for full reading links and the discussion prompt.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
