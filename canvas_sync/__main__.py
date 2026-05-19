@@ -75,16 +75,21 @@ def cmd_init(config, weeks_dir, state: SyncState):
 def _splice_slides(body_html: str, slides_html: Optional[str]) -> str:
     """Insert the slides iframe block into a rendered page body.
 
-    Strategy: place the slides block immediately before the first `<h2>`
-    heading. If no `<h2>` is present, append to the end. If `slides_html`
-    is empty or None, return the body unchanged.
+    Strategy: place the slides block immediately before the *second* `<h2>`
+    heading — i.e., between the Readings section and the next section
+    (typically Discussion Prompt). If fewer than two `<h2>` headings are
+    present, append to the end. If `slides_html` is empty or None, return
+    the body unchanged.
     """
     if not slides_html:
         return body_html
-    idx = body_html.find("<h2")
-    if idx == -1:
+    first = body_html.find("<h2")
+    if first == -1:
         return body_html.rstrip() + "\n" + slides_html
-    return body_html[:idx] + slides_html + body_html[idx:]
+    second = body_html.find("<h2", first + 1)
+    if second == -1:
+        return body_html.rstrip() + "\n" + slides_html
+    return body_html[:second] + slides_html + body_html[second:]
 
 
 def _render_page_body(cs: CanvasSync, week) -> str:

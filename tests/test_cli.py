@@ -51,7 +51,7 @@ def test_diff_week():
     assert args.week == 5
 
 
-def test_splice_slides_inserts_before_first_h2():
+def test_splice_slides_inserts_between_readings_and_discussion():
     body = (
         "<p>Welcome paragraph.</p>\n"
         "<p>NEH workshop note.</p>\n"
@@ -64,15 +64,33 @@ def test_splice_slides_inserts_before_first_h2():
     result = _splice_slides(body, slides)
     # Slides block should appear in the output exactly once
     assert result.count("<h2>Slides</h2>") == 1
-    # Original Readings heading still present
+    # Original headings still present
     assert "<h2>Readings</h2>" in result
-    # Slides block should appear BEFORE Readings
-    slides_idx = result.index("<h2>Slides</h2>")
+    assert "<h2>Discussion Prompt</h2>" in result
+    # Slides should appear AFTER Readings and BEFORE Discussion Prompt
     readings_idx = result.index("<h2>Readings</h2>")
-    assert slides_idx < readings_idx
-    # Welcome paragraph should still appear before slides
+    slides_idx = result.index("<h2>Slides</h2>")
+    discussion_idx = result.index("<h2>Discussion Prompt</h2>")
+    assert readings_idx < slides_idx < discussion_idx
+    # Welcome paragraph should still appear before Readings
     welcome_idx = result.index("Welcome paragraph.")
-    assert welcome_idx < slides_idx
+    assert welcome_idx < readings_idx
+
+
+def test_splice_slides_appends_when_only_one_h2():
+    body = (
+        "<p>Intro.</p>\n"
+        "<h2>Readings</h2>\n"
+        "<ul><li>A reading</li></ul>\n"
+    )
+    slides = "<h2>Slides</h2>\n<div>iframe</div>\n"
+    result = _splice_slides(body, slides)
+    # Readings heading preserved, slides appended at end
+    assert "<h2>Readings</h2>" in result
+    readings_idx = result.index("<h2>Readings</h2>")
+    slides_idx = result.index("<h2>Slides</h2>")
+    assert readings_idx < slides_idx
+    assert result.endswith(slides) or result.rstrip().endswith(slides.rstrip())
 
 
 def test_splice_slides_appends_when_no_h2():
@@ -114,18 +132,24 @@ def test_render_page_body_no_slides_returns_body_html():
 
 
 def test_render_page_body_with_slides_splices_iframe():
-    """When week has slides, _render_page_body splices the iframe before the first <h2>."""
+    """When a week has slides plus Readings and Discussion Prompt, the iframe
+    lands between them — readings come before slides, discussion after."""
     cs = MagicMock()
     cs.config.slides_base_url = "https://example.com/slides/"
     week = MagicMock()
     week.slides = "week-01"
-    week.body_html = "<p>Welcome.</p>\n<h2>Readings</h2>\n"
+    week.body_html = (
+        "<p>Welcome.</p>\n"
+        "<h2>Readings</h2>\n<ul><li>R</li></ul>\n"
+        "<h2>Discussion Prompt</h2>\n<p>Q</p>\n"
+    )
     week.slides_section_html.return_value = "<h2>Slides</h2>\n<iframe></iframe>\n"
     result = _render_page_body(cs, week)
     assert "<h2>Slides</h2>" in result
-    slides_idx = result.index("<h2>Slides</h2>")
     readings_idx = result.index("<h2>Readings</h2>")
-    assert slides_idx < readings_idx
+    slides_idx = result.index("<h2>Slides</h2>")
+    discussion_idx = result.index("<h2>Discussion Prompt</h2>")
+    assert readings_idx < slides_idx < discussion_idx
 
 
 def test_push_override_live_default_false():

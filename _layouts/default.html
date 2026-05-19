@@ -16,10 +16,27 @@
 
   <main class="content-wrap">
     <article class="page-content">
-      {% if page.slides %}
-        {% include slides-embed.html slug=page.slides %}
-      {% endif %}
-      {{ content }}
+      {%- comment -%}
+        Place the slides embed between the Readings section and the next
+        section (typically Discussion Prompt). Splitting the rendered HTML
+        on the `<h2` token lets us insert the iframe between sections[1]
+        (Readings) and sections[2] (next h2 block). With fewer than two h2
+        headings, the embed is appended at the end.
+      {%- endcomment -%}
+      {%- if page.slides -%}
+        {%- assign sections = content | split: '<h2' -%}
+        {%- if sections.size >= 3 -%}
+          {{ sections[0] }}<h2{{ sections[1] }}
+          {%- include slides-embed.html slug=page.slides -%}
+          {%- assign last = sections.size | minus: 1 -%}
+          {%- for i in (2..last) -%}<h2{{ sections[i] }}{%- endfor -%}
+        {%- else -%}
+          {{ content }}
+          {%- include slides-embed.html slug=page.slides -%}
+        {%- endif -%}
+      {%- else -%}
+        {{ content }}
+      {%- endif -%}
     </article>
   </main>
 
