@@ -2,6 +2,7 @@
 week: 3
 title: "AI for Textual Analysis"
 starts: 2026-05-25
+live: true
 slides: week-03
 workshop:
   title: "Workshop 2: AI for Textual Analysis"
