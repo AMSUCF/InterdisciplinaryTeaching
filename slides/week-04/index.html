@@ -10,6 +10,43 @@
 
   <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-04/. -->
   <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Side-by-side blockquotes for the summative vs. formative slide. */
+    .reveal .quote-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1.2em;
+    }
+    .reveal .quote-pair blockquote {
+      flex: 1 1 0;
+      width: auto;
+      margin: 0;
+    }
+    /* Two-column criteria layout for the Croxall rubric example slide. */
+    .reveal .criteria-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.5em;
+      text-align: left;
+    }
+    .reveal .criteria-pair > div {
+      flex: 1 1 0;
+    }
+    .reveal .criteria-pair h3 {
+      font-family: 'VT323', monospace;
+      font-size: 1.1em;
+      margin: 0 0 0.3em 0;
+    }
+    .reveal .criteria-pair ul {
+      font-size: 0.78em;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
@@ -147,14 +184,16 @@
       <section>
         <h1>Stage 2: Determine Evidence for Results</h1>
         <p class="slide-subtitle">Smith &mdash; summative vs. formative</p>
-        <blockquote>
-          <strong>Summative assessments</strong> &ldquo;measure how well students have achieved course objectives by the end of a learning period. These are often high-stakes assessments that contribute significantly to final grades&rdquo; &mdash; exams, portfolios, research papers.
-          <span class="attribution">&mdash; Smith</span>
-        </blockquote>
-        <blockquote>
-          <strong>Formative assessments</strong> &ldquo;focus on learning in progress. These assessments provide ongoing opportunities for students to practice, reflect, and integrate new knowledge while offering instructors insights into students&rsquo; development&rdquo; &mdash; drafts, completion-credit homework, brief writing. Low stakes.
-          <span class="attribution">&mdash; Smith</span>
-        </blockquote>
+        <div class="quote-pair">
+          <blockquote>
+            <strong>Summative assessments</strong> &ldquo;measure how well students have achieved course objectives by the end of a learning period. These are often high-stakes assessments that contribute significantly to final grades&rdquo; &mdash; exams, portfolios, research papers.
+            <span class="attribution">&mdash; Smith</span>
+          </blockquote>
+          <blockquote>
+            <strong>Formative assessments</strong> &ldquo;focus on learning in progress. These assessments provide ongoing opportunities for students to practice, reflect, and integrate new knowledge while offering instructors insights into students&rsquo; development&rdquo; &mdash; drafts, completion-credit homework, brief writing. Low stakes.
+            <span class="attribution">&mdash; Smith</span>
+          </blockquote>
+        </div>
         <aside class="notes">
           Smith, "Understanding by Design." Scott's scaffolding point (slide 4) lives here &mdash; formative work is the runway for the summative.
         </aside>
@@ -175,7 +214,56 @@
         </aside>
       </section>
 
-      <!-- 12. STAGE 3 — LEARNING EXPERIENCES -->
+      <!-- 12. CROXALL — RUBRIC EXAMPLE -->
+      <section>
+        <h1>Rubric Example: Blogging (with AI)</h1>
+        <p class="slide-subtitle">Brian Croxall &mdash; a three-tier rubric that names AI explicitly</p>
+        <p>Posts count as <strong>Unsatisfactory</strong>, <strong>Satisfactory</strong>, or <strong>Excellent</strong>. Excellent builds on top of Satisfactory.</p>
+        <div class="criteria-pair">
+          <div>
+            <h3>Satisfactory (all of):</h3>
+            <ul>
+              <li>Posted on time (9 a.m. day of discussion).</li>
+              <li>Descriptive title &mdash; sometimes LLM-generated.</li>
+              <li>Refers specifically to the day&rsquo;s reading, often by direct quotation.</li>
+              <li>Meets the minimum word requirement.</li>
+              <li>Written clearly: less formal than a paper but still serious and evidence-based.</li>
+              <li>No more than 3 grammar or spelling errors.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Excellent (adds):</h3>
+            <ul>
+              <li>One illustrative media object (image, screenshot, GIF, embedded video or audio) with full credit &mdash; link and creator name.</li>
+              <li>Exceptional insight or analysis, connections beyond the day&rsquo;s material, or compelling engagement with the LLM&rsquo;s writing &mdash; Croxall&rsquo;s shorthand: &ldquo;do you make me raise an eyebrow in a good way?&rdquo;</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Croxall, Brian. "Blogging (with AI)." F25 DH, 2025. https://briancroxall.net/f25dh/assignments/blogging-with-ai/
+          Note: the rubric names LLM use as a normal part of the workflow (title generation, engagement) rather than treating it as an exception &mdash; useful comparison point for your own signature assignment draft.
+        </aside>
+      </section>
+
+      <!-- 13. SAMPLE — RUBRIC EXAMPLE -->
+      <section>
+        <h1>Rubric Example: Hack Assignments</h1>
+        <p class="slide-subtitle">Mark Sample &mdash; holistic criteria for creative/remix work</p>
+        <p>Five open criteria, applied holistically &mdash; no preset tiers:</p>
+        <ul>
+          <li><strong>Unexpectedness</strong> &mdash; the extent to which the project defies expectations or produces surprising results or reactions.</li>
+          <li><strong>Craft</strong> &mdash; the degree of style, technical virtuosity, and craftiness, as well as digital representation.</li>
+          <li><strong>Intention</strong> &mdash; the sense of intentionality and deliberateness of the work.</li>
+          <li><strong>Theme</strong> &mdash; the level of engagement with the concepts of remixing and mashups.</li>
+          <li><strong>Argument</strong> &mdash; the degree to which your project is about something other than itself.</li>
+        </ul>
+        <aside class="notes">
+          Sample, Mark. "Hack 4: Remix." DIG 401, Digital Davidson. https://courses.digitaldavidson.net/dig401/hack-4-remix/
+          Pedagogical contrast with Croxall: tiered checklist (Croxall) vs. holistic criteria (Sample). The choice signals what kind of work you want students to do and what kind of evaluation conversation you want to have with them.
+        </aside>
+      </section>
+
+      <!-- 14. STAGE 3 — LEARNING EXPERIENCES -->
       <section>
         <h1>Stage 3: Plan Learning Experiences and Instruction</h1>
         <p class="slide-subtitle">Smith &mdash; only now do we design the activities</p>
@@ -190,21 +278,21 @@
         </aside>
       </section>
 
-      <!-- 13. KIES & STANFILL — CHEATING IS NOT NEW -->
+      <!-- 15. KIES & STANFILL — CHEATING IS NOT NEW -->
       <section>
         <h1>Cheating Was Already Common</h1>
         <p class="slide-subtitle">Kies and Stanfill &mdash; the long view</p>
         <blockquote>
-          &ldquo;If your primary concern is that students will cheat, we&rsquo;d argue that they would probably cheat even without generative AI. In the pre-digital age, students had underground markets to sell essays and exams to each other; they wrote notes on the soles of their shoes to look at during in-class exams. The internet enabled repositories of essays to copy or download. And there&rsquo;s always the &lsquo;grab quotes from a bunch of places on the internet and hope your professor doesn&rsquo;t notice&rsquo; model we all know and loathe.&rdquo;
+          <p>&ldquo;If your primary concern is that students will cheat, we&rsquo;d argue that they would probably cheat even without generative AI. In the pre-digital age, students had underground markets to sell essays and exams to each other; they wrote notes on the soles of their shoes to look at during in-class exams. The internet enabled repositories of essays to copy or download. And there&rsquo;s always the &lsquo;grab quotes from a bunch of places on the internet and hope your professor doesn&rsquo;t notice&rsquo; model we all know and loathe.</p>
+          <p>Generative AI doesn&rsquo;t change much about students using unauthorized aid &mdash; or the Sisyphean task of catching them. Students cheat for many reasons: they don&rsquo;t care about the class, they care about the grade and don&rsquo;t think they can succeed otherwise, they&rsquo;re overwhelmed and seek a shortcut.&rdquo;</p>
           <span class="attribution">&mdash; Kies &amp; Stanfill</span>
         </blockquote>
-        <p>Generative AI doesn&rsquo;t change much about students using unauthorized aid &mdash; or the Sisyphean task of catching them. Students cheat for many reasons: they don&rsquo;t care about the class, they care about the grade and don&rsquo;t think they can succeed otherwise, they&rsquo;re overwhelmed and seek a shortcut.</p>
         <aside class="notes">
           Kies, Bridget, and Mel Stanfill. Teaching AI in Film and Media Studies: Lights, Camera, Algorithms.
         </aside>
       </section>
 
-      <!-- 14. MOLLICK — SHOW THE PURPOSE -->
+      <!-- 16. MOLLICK — SHOW THE PURPOSE -->
       <section>
         <h1>Show Students the Purpose</h1>
         <p class="slide-subtitle">Mollick &mdash; the assignments-feel-obsolete problem</p>
@@ -219,7 +307,7 @@
         </aside>
       </section>
 
-      <!-- 15. MOLLICK — WHAT MIGHT BE AUTHORIZED -->
+      <!-- 17. MOLLICK — WHAT MIGHT BE AUTHORIZED -->
       <section>
         <h1>What Kinds of AI Use Might Be Authorized?</h1>
         <p class="slide-subtitle">Mollick &mdash; the line isn&rsquo;t obvious</p>
@@ -232,7 +320,7 @@
         </aside>
       </section>
 
-      <!-- 16. THE READING PROBLEM -->
+      <!-- 18. THE READING PROBLEM -->
       <section>
         <h1>Students Offload Reading, Too</h1>
         <p class="slide-subtitle">Why &ldquo;just read it&rdquo; isn&rsquo;t a plan</p>
@@ -251,7 +339,7 @@
         </aside>
       </section>
 
-      <!-- 17. CLOSING — Week 4 to-dos -->
+      <!-- 19. CLOSING — Week 4 to-dos -->
       <section>
         <h1>This Week</h1>
         <ul>
