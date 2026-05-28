@@ -2,6 +2,7 @@
 week: 4
 title: "Assignment Design and Assessment"
 starts: 2026-06-01
+slides: week-04
 discussion:
   title: "Signature Assignment Draft"
   points: 30
