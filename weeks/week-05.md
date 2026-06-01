@@ -2,6 +2,7 @@
 week: 5
 title: "AI for Visual Analysis"
 starts: 2026-06-08
+slides: week-05
 workshop:
   title: "Workshop 3: AI for Visual Analysis"
   date: 2026-06-10

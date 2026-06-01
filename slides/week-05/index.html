@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 5 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-05/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Full-bleed visualization slides: let the image carry the slide. */
+    .reveal .viz-slide img {
+      max-height: 540px;
+      max-width: 100%;
+      margin: 0.2em auto 0;
+    }
+    .reveal .viz-slide .image-caption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.9em;
+      margin-top: 0.4em;
+    }
+    /* Side-by-side blockquotes for the three-questions / for-vs-against slides. */
+    .reveal .quote-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1.2em;
+      text-align: left;
+    }
+    .reveal .quote-pair > div {
+      flex: 1 1 0;
+    }
+    .reveal .quote-pair h3 {
+      font-family: 'VT323', monospace;
+      font-size: 1.1em;
+      margin: 0 0 0.3em 0;
+    }
+    .reveal .quote-pair ul {
+      font-size: 0.82em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 5<br/>AI for<br/>Visual Analysis</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+      </section>
+
+      <!-- 2. SINCLAIR & ROCKWELL — WHY VISUALIZATION -->
+      <section>
+        <h1>Visualization</h1>
+        <p class="slide-subtitle">St&eacute;fan Sinclair &amp; Geoffrey Rockwell, <em>Digital Pedagogy in the Humanities</em></p>
+        <blockquote>
+          &ldquo;Data visualizations have a long history and much to offer, particularly when the amount of text exceeds what can be reasonably read and represented by more traditional means.&rdquo;
+          <span class="attribution">&mdash; Sinclair &amp; Rockwell</span>
+        </blockquote>
+        <p>As we move toward bigger and bigger data, visualizations get more and more useful.</p>
+        <aside class="notes">
+          Sinclair, St&eacute;fan, and Geoffrey Rockwell. "Visualization." Digital Pedagogy in the Humanities. https://digitalpedagogy.hcommons.org/keyword/Visualization
+          The opening move: visualization isn't decoration, it's how we make scale legible. Ties straight back to Week 3's distant-reading thread.
+        </aside>
+      </section>
+
+      <!-- 3. TEACH STUDENTS TO TREAT VISUALIZATIONS CRITICALLY -->
+      <section>
+        <h1>Treat Visualizations Critically</h1>
+        <p class="slide-subtitle">Sinclair &amp; Rockwell &mdash; what to have students do</p>
+        <ul>
+          <li>Test out different kinds of visualizations and &ldquo;reflect on the graphical features and how they might or might not reflect evidence.&rdquo;</li>
+          <li>Create their own &mdash; and think about how best to convey information.</li>
+          <li>Think about visualizations &ldquo;not as objective representations of data,&rdquo; but for how they construct knowledge and make arguments.</li>
+        </ul>
+        <aside class="notes">
+          Sinclair &amp; Rockwell, "Visualization." The pedagogical pivot for this week: visualizations are arguments, not mirrors. The same stance we'll need when AI "reads" an image for us.
+        </aside>
+      </section>
+
+      <!-- 4. KEY CONCEPTUAL QUESTIONS -->
+      <section>
+        <h1>Key Conceptual Questions</h1>
+        <p class="slide-subtitle">Sinclair &amp; Rockwell &mdash; four lenses</p>
+        <ul>
+          <li><strong>Presence:</strong> Where do we see visualizations? What are they designed to communicate? Who designs them, and for what audience?</li>
+          <li><strong>Literacy:</strong> How do we read them? What are they showing &mdash; and hiding? Which features come from evidence, which from design? What are the common pitfalls?</li>
+          <li><strong>Rhetoric:</strong> How can we communicate effectively with visualizations? Can we imagine new ways of using them in humanistic interpretation?</li>
+          <li><strong>Visual Traditions:</strong> What is the history of a genre like the bar chart? How do traditions of interpretation shape how visualizations are read?</li>
+        </ul>
+        <aside class="notes">
+          Sinclair &amp; Rockwell, "Visualization." These four lenses are a ready-made discussion scaffold &mdash; you can hand them to students alongside any visualization, including an AI-generated one.
+        </aside>
+      </section>
+
+      <!-- 5. KEY DESIGN QUESTIONS -->
+      <section>
+        <h1>Key Design Questions</h1>
+        <p class="slide-subtitle">Sinclair &amp; Rockwell &mdash; questions for making them</p>
+        <ul>
+          <li>Can a visualization stand alone, or does it need text to contextualize it?</li>
+          <li>How is text graphical? How is an outline or a list a visualization?</li>
+          <li>What does interactivity add? How is a serious game a visualization?</li>
+          <li>Does a visualization have to be beautiful to communicate?</li>
+          <li>Do visualizations represent a truth about a phenomenon, or do they <em>model</em> something?</li>
+          <li>What is difficult to show? How can visualizations mislead?</li>
+        </ul>
+        <aside class="notes">
+          Sinclair &amp; Rockwell, "Visualization." The "model vs. truth" question is the one to dwell on &mdash; it's the same question that haunts AI visual analysis.
+        </aside>
+      </section>
+
+      <!-- 6. EXAMPLES -->
+      <section>
+        <h1>Examples</h1>
+        <p class="slide-subtitle">Sinclair &amp; Rockwell &mdash; where to start</p>
+        <ul>
+          <li><strong>Manovich</strong> names two core principles of information visualization: <em>reduction</em> (ignoring details of individual items to surface patterns across a subset of characteristics) and <em>spatiality</em> (using position, size, shape, and movement).</li>
+          <li><strong>Drucker &amp; Eskandar:</strong> &ldquo;every aspect of visualization is subject to interpretation, even though most visualizations mask the uncertainty and the decision-making processes.&rdquo;</li>
+          <li><strong>Voyant</strong> (which Sinclair &amp; Rockwell built) is easy to start with and offers a whole suite of tools for many kinds of visualization.</li>
+          <li><strong>BatchGeo&rsquo;s</strong> galleries show how many options exist &mdash; &ldquo;students can be asked to compile an annotated set of their favorites&rdquo; as inspiration for their own work.</li>
+        </ul>
+        <aside class="notes">
+          Sinclair &amp; Rockwell, "Visualization." Manovich's reduction + spatiality and Drucker's "masked uncertainty" are the two ideas to carry into the next three slides, which are concrete examples of visualizations making arguments.
+        </aside>
+      </section>
+
+      <!-- 7. EXAMPLE — NETWORK MAP -->
+      <section class="viz-slide">
+        <h1>Reduction &amp; Spatiality in Action</h1>
+        <p class="slide-subtitle">A network map of coordinated slogans on X/Twitter</p>
+        <img src="images/wokemind.jpg" alt="A network graph with four labeled clusters of densely connected accounts: a large purple cluster 'Woke Go Broke,' a green cluster 'Woke Mind Virus,' an orange cluster 'Genocide in South Africa,' and a small blue cluster labeled 'Diversity is a Code, Diversity Means Chasing Down, Antiwhites Deny White Genocide.' Edges connect the clusters, showing overlap between the communities sharing each slogan." />
+        <p class="image-caption">Each blob is thousands of accounts reduced to position, color, and size &mdash; Manovich&rsquo;s principles made visible.</p>
+        <aside class="notes">
+          Drawn from Stanfill's research on coordinated far-right slogan campaigns. Use it to make Manovich concrete: the graph throws away every individual tweet to surface the *pattern* of who shares which slogan together. Ask Sinclair &amp; Rockwell's literacy questions: what does the layout assert, and what decisions (clustering algorithm, color, label placement) are masked?
+        </aside>
+      </section>
+
+      <!-- 8. EXAMPLE — DIVERSITY TIME SERIES -->
+      <section class="viz-slide">
+        <h1>The Same Data, Re-cut Over Time</h1>
+        <p class="slide-subtitle">&ldquo;Diversity is a Code&rdquo; / &ldquo;Diversity Means Chasing Down&rdquo;</p>
+        <img src="images/diversitycode.jpg" alt="Two line charts side by side titled 'Diversity is a Code Tweets' and 'Diversity Means Chasing Down Tweets,' both spanning January 2019 to January 2022. A pink 'PowerUsers' line spikes erratically and frequently through 2019 and early 2020, then drops off; a blue 'RegularUsers' line stays low and nearly flat across the whole period." />
+        <p class="image-caption">Time on the x-axis turns the same accounts into a story about <em>when</em> coordination happened.</p>
+        <aside class="notes">
+          From the same body of research. The PowerUsers vs. RegularUsers split is itself an interpretive decision &mdash; someone chose that threshold. Good prompt for students: what argument does separating the two lines make, and would a single combined line tell a different story?
+        </aside>
+      </section>
+
+      <!-- 9. EXAMPLE — WOKE TIME SERIES -->
+      <section class="viz-slide">
+        <h1>What the Spikes Argue</h1>
+        <p class="slide-subtitle">&ldquo;Woke Go Broke&rdquo; / &ldquo;Woke Mind Virus&rdquo;</p>
+        <img src="images/wokebroke.jpg" alt="Two line charts side by side titled 'Woke Go Broke Tweets' and 'Woke Mind Virus Tweets,' spanning January to mid-February 2023. In both, a blue 'RegularUsers' line rises and falls with sharp peaks while a pink 'PowerUsers' line stays comparatively low; both charts show a deep shared dip around January 15." />
+        <p class="image-caption">A shared dip and a late surge: the chart invites a causal read it never states outright.</p>
+        <aside class="notes">
+          From the same research. Tie back to Drucker: the visualization masks its own uncertainty &mdash; we don't see error bars, sampling choices, or what counts as a "PowerUser." The viewer supplies the causal story. This is exactly the critical-reading muscle the workshop exercise asks students to apply to AI's visual analysis.
+        </aside>
+      </section>
+
+      <!-- 10. KIES & STANFILL — STUDIO GHIBLI -->
+      <section>
+        <h1>Studio Ghibli and Generative AI</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; from algorithms to attribution</p>
+        <ul>
+          <li>A 2025 trend: users prompting ChatGPT to recreate images in Studio Ghibli&rsquo;s hand-drawn style.</li>
+          <li>Results were almost indistinguishable from actual film stills &mdash; despite OpenAI&rsquo;s claim that guardrails were in place.</li>
+          <li>AI images raise three core legal questions that remain unresolved.</li>
+        </ul>
+        <aside class="notes">
+          Kies, Bridget, and Mel Stanfill. "From Algorithms to Attribution: Teaching AI and Copyright." (PDF in Webcourses.) The Ghibli case is the hook; the next slides unpack the three legal questions.
+        </aside>
+      </section>
+
+      <!-- 11. COPYRIGHT BASICS -->
+      <section>
+        <h1>Copyright Basics</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; the ground rules</p>
+        <ul>
+          <li>Media is non-rivalrous and non-excludable; it doesn&rsquo;t automatically act like property without copyright.</li>
+          <li>US copyright is <strong>utilitarian</strong>: it incentivizes creation for public benefit &mdash; not as a reward for labor.</li>
+          <li>Two key limits: <strong>duration</strong> (life + 70 years, then public domain) and <strong>fair use</strong> (a four-factor balancing test; &ldquo;transformative&rdquo; use is the key standard).</li>
+        </ul>
+        <aside class="notes">
+          Kies &amp; Stanfill. The "utilitarian, not labor-reward" point is load-bearing for everything that follows &mdash; it's why "but the artist worked hard" isn't, by itself, a copyright argument.
+        </aside>
+      </section>
+
+      <!-- 12. QUESTION 1 — TRAINING -->
+      <section>
+        <h1>Q1: Does Training on Copyrighted Material Infringe?</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; mixed outcomes so far</p>
+        <p>Most training data is copyrighted; using only public-domain material is an alternative, but rare. A wave of lawsuits (Disney, Universal, the RIAA, authors) has produced <em>mixed</em> court outcomes.</p>
+        <div class="quote-pair">
+          <div>
+            <h3>For infringement</h3>
+            <ul>
+              <li>Commercial use of entire works.</li>
+              <li>Creators receive no compensation.</li>
+              <li>Exploitative &mdash; especially of marginalized creators.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Against infringement</h3>
+            <ul>
+              <li>Training data is math, not copies.</li>
+              <li>Transformative use.</li>
+              <li>Societal benefit.</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Kies &amp; Stanfill. "Math, not copies" is the industry's strongest card; "no compensation, especially for the marginalized" is the equity counter. Courts haven't settled it.
+        </aside>
+      </section>
+
+      <!-- 13. THE PLAGIARISM CONFUSION -->
+      <section>
+        <h1>The Plagiarism Confusion</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; two different problems</p>
+        <p>Most public criticism frames AI as a &ldquo;plagiarism machine.&rdquo; Maybe so &mdash; but plagiarism and copyright infringement are <em>not the same thing</em>.</p>
+        <ul>
+          <li><strong>Plagiarism</strong> = a moral / attribution issue.</li>
+          <li><strong>Infringement</strong> = a legal issue.</li>
+        </ul>
+        <p>Many AI concerns are ethical rather than legal. Both matter &mdash; but conflating them muddies the debate.</p>
+        <aside class="notes">
+          Kies &amp; Stanfill. Worth slowing down here: students (and pundits) routinely collapse these two, and the collapse makes every conversation less useful.
+        </aside>
+      </section>
+
+      <!-- 14. QUESTION 2 — OUTPUTS THAT RESEMBLE -->
+      <section>
+        <h1>Q2: Do AI Outputs That Resemble Works Infringe?</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; style, &ldquo;feel,&rdquo; and publicity</p>
+        <ul>
+          <li>Style is not copyrightable &mdash; but courts don&rsquo;t always follow the letter of the law.</li>
+          <li><em>Blurred Lines</em> (2015): the &ldquo;feel&rdquo; of a song was found infringing without direct copying &mdash; a precedent relevant to AI.</li>
+          <li>Right of publicity is also at stake (e.g., OpenAI&rsquo;s Scarlett Johansson soundalike).</li>
+        </ul>
+        <blockquote>
+          Unresolved: Is generation copying? Is resemblance infringement?
+        </blockquote>
+        <aside class="notes">
+          Kies &amp; Stanfill. The Ghibli example from earlier lands right here &mdash; "in the style of" sits exactly on this unsettled line.
+        </aside>
+      </section>
+
+      <!-- 15. QUESTION 3 — CAN OUTPUTS BE COPYRIGHTED -->
+      <section>
+        <h1>Q3: Can AI Outputs Be Copyrighted?</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; human authorship in question</p>
+        <div class="quote-pair">
+          <div>
+            <h3>For</h3>
+            <ul>
+              <li>AI is a tool, like Photoshop.</li>
+              <li>Work-for-hire analogy.</li>
+              <li>Outputs can meet basic originality criteria.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Against</h3>
+            <ul>
+              <li>US Copyright Office (2025): human authorship is required.</li>
+              <li>Prompting alone is insufficient creative control.</li>
+              <li>&ldquo;Copyright protects authorship, not sweat of the brow.&rdquo;</li>
+            </ul>
+          </div>
+        </div>
+        <p>International variation: the EU and Korea require human authors; China and Japan allow AI-assisted copyright with sufficient human input.</p>
+        <aside class="notes">
+          Kies &amp; Stanfill. The international split matters for students who may publish or teach across borders &mdash; the answer is genuinely jurisdiction-dependent.
+        </aside>
+      </section>
+
+      <!-- 16. THE BIGGER PICTURE -->
+      <section>
+        <h1>The Bigger Picture</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; power, not just law</p>
+        <ul>
+          <li>All three questions remain legally unsettled &mdash; this will likely reach the Supreme Court.</li>
+          <li>Legal answers, moral intuitions, and everyday practice frequently diverge.</li>
+          <li>Power asymmetries matter: training-data practices risk (neo)colonial extraction from marginalized creators.</li>
+          <li>&ldquo;Fair culture&rdquo; (Madhavi Sunder) vs. &ldquo;free culture.&rdquo;</li>
+        </ul>
+        <aside class="notes">
+          Kies &amp; Stanfill, drawing on Madhavi Sunder. The "fair culture vs. free culture" frame reframes the whole debate around who benefits, not just what's legal.
+        </aside>
+      </section>
+
+      <!-- 17. WHAT THIS MEANS FOR YOU -->
+      <section>
+        <h1>What This Means for You</h1>
+        <p class="slide-subtitle">Kies &amp; Stanfill &mdash; practical guidance</p>
+        <ul>
+          <li><strong>Training models:</strong> public domain is safest; scholarly use favors fair use; don&rsquo;t train and sell.</li>
+          <li><strong>Outputs:</strong> avoid AI avatars of living people; &ldquo;in the style of&rdquo; prompting carries risk; scholarly use helps.</li>
+          <li><strong>Your own work:</strong> publishers are wary of AI-generated or mixed content &mdash; document your human contributions carefully.</li>
+        </ul>
+        <aside class="notes">
+          Kies &amp; Stanfill. Connect this directly to the workshop exercise: students should only upload images that are public domain or that they have the right to use.
+        </aside>
+      </section>
+
+      <!-- 18. COHEN — MJT -->
+      <section>
+        <h1>A Museum&rsquo;s Sublime Hallucinations</h1>
+        <p class="slide-subtitle">Dan Cohen &mdash; the Museum of Jurassic Technology</p>
+        <p>Cohen writes about the Museum of Jurassic Technology &mdash; a project that is itself a commentary on museums, full of fake things presented as real.</p>
+        <blockquote>
+          &ldquo;Prodding you to notice what placing an object in a glass vitrine conveys, and what you, the viewer, project onto the object.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen</span>
+        </blockquote>
+        <p>How does a respectable-looking form encourage us to treat things as authoritative?</p>
+        <aside class="notes">
+          Cohen, Dan. "A Museum's Sublime Hallucinations." Humane Ingenuity. https://newsletter.dancohen.org/archive/a-museums-sublime-hallucinations
+          The vitrine = the visualization = the clean AI answer. Form confers authority regardless of content. This is the through-line of the whole deck.
+        </aside>
+      </section>
+
+      <!-- 19. MJT — THE PEALE QUOTE -->
+      <section>
+        <h1>Real, Fake, and the Space Between</h1>
+        <p class="slide-subtitle">Cohen &mdash; a fake attribution that became real</p>
+        <blockquote>
+          &ldquo;The learner must be led always from familiar objects toward the unfamiliar, guided along, as it were, a chain of flowers into the mysteries of life.&rdquo;
+          <span class="attribution">&mdash; attributed to Charles Willson Peale</span>
+        </blockquote>
+        <p>Now &ldquo;widely attributed to Peale because of MJT,&rdquo; the line is in fact <em>not</em> by Peale &mdash; it comes from his biographer, Charles Coleman Sellers. A project that deliberately blurs real and fake <em>inside itself</em> has also generated misinformation <em>outside</em> itself.</p>
+        <aside class="notes">
+          Cohen, "A Museum's Sublime Hallucinations." A perfect non-AI example of how confident, well-formed presentation launders a false claim into accepted fact &mdash; exactly the failure mode of AI hallucination.
+        </aside>
+      </section>
+
+      <!-- 20. MJT — HUMAN VS AI FAKENESS -->
+      <section>
+        <h1>Human Fakeness vs. AI Hallucination</h1>
+        <p class="slide-subtitle">Cohen &mdash; the contrast that closes the loop</p>
+        <blockquote>
+          &ldquo;It&rsquo;s hard to imagine artificial general intelligence producing anything like what&rsquo;s inside MJT, because the engineer&rsquo;s concept of AGI is so far from the actual human mind, which seems to have an infinite ability to be peculiar and surprising, and to prospect for meaning, understanding, and joy in the strangest of places.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen</span>
+        </blockquote>
+        <aside class="notes">
+          Cohen, "A Museum's Sublime Hallucinations." Cohen's distinction: MJT's fakeness is intentional, meaning-seeking, human; AI's is statistical. The week's question for students &mdash; what can AI's visual analysis notice, and what can only a human reader bring?
+        </aside>
+      </section>
+
+      <!-- 21. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>NEH Workshop 3: AI for Visual Analysis</strong> &mdash; June 10, 10 AM&ndash;noon, CHDR.</li>
+          <li><strong>Discussion: Workshop Exercise &mdash; Visual Analysis</strong> (due Sunday, June 14). Using Claude Artifacts, upload images you may legally use (archival photos, artwork, maps, data visualizations) and have Claude analyze, describe, or interpret them. Build metadata and a visual tool for exploring them.</li>
+          <li>Reflect: how does AI read visual material compared to trained humanistic interpretation? What does it notice, what does it miss?</li>
+          <li>Readings: Sinclair &amp; Rockwell, &ldquo;Visualization&rdquo;; Kies &amp; Stanfill, &ldquo;From Algorithms to Attribution&rdquo;; Cohen, &ldquo;A Museum&rsquo;s Sublime Hallucinations.&rdquo;</li>
+        </ul>
+        <p>See <code>weeks/week-05.md</code> on Canvas for full reading links and the discussion prompt.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
