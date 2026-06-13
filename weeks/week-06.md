@@ -21,4 +21,4 @@ How do we keep students engaged, especially in online and asynchronous modalitie
 
 ## Discussion Prompt
 
-AI Exercise Design. Design an AI-related exercise for your course. How does this exercise use active learning principles? What would students do with AI, and what would they learn? How does this exercise connect to your course's learning objectives? Use Claude Artifacts to prototype or model the exercise.
+AI Exercise Design. Design an AI-related exercise for your course. How does this exercise use active learning principles? What would students do with AI, and what would they learn? How does this exercise connect to your course's learning objectives?We strongly recommend trying out something interactive in Claude Artifacts (strong DH component, less likely to offload thinking) as opposed to having students generate writing (more likely to offload thinking).
