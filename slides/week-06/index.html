@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 6 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-06/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Slide 15: Matthew Arnold portrait beside the quote. */
+    .reveal .arnold-cols {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4em;
+      text-align: left;
+    }
+    .reveal .arnold-cols .arnold-text {
+      flex: 1 1 0;
+    }
+    .reveal .arnold-cols figure.arnold-portrait {
+      flex: 0 0 auto;
+      margin: 0;
+      text-align: center;
+    }
+    .reveal .arnold-cols figure.arnold-portrait img {
+      max-height: 360px;
+      width: auto;
+      border: 4px solid var(--text-muted);
+    }
+    .reveal .arnold-cols figure.arnold-portrait figcaption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.7em;
+      margin-top: 0.4em;
+      max-width: 240px;
+    }
+    /* Side-by-side blocks for the inclusive-pedagogy / critique slides. */
+    .reveal .quote-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1.2em;
+      text-align: left;
+    }
+    .reveal .quote-pair > div {
+      flex: 1 1 0;
+    }
+    .reveal .quote-pair h3 {
+      font-family: 'VT323', monospace;
+      font-size: 1.1em;
+      margin: 0 0 0.3em 0;
+    }
+    .reveal .quote-pair ul {
+      font-size: 0.82em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 6<br/>Active Learning &amp;<br/>Student Motivation</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+      </section>
+
+      <!-- 2. THE CHALLENGE -->
+      <section>
+        <h1>The Challenge: Keeping Students Engaged</h1>
+        <ul>
+          <li>Online and asynchronous modalities remove real-time interaction and feedback.</li>
+          <li>Digital humanities courses blend technical and interpretive work &mdash; and it&rsquo;s hard to scaffold both.</li>
+          <li>Student motivation drops when learning feels passive or disconnected from their lives.</li>
+        </ul>
+        <aside class="notes">
+          The problem this week sets out to solve. Async strips away the live cues we lean on; DH adds a double scaffolding burden (skills + interpretation); and motivation collapses when work feels passive or irrelevant. Everything that follows is a response to one of these three.
+        </aside>
+      </section>
+
+      <!-- 3. ACTIVE LEARNING PRINCIPLES -->
+      <section>
+        <h1>Active Learning Principles</h1>
+        <ul>
+          <li>Students learn by doing, not watching &mdash; aim for more tasks, fewer lectures.</li>
+          <li>Low-stakes, frequent activities outperform high-stakes assessments for retention.</li>
+          <li>In async contexts it&rsquo;s especially important that tasks are <em>genuine</em>, so they don&rsquo;t feel like busy work.</li>
+        </ul>
+        <aside class="notes">
+          The core toolkit. The async caveat is the one to dwell on: when there&rsquo;s no classroom energy carrying a flat task, the task itself has to be worth doing. This is the bar the week&rsquo;s discussion exercise (designing an AI activity) has to clear.
+        </aside>
+      </section>
+
+      <!-- 4. LANGMEAD & VEE — QUESTIONS NO COMPUTER CAN ANSWER -->
+      <section>
+        <h1>Questions No Computer Can Answer</h1>
+        <p class="slide-subtitle">Langmead &amp; Vee &mdash; their approach to DH</p>
+        <blockquote>
+          Asking &ldquo;questions that no computer can answer.&rdquo;
+          <span class="attribution">&mdash; Langmead &amp; Vee</span>
+        </blockquote>
+        <p>The computer might facilitate the answering, but the <strong>question</strong> is the humanities part.</p>
+        <p>This matters even more as AI seems able to answer &mdash; or ask &mdash; questions for us.</p>
+        <aside class="notes">
+          Langmead, Alison, and Annette Vee. "Teaching the Digital Humanities to a Broad Undergraduate Population." What We Teach When We Teach DH.
+          The thesis that anchors the Langmead &amp; Vee run: the humanistic move is the question, not the computation. In the AI era this gets sharper, not weaker.
+        </aside>
+      </section>
+
+      <!-- 5. LANGMEAD & VEE — OBLIGATION TO TEACH IMPLICATIONS -->
+      <section>
+        <h1>An Obligation to Teach the Implications</h1>
+        <p class="slide-subtitle">Langmead &amp; Vee &mdash; digitality across the disciplines</p>
+        <blockquote>
+          &ldquo;The humanities, like all disciplines, must not only grapple with what pervasive digitality means for our work; we also have an obligation to teach these implications to our students.&rdquo;
+          <span class="attribution">&mdash; Langmead &amp; Vee</span>
+        </blockquote>
+        <p>They want students to &ldquo;draw on their emerging understandings of computation in their own fields&rdquo; and to &ldquo;explore computation within the contexts of their other courses and majors.&rdquo;</p>
+        <aside class="notes">
+          Langmead &amp; Vee. This discipline-relative framing is exactly why we advocate not stopping at refusal, even if you don&rsquo;t like AI: the point is to help students reason about computation inside their own fields, not to opt out of the conversation.
+        </aside>
+      </section>
+
+      <!-- 6. LANGMEAD & VEE — HUMANS ALL THE WAY DOWN -->
+      <section>
+        <h1>Humans All the Way Down</h1>
+        <p class="slide-subtitle">Langmead &amp; Vee &mdash; the course mantra</p>
+        <blockquote>
+          &ldquo;That computers were designed by, operated by, programmed by, and used by humans is captured in a mantra we often repeat in the course: it is humans all the way down.&rdquo;
+          <span class="attribution">&mdash; Langmead &amp; Vee</span>
+        </blockquote>
+        <p>A way to demystify technology &mdash; and to keep the human centered in a humanities classroom.</p>
+        <aside class="notes">
+          Langmead &amp; Vee. "Humans all the way down" does double duty: it strips the mystique off the machine and re-centers people. Pair it with the previous slide&rsquo;s "questions no computer can answer."
+        </aside>
+      </section>
+
+      <!-- 7. LANGMEAD & VEE — MANY ANGLES ON TECHNOLOGY -->
+      <section>
+        <h1>Many Angles on Technology</h1>
+        <p class="slide-subtitle">Langmead &amp; Vee &mdash; mix and match for your course</p>
+        <blockquote>
+          &ldquo;We discuss both historical and contemporary questions about how computers work, what they can and cannot do, how they serve or do not serve us, and what they are made to do (in both senses of that verb).&rdquo;
+          <span class="attribution">&mdash; Langmead &amp; Vee</span>
+        </blockquote>
+        <p>Lots of entry points exist &mdash; choose the angles that fit your course.</p>
+        <aside class="notes">
+          Langmead &amp; Vee. "Made to do" in both senses &mdash; designed to do, and coerced into doing &mdash; is a nice prompt. The takeaway for instructors: there&rsquo;s no single correct lens; assemble the mix your students need.
+        </aside>
+      </section>
+
+      <!-- 8. LANGMEAD & VEE — INSTITUTIONAL MODEL -->
+      <section>
+        <h1>A Model for New Courses</h1>
+        <p class="slide-subtitle">Langmead &amp; Vee &mdash; navigating the institution</p>
+        <p>As you imagine proposing courses that don&rsquo;t exist yet, their account of the institutional work is a useful model:</p>
+        <blockquote>
+          &ldquo;Learned to draw on our personal connections through a burgeoning university-wide DH network, to collaborate from the vantage point of our individual disciplines, to garner sponsorship for a pilot version of the course, and then to leverage the university&rsquo;s general education requirements in order to make our course sustainable.&rdquo;
+          <span class="attribution">&mdash; Langmead &amp; Vee</span>
+        </blockquote>
+        <aside class="notes">
+          Langmead &amp; Vee. Concrete, reproducible moves: network, collaborate across disciplines, pilot, then hook into gen-ed to make it sustainable. Directly relevant to anyone in the room thinking about a new course proposal.
+        </aside>
+      </section>
+
+      <!-- 9. INCLUSIVE PEDAGOGY -->
+      <section>
+        <h1>Inclusive Pedagogy as Motivation</h1>
+        <p class="slide-subtitle">Curriculum design, not just classroom climate</p>
+        <ul>
+          <li>Inclusion means <strong>curriculum design</strong>, not just classroom climate.</li>
+          <li>Students engage more when materials relate to them &mdash; contemporary examples, shared experiences, cultural connection.</li>
+          <li>This is a challenge in DH because, as Prince &amp; Messina note, the field is very white.</li>
+          <li>Black DH asks: whose questions does DH ask? Whose archives? Whose methods?</li>
+        </ul>
+        <aside class="notes">
+          The pivot from "how to engage" to "who gets engaged." Inclusion as design, not vibe. The three Black DH questions are the through-line into the next two slides &mdash; and a ready scaffold for examining any syllabus.
+        </aside>
+      </section>
+
+      <!-- 10. BLACK DH & CITATIONAL POLITICS -->
+      <section>
+        <h1>Black DH and Citational Politics</h1>
+        <p class="slide-subtitle">Prince &amp; Messina &mdash; citation is not neutral</p>
+        <p>Prince &amp; Messina argue that a radical politics of inclusivity is fundamental to the field, and that citational practices are crucial.</p>
+        <ul>
+          <li>Who&rsquo;s on your syllabus?</li>
+          <li>Which scholars are highlighted for your students &mdash; and which aren&rsquo;t?</li>
+        </ul>
+        <p>Compare Kishonna Gray&rsquo;s <strong>#CiteHerWork</strong>.</p>
+        <aside class="notes">
+          Prince, Alanna, and Cara Marta Messina. "Black Digital Humanities for the Rising Generation." DHQ 16.3 (2022).
+          Citation as a political act, not bookkeeping. #CiteHerWork makes it concrete. Invite the room to audit their own reading lists against these questions.
+        </aside>
+      </section>
+
+      <!-- 11. PRINCE & MESSINA — HIDDEN CURRICULUM -->
+      <section>
+        <h1>Making the Hidden Curriculum Legible</h1>
+        <p class="slide-subtitle">Prince &amp; Messina &mdash; leveling the playing field</p>
+        <p>They walk through every step they took to make the &ldquo;hidden curriculum&rdquo; of academic publishing legible to junior scholars.</p>
+        <p>Aimed at grad students and early-career scholars &mdash; but the structure carries to earlier stages too:</p>
+        <ul>
+          <li>What do people need to know that they might not already know?</li>
+          <li>How can you level the playing field by providing that foundation?</li>
+        </ul>
+        <aside class="notes">
+          Prince &amp; Messina. The "hidden curriculum" idea generalizes: every course assumes background some students don&rsquo;t have. Naming and teaching that background is itself an inclusion and a motivation move.
+        </aside>
+      </section>
+
+      <!-- 12. MOLLICK CRITIQUE — PROFESSIONAL JUDGMENT -->
+      <section>
+        <h1>AI Content Bypasses Professional Judgment</h1>
+        <p class="slide-subtitle">A critical read of Mollick</p>
+        <ul>
+          <li>Mollick frames instructor expertise as &ldquo;vetting&rdquo; AI outputs &mdash; positioning teachers as quality-checkers rather than knowledge-makers.</li>
+          <li>Good examples and explanations aren&rsquo;t generic; they respond to specific students, contexts, and moments an instructor knows and AI does not.</li>
+          <li>Offloading that work gradually erodes the pedagogical craft that comes from doing it yourself.</li>
+        </ul>
+        <aside class="notes">
+          Mollick, Ethan. "Using AI to Make Teaching Easier and More Impactful." One Useful Thing.
+          The first of three critiques. The "vetting" frame quietly demotes teachers from authors to inspectors. The craft argument is the heart of it: making examples yourself is how you build the judgment that lets you vet anything at all.
+        </aside>
+      </section>
+
+      <!-- 13. MOLLICK CRITIQUE — ASSESSMENT -->
+      <section>
+        <h1>Assessment Is Not a Production Problem</h1>
+        <p class="slide-subtitle">A critical read of Mollick</p>
+        <ul>
+          <li>&ldquo;Use AI to generate quiz questions&rdquo; assumes test-writing is a time burden &mdash; but designing assessment is the intellectual work of deciding what matters.</li>
+          <li>Low-stakes tests work because they align with specific learning objectives and student contexts.</li>
+          <li>&ldquo;Muddiest point&rdquo; exercises lose their value if AI summarizes responses instead of the instructor reading them &mdash; and if they write it, we owe it to them to read it.</li>
+        </ul>
+        <aside class="notes">
+          Mollick. Ties straight back to Slide 3&rsquo;s "genuine tasks": assessment design is where you decide what the course is about. Automating it doesn&rsquo;t save the work &mdash; it skips it.
+        </aside>
+      </section>
+
+      <!-- 14. MOLLICK CRITIQUE — EFFICIENCY FRAMING -->
+      <section>
+        <h1>Efficiency Framing Devalues Teaching</h1>
+        <p class="slide-subtitle">A critical read of Mollick</p>
+        <ul>
+          <li>Mollick &mdash; and much of the AI-for-teaching space &mdash; frames pedagogy as a burden to be lightened rather than a practice to be developed: tasks to automate, not a skill that deepens over time.</li>
+          <li>Historically, tools that &ldquo;save teacher time&rdquo; have been used to justify larger classes, fewer instructors, and reduced investment.</li>
+          <li>Efficiency gains rarely stay with teachers.</li>
+        </ul>
+        <aside class="notes">
+          Mollick. The political-economy critique: "saving time" is rarely neutral &mdash; the saved time gets reabsorbed as bigger workloads. Worth stating plainly so the room reads efficiency claims with their eyes open.
+        </aside>
+      </section>
+
+      <!-- 15. COHEN — ARNOLD & THE CANON -->
+      <section class="arnold-slide">
+        <h1>&ldquo;The Best That Has Been Thought and Said&rdquo;</h1>
+        <p class="slide-subtitle">Dan Cohen &mdash; Matthew Arnold, the canon, and training data</p>
+        <div class="arnold-cols">
+          <div class="arnold-text">
+            <p>Cohen invokes Arnold&rsquo;s framing of culture as &ldquo;the best that has been thought and said.&rdquo;</p>
+            <p>His point: serious work with LLMs needs <em>reliable</em> training data, not just any random thing from the internet.</p>
+            <p>But the phrase has historically marginalized non-canonical culture &mdash; working-class, women&rsquo;s, racialized, and postcolonial cultures.</p>
+          </div>
+          <figure class="arnold-portrait">
+            <img src="images/matthew-arnold.jpg" alt="Sepia-toned 1869 photographic portrait of Matthew Arnold, a clean-shaven Victorian man with side-parted dark hair and long sideburns, wearing a dark coat and bow tie, seated and turned slightly to one side." />
+            <figcaption>Matthew Arnold, 1869 (Hills &amp; Saunders). Public domain.</figcaption>
+          </figure>
+        </div>
+        <aside class="notes">
+          Cohen, Dan. "Books Are Big AI&rsquo;s Achilles&rsquo; Heel." Humane Ingenuity.
+          The tension to sit with: Arnold&rsquo;s "best" is a real argument for data quality, but "best" is also a gatekeeping word with a long exclusionary history. Connects straight back to the Black DH slides &mdash; whose culture counts as "the best"?
+        </aside>
+      </section>
+
+      <!-- 16. COHEN — LIBRARY-LED TRAINING DATA -->
+      <section>
+        <h1>Books as AI&rsquo;s Achilles&rsquo; Heel</h1>
+        <p class="slide-subtitle">Cohen &mdash; a library-led training set</p>
+        <blockquote>
+          &ldquo;A library-led training data set of books would diversify and strengthen the development of AI.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen</span>
+        </blockquote>
+        <p>Google Books, HathiTrust, and similar initiatives have already &ldquo;worked through many of the most challenging copyright issues, at least for how fair use applies to nonprofit research uses such as computational analysis.&rdquo;</p>
+        <aside class="notes">
+          Cohen. The constructive turn: instead of scraping the open web, build training data from the deep, vetted, already-legally-cleared corpora libraries steward. Diversify and strengthen &mdash; the answer to Slide 15&rsquo;s worry about "the best."
+        </aside>
+      </section>
+
+      <!-- 17. COHEN — LIBRARIES' PUBLIC-INTEREST DISPOSITION -->
+      <section>
+        <h1>Why Libraries Are Suited to This</h1>
+        <p class="slide-subtitle">Cohen &mdash; a public-interest disposition</p>
+        <blockquote>
+          Academic libraries already &ldquo;have a public-interest disposition that can take into account the particular social and ethical challenges of AI development.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen</span>
+        </blockquote>
+        <p>The institution&rsquo;s values &mdash; not just its holdings &mdash; are the qualification.</p>
+        <aside class="notes">
+          Cohen. The closer: libraries bring more than books, they bring a mission. That public-interest stance is exactly what the commercial scrape-everything model lacks &mdash; and it loops the whole deck back to keeping the human (and humane) at the center.
+        </aside>
+      </section>
+
+      <!-- 18. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>Discussion: AI Exercise Design</strong> (due Sunday, June 21). Design an AI-related exercise for your course. How does it use active learning principles? What would students do with AI, and what would they learn? How does it connect to your learning objectives? Use Claude Artifacts to prototype or model the exercise.</li>
+          <li>Aim for a <em>genuine</em>, low-stakes, doing-not-watching task &mdash; one whose questions a computer can&rsquo;t answer for the student.</li>
+          <li>Readings: Langmead &amp; Vee, &ldquo;Teaching the Digital Humanities to a Broad Undergraduate Population&rdquo;; Prince &amp; Messina, &ldquo;Black Digital Humanities for the Rising Generation&rdquo;; Mollick, &ldquo;Using AI to Make Teaching Easier and More Impactful&rdquo;; Cohen, &ldquo;Books Are Big AI&rsquo;s Achilles&rsquo; Heel.&rdquo;</li>
+        </ul>
+        <p>See <code>weeks/week-06.md</code> on Canvas for full reading links and the discussion prompt.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

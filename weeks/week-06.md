@@ -2,6 +2,7 @@
 week: 6
 title: "Active Learning and Student Motivation"
 starts: 2026-06-15
+slides: week-06
 discussion:
   title: "AI Exercise Design"
   points: 30
