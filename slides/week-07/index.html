@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 7 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-07/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Key-terms definition list used on the Git slides. */
+    .reveal dl.key-terms {
+      text-align: left;
+      max-width: 90%;
+      margin: 0.4em auto 0;
+    }
+    .reveal dl.key-terms dt {
+      font-family: 'VT323', monospace;
+      font-size: 1.15em;
+      margin-top: 0.5em;
+    }
+    .reveal dl.key-terms dd {
+      margin: 0 0 0.3em 0;
+      font-size: 0.9em;
+    }
+    /* Bordered figure placeholder for the Stanfill GitHub screenshot. */
+    .reveal figure.shot {
+      margin: 0.6em auto 0;
+      text-align: center;
+    }
+    .reveal figure.shot img {
+      max-height: 300px;
+      width: auto;
+      border: 4px solid var(--text-muted);
+    }
+    .reveal figure.shot figcaption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.7em;
+      margin-top: 0.4em;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 7<br/>AI for Code &amp;<br/>Digital Humanities</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+        <aside class="notes">
+          The transition week: from Claude Artifacts to Claude Code Web. The framing question &mdash; what does it mean for humanists to engage with code, not as engineers but as scholars who build tools? No prior coding experience required.
+        </aside>
+      </section>
+
+      <!-- 2. MARTIN — TRAINING THE SCHOLAR / TRAINING THE MODEL -->
+      <section>
+        <h1>Command Lines for the Humanities</h1>
+        <p class="slide-subtitle">Meredith Martin &mdash; what we are trained to recognize</p>
+        <p>Martin opens by comparing disciplinary training to training an AI model: what we recognize about poetry is the product of what went into preparing us.</p>
+        <ul>
+          <li>We &mdash; and those who evaluate us &mdash; are trained to recognize traditional, single-authored, gradually-developed written outputs.</li>
+          <li>We are <strong>not</strong> trained to recognize collaboration, public scholarship, or the creation of software and data.</li>
+        </ul>
+        <p>Martin argues humanists need to learn to recognize that second category of work.</p>
+        <aside class="notes">
+          Martin, Meredith. "Command Lines for the Humanities." PMLA 139.3 (2024): 541&ndash;547.
+          The opening analogy does the heavy lifting: training shapes perception. Our disciplinary "training data" teaches us to value the monograph and overlook the database, the tool, the collaboration. Naming that is the first move toward changing it.
+        </aside>
+      </section>
+
+      <!-- 3. MARTIN — RECOGNITION & LEGIBILITY -->
+      <section>
+        <h1>Interdisciplinarity, Collaboration, Recognition</h1>
+        <p class="slide-subtitle">Martin &mdash; making your work legible</p>
+        <p>This matters as we turn toward job materials in the back half of the semester:</p>
+        <p>How will you make what you do <strong>legible</strong> to people with traditional disciplinary mindsets?</p>
+        <p>We&rsquo;ve had to do this legibility labor ourselves in the English department and the College of Arts and Humanities.</p>
+        <aside class="notes">
+          Martin. "Legibility labor" is the practical takeaway &mdash; the work of translating non-traditional outputs into terms a conventional committee can read and reward. Connects directly to the job-materials unit coming later in the course.
+        </aside>
+      </section>
+
+      <!-- 4. MARTIN — POLITICS OF CITATION -->
+      <section>
+        <h1>A Politics of Citation</h1>
+        <p class="slide-subtitle">Martin &mdash; citing scholar-built resources</p>
+        <blockquote>
+          &ldquo;Scholars need to cite scholar-built resources and workflows (software, web applications, databases) as research outputs.&rdquo;
+          <span class="attribution">&mdash; Martin, 543</span>
+        </blockquote>
+        <p>If this becomes a collective standard, it&rsquo;s far easier to argue for the value of these necessary outputs.</p>
+        <aside class="notes">
+          Martin, 543. Citation again as a political act (echoes the Black DH citation slides from Week 6). Value follows recognition: if software and databases get cited as outputs, they start to count in the systems that evaluate us.
+        </aside>
+      </section>
+
+      <!-- 5. MARTIN — HUMANITIES FOR AI -->
+      <section>
+        <h1>Not Just AI for Humanists</h1>
+        <p class="slide-subtitle">Martin &mdash; humanities <em>for</em> AI</p>
+        <blockquote>
+          &ldquo;Is the endgame to improve the closed LLMs with our input, to provide drag on the corporations that control them, or to build our own alternatives and explain them to different publics? &hellip; the more we own our expertise and turn it into actionable and, yes, marketable, interventions, the more likely our expertise will be taken seriously.&rdquo;
+          <span class="attribution">&mdash; Martin, 543</span>
+        </blockquote>
+        <p>Not just <em>AI for Humanists</em> (making the tech intelligible to us) but <em>humanities for AI</em> (bringing our knowledge to bear on these tools).</p>
+        <aside class="notes">
+          Martin, 543. Moving from closed, slow academic publishing toward more public work increases impact. The two-directional frame is the keeper: translate the tech inward, and push humanistic expertise outward into the tools themselves. It&rsquo;s also a hiring/tenure/promotion question &mdash; this work has to be valued, not just done.
+        </aside>
+      </section>
+
+      <!-- 6. WILLISON — VIBE CODING VS AI-ASSISTED PROGRAMMING -->
+      <section>
+        <h1>AI-Assisted Programming vs. Vibe Coding</h1>
+        <p class="slide-subtitle">Simon Willison &mdash; two different things</p>
+        <p>Term coined by Andrej Karpathy in 2025. Willison defines vibe coding as &ldquo;building software with an LLM <em>without reviewing the code it writes</em>.&rdquo;</p>
+        <p>Both have their place &mdash; but they aren&rsquo;t the same thing.</p>
+        <blockquote>
+          &ldquo;My golden rule for production-quality AI-assisted programming is that I won&rsquo;t commit any code to my repository if I couldn&rsquo;t explain exactly what it does to somebody else.&rdquo;
+          <span class="attribution">&mdash; Willison</span>
+        </blockquote>
+        <aside class="notes">
+          Willison, Simon. "Not All AI-Assisted Programming is Vibe Coding (But Vibe Coding Rocks)." simonwillison.net, March 19, 2025.
+          The distinction is the whole point: vibe coding skips review on purpose; AI-assisted programming keeps you accountable for the code. The golden rule &mdash; don&rsquo;t commit what you can&rsquo;t explain &mdash; is a portable standard for students too.
+        </aside>
+      </section>
+
+      <!-- 7. WILLISON — WHEN VIBE CODING MAKES SENSE -->
+      <section>
+        <h1>When Vibe Coding Makes Sense</h1>
+        <p class="slide-subtitle">Willison &mdash; low stakes, but watch the edges</p>
+        <ul>
+          <li><strong>Low stakes:</strong> bugs or security flaws won&rsquo;t cause real harm.</li>
+          <li>Personal or throwaway projects &mdash; automating tedious tasks, not tools others rely on.</li>
+          <li>Watch for <strong>secrets</strong> (API keys, passwords) and data privacy: if private data is involved, you need to understand how the code handles it.</li>
+          <li>Watch for demands on other platforms&rsquo; servers &mdash; especially for things like web scrapers.</li>
+        </ul>
+        <figure class="shot">
+          <img src="images/mstanfill-github.png" alt="Mel Stanfill's GitHub profile (mstanfill), showing pinned public repositories including AO3MetadataScraper, BskyScraper, FFNetScraper, TumblrScraper, and RedditScraper, each described as a 'Web scraper for research purposes' and written in Jupyter Notebook." />
+          <figcaption>github.com/mstanfill &mdash; research scrapers as public scholarly output</figcaption>
+        </figure>
+        <aside class="notes">
+          Willison (and Karpathy): vibe coding fits casual products, not important uses. The four guardrails &mdash; stakes, audience, secrets/privacy, and load on others&rsquo; servers &mdash; are the practical checklist. The Stanfill profile makes the last guardrail concrete: these are scrapers (AO3, Bluesky, FFNet, Tumblr, Reddit) &mdash; exactly the &ldquo;research for purposes&rdquo; tools that hit other platforms&rsquo; servers and need care. It also models Martin&rsquo;s point: software as a citable, public scholarly output.
+        </aside>
+      </section>
+
+      <!-- 8. WILLISON — SANDBOXING -->
+      <section>
+        <h1>Sandboxing as a Safety Net</h1>
+        <p class="slide-subtitle">Willison &mdash; why Claude Artifacts felt safe</p>
+        <p>A sandbox like Claude Artifacts makes vibe coding safer:</p>
+        <ul>
+          <li>It restricts code to a locked-down iframe, allows only approved libraries, and blocks network requests to other sites.</li>
+          <li>That makes it much harder to cause harm &mdash; but it also limits what projects can do.</li>
+        </ul>
+        <p>Inside the sandbox you can&rsquo;t reach external APIs or run prompts against an LLM &mdash; which is exactly why this week we move to Claude Code Web.</p>
+        <aside class="notes">
+          Willison. The sandbox trade-off explains the arc of the course: Artifacts kept us safe by walling things off (great for low-stakes prototyping); Claude Code Web opens the walls so we can build real, connected projects &mdash; and asks us to take on the review responsibility from the previous slides.
+        </aside>
+      </section>
+
+      <!-- 9. WILLISON — GIT: WHAT IT IS -->
+      <section>
+        <h1>Using Git with Coding Agents</h1>
+        <p class="slide-subtitle">Willison &mdash; the vocabulary</p>
+        <dl class="key-terms">
+          <dt>Git</dt>
+          <dd>Open-source software for version control.</dd>
+          <dt>Version control</dt>
+          <dd>A way to &ldquo;record how that code changes over time and investigate and reverse any mistakes&rdquo; &mdash; especially useful when AI is changing code for you.</dd>
+          <dt>GitHub</dt>
+          <dd>A website where you can host and collaborate on software, built on Git to track changes.</dd>
+        </dl>
+        <aside class="notes">
+          Willison, Simon. "Using Git with Coding Agents." Version control is the safety net under AI-assisted work: if the agent makes a mess, you can see exactly what changed and roll it back. Demystify the three terms &mdash; Git the tool, version control the practice, GitHub the place.
+        </aside>
+      </section>
+
+      <!-- 10. WILLISON — GIT: KEY TERMS -->
+      <section>
+        <h1>Git: Repositories and Commits</h1>
+        <p class="slide-subtitle">Willison &mdash; key terms</p>
+        <dl class="key-terms">
+          <dt>Repository</dt>
+          <dd>Where your Git project is stored, whether locally or in the cloud.</dd>
+          <dt>Commits</dt>
+          <dd>&ldquo;Timestamped bundles of changes to one or more files accompanied by a commit message describing those changes.&rdquo;</dd>
+        </dl>
+        <p>It&rsquo;s worth understanding these basics even if you never manually manage your repository and commits.</p>
+        <aside class="notes">
+          Willison. The commit message matters: it&rsquo;s the human-readable record of intent. Even when an agent does the committing, knowing what a commit is lets you read the history of your own project and trust the rollback.
+        </aside>
+      </section>
+
+      <!-- 11. WILLISON — GIT: COLLABORATION & MERGE CONFLICTS -->
+      <section>
+        <h1>Git as a Collaboration Tool</h1>
+        <p class="slide-subtitle">Willison &mdash; agents and merge conflicts</p>
+        <p>Git is a professional tool for collaboration: learning to use it consistently prepares students to work with both people and agents.</p>
+        <blockquote>
+          &ldquo;Coding agents can navigate the most Byzantine of merge conflicts, reasoning through the intent of the new code and figuring out what to keep and how to combine conflicting changes.&rdquo;
+          <span class="attribution">&mdash; Willison</span>
+        </blockquote>
+        <p>The hardest part of Git &mdash; resolving conflicts between versions &mdash; is exactly what agents are now good at.</p>
+        <aside class="notes">
+          Willison. Merge conflicts used to be the gatekeeping pain point of collaborative coding. Agents lower that barrier, which makes Git more approachable for humanists &mdash; but the collaboration literacy still matters for working with both people and tools.
+        </aside>
+      </section>
+
+      <!-- 12. COHEN — THE INDEX -->
+      <section>
+        <h1>The Index and the Vector</h1>
+        <p class="slide-subtitle">Dan Cohen &mdash; the problem with precise vocabulary</p>
+        <p>Traditional library indexes require precise vocabulary: search terms must match controlled keywords.</p>
+        <blockquote>
+          &ldquo;Few first-year students walk into a museum &hellip; knowing about the Pre-Raphaelite Brotherhood and exact terms for its visual and conceptual characteristics &hellip; many audiences for cultural works don&rsquo;t have the right words at hand &hellip; They have lay descriptors instead, like &lsquo;woodsy.&rsquo;&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <p>LLMs can bridge this divide &mdash; because they use vectors.</p>
+        <aside class="notes">
+          Cohen, Dan. "The Index and the Vector." Humane Ingenuity.
+          The index demands you already know the answer&rsquo;s vocabulary to find it &mdash; a real barrier for novices. "Woodsy" is the perfect example of lay language that a controlled index can&rsquo;t handle. Sets up the vector as the fix.
+        </aside>
+      </section>
+
+      <!-- 13. COHEN — THE VECTOR -->
+      <section>
+        <h1>What&rsquo;s a Vector?</h1>
+        <p class="slide-subtitle">Cohen &mdash; meaning as proximity</p>
+        <p>Mathematical representations of meaning in multidimensional space, where proximity encodes similarity.</p>
+        <blockquote>
+          &ldquo;&lsquo;Gloves,&rsquo; &lsquo;ring,&rsquo; and &lsquo;bell&rsquo; will add up to a vector that is highly correlated with &lsquo;boxing.&rsquo;&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <ul>
+          <li>This lets AI handle vague, lay-language queries (&ldquo;woodsy, mythical, long-haired women&rdquo;) and return precise results (&ldquo;Pre-Raphaelite Brotherhood&rdquo;).</li>
+          <li>For DH: AI can be a better entryway to cultural-heritage collections for non-expert users.</li>
+          <li>It&rsquo;s also why people so often want to <em>ask</em> AI things.</li>
+        </ul>
+        <aside class="notes">
+          Cohen. Vectors turn meaning into geometry: near = similar. The boxing example shows how scattered lay terms still land in the right neighborhood. The DH payoff is access &mdash; the collection becomes reachable without insider vocabulary.
+        </aside>
+      </section>
+
+      <!-- 14. COHEN — VECTORS AND CODE -->
+      <section>
+        <h1>Vectors and Coding</h1>
+        <p class="slide-subtitle">Cohen &mdash; vocabulary as the barrier</p>
+        <blockquote>
+          &ldquo;My students, like all novice learners of a subject or medium, lacked specialized vocabulary, and they would have had similar problems trying to describe and locate works of art in a digital or physical collection, due to the precise composition of finding aids.&rdquo;
+          <span class="attribution">&mdash; Cohen</span>
+        </blockquote>
+        <p>Code and Git also have specialized vocabularies &mdash; and our courses can be an entry point for building that vocabulary and learning to navigate these systems with the help of AI agents.</p>
+        <aside class="notes">
+          Cohen. The bridge back to the Willison run: what the vector does for art collections, an AI coding agent does for code. The barrier in both cases is vocabulary, and the course&rsquo;s job is to lower it &mdash; not to skip the learning, but to scaffold it.
+        </aside>
+      </section>
+
+      <!-- 15. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>Workshop 4: Web and Interactive Applications</strong> (June 24, 10 AM&ndash;noon, CHDR). Introduces Claude Code Web and building interactive DH projects with AI. Attendees extend the exercise; others complete it asynchronously.</li>
+          <li><strong>Discussion: Workshop Exercise &mdash; Machine Learning and Code</strong> (due Sunday, June 28). Using Claude Code Web, build a small interactive project relevant to your discipline &mdash; a text-analysis tool, a timeline, a quiz, a data explorer. No prior coding experience required. Reflect on co-authoring code with AI and what it means for humanities pedagogy.</li>
+          <li>Readings: Martin, &ldquo;Command Lines for the Humanities&rdquo;; Willison, &ldquo;Not All AI-Assisted Programming is Vibe Coding&rdquo; and &ldquo;Using Git with Coding Agents&rdquo;; Cohen, &ldquo;The Index and the Vector.&rdquo;</li>
+        </ul>
+        <p>See <code>weeks/week-07.md</code> on Canvas for full reading links and the discussion prompt.</p>
+        <aside class="notes">
+          The transition is the headline: Artifacts &rarr; Claude Code Web. The exercise asks students to build something genuine in their own discipline and reflect on co-authorship &mdash; the active-learning bar from Week 6 carried into a coding context.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

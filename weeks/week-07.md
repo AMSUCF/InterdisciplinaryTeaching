@@ -2,6 +2,7 @@
 week: 7
 title: "AI for Code and Digital Humanities"
 starts: 2026-06-22
+slides: week-07
 workshop:
   title: "Workshop 4: Web and Interactive Applications"
   date: 2026-06-24
