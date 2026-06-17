@@ -7,3 +7,5 @@ __pycache__/
 # Source notes for slide decks — kept locally, not published
 slides/*.md
 slides/*.txt
+# Same, for source notes kept at the repo root (e.g. weeksevenslides.txt)
+/*slides*.txt
