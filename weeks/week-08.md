@@ -2,6 +2,8 @@
 week: 8
 title: "Imagining the Syllabus"
 starts: 2026-06-29
+slides: week-08
+live: true
 assignments:
   - title: "Signature Assignment"
     points: 200
