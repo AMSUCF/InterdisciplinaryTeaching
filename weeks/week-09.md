@@ -3,6 +3,7 @@ week: 9
 title: "Playful, Accessible, and Inclusive Design"
 starts: 2026-07-06
 slides: week-09
+live: true
 workshop:
   title: "Workshop 5: Playful Approaches and Creative Code"
   date: 2026-07-08
