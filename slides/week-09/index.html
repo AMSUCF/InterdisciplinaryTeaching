@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 9 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-09/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Numbered-principles list used on the UDL and Mollick slides. */
+    .reveal ol.principles {
+      text-align: left;
+      max-width: 92%;
+      margin: 0.3em auto 0;
+    }
+    .reveal ol.principles li {
+      margin-bottom: 0.5em;
+    }
+
+    /* Bordered figure used for screenshots. */
+    .reveal figure.shot {
+      margin: 0.4em auto 0;
+      text-align: center;
+    }
+    .reveal figure.shot img {
+      max-height: 400px;
+      width: auto;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal figure.shot figcaption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.7em;
+      margin-top: 0.4em;
+    }
+
+    /* Two screenshots side by side (the text-to-slide process). */
+    .reveal .process-figs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0.3em auto 0;
+    }
+    .reveal .process-figs figure {
+      margin: 0;
+      flex: 1 1 44%;
+      min-width: 240px;
+      text-align: center;
+    }
+    .reveal .process-figs img {
+      width: 100%;
+      max-height: 340px;
+      object-fit: contain;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal .process-figs figcaption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.66em;
+      margin-top: 0.35em;
+    }
+
+    /* Interactive embed slides (external playful artifacts). */
+    .reveal iframe.embed-frame {
+      display: block;
+      width: 100%;
+      height: 56vh;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal .embed-caption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.72em;
+      margin-top: 0.45em;
+      text-align: center;
+    }
+
+    /* Launch card for artifacts that block being embedded in an iframe
+       (e.g. itch.io sets frame-ancestors). A real link, keyboard-operable
+       and descriptive, styled to match the embed frame. */
+    .reveal a.launch-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25em;
+      width: 100%;
+      height: 48vh;
+      margin: 0.3em auto 0;
+      border: 4px solid var(--text-muted);
+      background: var(--bg-alt);
+      color: var(--text);
+      text-decoration: none;
+    }
+    .reveal a.launch-card:hover,
+    .reveal a.launch-card:focus-visible {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .reveal a.launch-card .launch-icon {
+      font-size: 2.4em;
+      line-height: 1;
+      color: var(--accent);
+    }
+    .reveal a.launch-card .launch-title {
+      font-family: 'Press Start 2P', system-ui, sans-serif;
+      font-size: 0.9em;
+      color: var(--heading);
+    }
+    .reveal a.launch-card .launch-host {
+      font-family: 'VT323', monospace;
+      font-size: 0.95em;
+      color: var(--text-muted);
+    }
+
+    /* Accessible redraw of Tiulkanov's decision flowchart. Meaning is carried
+       by the text in each node and by the "Yes"/"No" branch labels, never by
+       color alone. */
+    /* Redrawn Tiulkanov decision flow. Decisions form a fixed-width left
+       column; each "No" outcome sits immediately to its right, joined by a
+       drawn arrow so the branch is unmistakable. The "Yes" path is a real
+       vertical line down the spine. */
+    .reveal .flow {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0.6em auto 0;
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-size: 0.66em;
+      line-height: 1.25;
+      text-align: left;
+    }
+    .reveal .flow .step {
+      display: flex;
+      align-items: center;
+    }
+    .reveal .flow .node {
+      border: 3px solid var(--text-muted);
+      background: var(--bg-alt);
+      border-radius: 8px;
+      padding: 0.5em 0.9em;
+    }
+    .reveal .flow .step .node:first-child {
+      width: 24em;               /* fixed decision column so arrows line up */
+      flex: 0 0 auto;
+    }
+    .reveal .flow .node.outcome {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    /* Color by meaning: green = you can use AI, red = you can't. Text still
+       states the outcome, so color only reinforces (not the sole cue). */
+    .reveal .flow .node.outcome.use {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+    .reveal .flow .node.outcome.avoid {
+      border-color: #a8391f;
+      background: #efcfc7;
+      color: #3a1710;
+    }
+    [data-theme="dark"] .reveal .flow .node.outcome.avoid {
+      border-color: #d9604a;
+      background: #3c1c15;
+      color: #eec6bb;
+    }
+    /* Horizontal "No" connector: a line with a solid arrowhead and a label
+       sitting on it. */
+    .reveal .flow .conn {
+      position: relative;
+      width: 4.5em;
+      height: 3px;
+      background: var(--text-muted);
+      flex: 0 0 auto;
+    }
+    .reveal .flow .conn::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 11px solid var(--text-muted);
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+    }
+    .reveal .flow .conn .lbl {
+      position: absolute;
+      left: 50%;
+      top: -0.85em;
+      transform: translateX(-55%);
+      background: var(--bg);
+      padding: 0 0.3em;
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+    }
+    /* Vertical "Yes" connector down the left spine, centered under the 24em
+       decision column. */
+    .reveal .flow .yes {
+      position: relative;
+      height: 1.9em;
+      margin-left: 12em;
+      border-left: 3px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+    }
+    .reveal .flow .yes .lbl {
+      padding-left: 0.55em;
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+    }
+    .reveal .flow .yes::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      bottom: 0;
+      border-top: 11px solid var(--text-muted);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+    }
+    .reveal .flow .step.final {
+      margin-left: 6.5em;        /* nudge final outcome under the spine */
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 9<br/>Playful, Accessible,<br/>and Inclusive Design</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter</p>
+        <aside class="notes">
+          How do we design courses that are playful, accessible, and inclusive? This week pairs playful pedagogy (Johnson &amp; Salter) with Universal Design for Learning (Houshyar) and UCF&rsquo;s accessibility resources, then returns to Mollick on when AI actually helps. It aligns with NEH Workshop 5, &ldquo;Playful Approaches and Creative Code&rdquo; (July 8, 10 AM&ndash;noon, CHDR). The discussion this week is a workshop exercise (30 points, due July 12): draft an AI policy for your syllabus and evaluate it through copyright, accessibility, equity, and labor. Attendees extend the exercise; others complete it asynchronously.
+        </aside>
+      </section>
+
+      <!-- 2. JOHNSON & SALTER — HYPE VS. USEFUL -->
+      <section>
+        <h1>Hype vs. What&rsquo;s Useful</h1>
+        <p class="slide-subtitle">Johnson &amp; Salter &mdash; separating games-for-learning hype from value</p>
+        <ul>
+          <li>There has been a lot of hype around games for learning &mdash; it matters to separate the hype from what&rsquo;s actually useful.</li>
+          <li>Mainstream and commercial games aren&rsquo;t optimized for learning, and they carry assumptions about the &ldquo;default&rdquo; player that can be <strong>exclusionary</strong>.</li>
+          <li>Some educational games are just memorization &mdash; a less effective way to learn most topics.</li>
+        </ul>
+        <aside class="notes">
+          Johnson, Emily K. and Anastasia Salter. &ldquo;Designing Playfully for a Distant Future.&rdquo; <em>Playful Pedagogy in the Pandemic: Pivoting to Game-Based Learning</em> (Routledge, 2022).
+          The opening move is deflationary on purpose: &ldquo;games&rdquo; is not automatically good pedagogy. Commercial games assume a default player (skilled, able-bodied, with time and hardware), and drill-and-kill &ldquo;edutainment&rdquo; often just gamifies memorization. The rest of the reading is about what a genuinely <em>playful</em> pedagogy looks like instead.
+        </aside>
+      </section>
+
+      <!-- 3. CHARACTERISTICS OF PLAYFUL PEDAGOGY -->
+      <section>
+        <h1>Characteristics of Playful Pedagogy</h1>
+        <p class="slide-subtitle">Johnson &amp; Salter &mdash; what makes play pedagogically useful</p>
+        <ul>
+          <li>Is <strong>inclusive and diverse</strong>.</li>
+          <li>Questions dominant culture; provides opportunities to think beyond it.</li>
+          <li>Deemphasizes or <strong>reframes failure</strong> &mdash; success is defined as improving or learning from failure.</li>
+          <li>Promotes questioning, exploration, and creative solutions.</li>
+          <li>Presents unstructured, complicated problems to solve.</li>
+          <li>Follows constructivist (or socio-constructivist, humanist, or connectivist) learning theory.</li>
+        </ul>
+        <aside class="notes">
+          Johnson &amp; Salter. This is the working definition for the week. Note that &ldquo;playful&rdquo; is not the same as &ldquo;a game&rdquo; &mdash; it&rsquo;s a stance: low-stakes failure, open-ended problems, and inclusion built in. The learning-theory line matters because it grounds play in constructivism (students building understanding through experience) rather than treating it as decoration.
+        </aside>
+      </section>
+
+      <!-- 4. CREATE GAMES FOR YOUR COURSE -->
+      <section>
+        <h1>Create Games for Your Course</h1>
+        <p class="slide-subtitle">Johnson &amp; Salter &mdash; why build playful artifacts</p>
+        <blockquote>
+          &ldquo;Art, pretend, and play allow us to imagine: to try on new ways of thinking and to fail without detrimental consequences. These are the key aspects of games and playful learning that should be the focus of our pedagogy.&rdquo;
+          <span class="attribution">&mdash; Johnson &amp; Salter, p.&nbsp;111</span>
+        </blockquote>
+        <ul>
+          <li>Games let students consider perspectives, and <strong>low-stakes failure</strong> is built in.</li>
+          <li>Games can let you <strong>frontload labor</strong>: once it&rsquo;s built, using it in class doesn&rsquo;t take as much effort.</li>
+        </ul>
+        <aside class="notes">
+          Johnson &amp; Salter. The keeper phrase is &ldquo;fail without detrimental consequences.&rdquo; The second bullet is the practical hook for busy instructors: a well-built playful artifact is reusable &mdash; the effort is upfront, not every semester. The next few slides are live examples of playful artifacts to try on.
+        </aside>
+      </section>
+
+      <!-- 5. EMBED — CONTENT MODERATOR SIM -->
+      <section>
+        <h1>Content Moderator Sim</h1>
+        <p class="slide-subtitle">Mark Sample &mdash; a role you can&rsquo;t win, by design</p>
+        <a class="launch-card" href="https://samplereality.itch.io/content-moderator-sim" target="_blank" rel="noopener">
+          <span class="launch-icon" aria-hidden="true">&#9654;</span>
+          <span class="launch-title">Play Content Moderator Sim</span>
+          <span class="launch-host">samplereality.itch.io &middot; opens in a new tab</span>
+        </a>
+        <p class="embed-caption">Puts you in the seat of a content moderator &mdash; making impossible calls at speed.</p>
+        <aside class="notes">
+          Mark Sample&rsquo;s <em>Content Moderator Sim</em>. A playful artifact that teaches by role: it hands you impossible judgment calls at speed and surfaces the invisible, exhausting labor behind &ldquo;the platform.&rdquo; This is the &ldquo;consider perspectives, fail safely&rdquo; principle in action &mdash; you learn something about moderation you couldn&rsquo;t get from a lecture. If the embed doesn&rsquo;t load in the deck, open it in a new tab.
+        </aside>
+      </section>
+
+      <!-- 6. EMBED — TECHNORHETORIC / KENNEDY -->
+      <section>
+        <h1>Playful Scholarship</h1>
+        <p class="slide-subtitle">Kairos 29.2 &mdash; scholarship that is itself interactive</p>
+        <iframe class="embed-frame" data-src="https://www.technorhetoric.net/29.2/disputatio/kennedy/" title="Kennedy, an interactive scholarly webtext in Kairos: A Journal of Rhetoric, Technology, and Pedagogy 29.2" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          An interactive webtext in <em>Kairos</em> 29.2 &mdash;
+          <a href="https://www.technorhetoric.net/29.2/disputatio/kennedy/" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          A webtext from <em>Kairos: A Journal of Rhetoric, Technology, and Pedagogy</em>. The point of showing it here: playfulness isn&rsquo;t only for students&rsquo; assignments. Scholarly argument itself can be built as an interactive, explorable artifact &mdash; form and content working together. That opens a door for what your students&rsquo; &ldquo;papers&rdquo; could be.
+        </aside>
+      </section>
+
+      <!-- 7. HAVE STUDENTS CREATE GAMES -->
+      <section>
+        <h1>Have Students Create Games</h1>
+        <p class="slide-subtitle">Johnson &amp; Salter &mdash; making as learning</p>
+        <blockquote>
+          &ldquo;Creating their own games to teach or demonstrate a course concept provides students with autonomy and responsibility for their own education as well as motivation that is likely to keep them engaged in the learning task.&rdquo;
+          <span class="attribution">&mdash; Johnson &amp; Salter, p.&nbsp;113</span>
+        </blockquote>
+        <ul>
+          <li>Even if the game isn&rsquo;t very good, students learn in the <strong>process of making it</strong>.</li>
+          <li>Students can <strong>design</strong> a game without building it and still get many of the same benefits.</li>
+          <li>Process-over-product &mdash; or setting the bar at &ldquo;proof of concept&rdquo; &mdash; can decrease anxiety.</li>
+        </ul>
+        <aside class="notes">
+          Johnson &amp; Salter. The pivot from consuming to making. The load-bearing idea is &ldquo;process over product&rdquo;: the learning happens in the design decisions, not in the polish. That also lowers the stakes (McGinn &amp; Coats&rsquo; buy-in point from last week) &mdash; a proof-of-concept or a paper design is a legitimate deliverable. The next three examples are student-scale creative works.
+        </aside>
+      </section>
+
+      <!-- 8. EMBED — CLIMATES OF CHANGE / DONLEY -->
+      <section>
+        <h1>Student-Made: &ldquo;I Look&rdquo;</h1>
+        <p class="slide-subtitle">UCF Climates of Change exhibit &mdash; Donley</p>
+        <iframe class="embed-frame" data-src="https://projects.cah.ucf.edu/mediaartsexhibits/ClimatesOfChange/Donley/ilook.html" title="I Look by Donley, an interactive piece from the UCF Climates of Change media arts exhibit" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          From the UCF <em>Climates of Change</em> media-arts exhibit &mdash;
+          <a href="https://projects.cah.ucf.edu/mediaartsexhibits/ClimatesOfChange/Donley/ilook.html" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          A student-created interactive from a UCF media-arts exhibit. This is what &ldquo;have students create&rdquo; produces when it&rsquo;s published: real work, made public, that argues through interaction. Showing a gallery of past student work (as in <em>Critical Making</em> last week) also lowers stakes for the next cohort &mdash; they see the genuine range of what success looks like.
+        </aside>
+      </section>
+
+      <!-- 9. EMBED — THROUGHLINES / STOLEE -->
+      <section>
+        <h1>Student-Made: &ldquo;Throughlines&rdquo;</h1>
+        <p class="slide-subtitle">Mirek Stolee &mdash; a concept expressed as a playable system</p>
+        <iframe class="embed-frame" data-src="https://www.mirekstolee.com/throughlinesDesc.html" title="Throughlines by Mirek Stolee, an interactive game" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          <em>Throughlines</em> by Mirek Stolee &mdash;
+          <a href="https://www.mirekstolee.com/throughlinesDesc.html" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          Mirek Stolee&rsquo;s <em>Throughlines</em>. Another making-as-learning example: an idea rendered as a playable system, where the rules <em>are</em> the argument. When students design mechanics, they have to make their understanding of a concept explicit and testable &mdash; that&rsquo;s the metacognitive payoff of the &ldquo;design a game&rdquo; assignment.
+        </aside>
+      </section>
+
+      <!-- 10. EMBED — FISH & DAGGER -->
+      <section>
+        <h1>Playable Narrative: &ldquo;Fish &amp; Dagger&rdquo;</h1>
+        <p class="slide-subtitle">Spring Thing 2021 &mdash; interactive fiction</p>
+        <iframe class="embed-frame" data-src="https://www.springthing.net/2021/play_online/FishAndDagger/index.html" title="Fish and Dagger, an interactive fiction piece from Spring Thing 2021" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          <em>Fish &amp; Dagger</em>, Spring Thing 2021 &mdash;
+          <a href="https://www.springthing.net/2021/play_online/FishAndDagger/index.html" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          <em>Fish &amp; Dagger</em> from the Spring Thing interactive-fiction festival. Text-forward interactive fiction is one of the most approachable make-your-own forms &mdash; low technical barrier, high expressive range (Twine, Bitsy, and friends live here). It&rsquo;s a natural bridge for humanities students: the medium is words, but the structure is a designed, branching experience.
+        </aside>
+      </section>
+
+      <!-- 11. BUT I DON'T KNOW HOW TO MAKE GAMES -->
+      <section>
+        <h1>&ldquo;But I Don&rsquo;t Know How to Make Games!&rdquo;</h1>
+        <p class="slide-subtitle">Johnson &amp; Salter &mdash; and where AI lowers the barrier</p>
+        <blockquote>
+          &ldquo;Like any educational activity, learning games take time and careful thought to design well.&rdquo;
+          <span class="attribution">&mdash; Johnson &amp; Salter, p.&nbsp;114</span>
+        </blockquote>
+        <ul>
+          <li>This is a place <strong>AI can help</strong>: offload the building so you can focus on the conceptual and content work.</li>
+          <li>Hesitant to assign a technology you don&rsquo;t know well? AI can help <strong>level that playing field</strong> for you and your students.</li>
+        </ul>
+        <aside class="notes">
+          Johnson &amp; Salter, with a bridge to this week&rsquo;s AI thread. The honest caveat first: good learning games take real design thought &mdash; AI doesn&rsquo;t remove that. What it removes is the technical build barrier, so a humanist can prototype the <em>idea</em> without first becoming a developer. This sets up the Mollick material on where AI is genuinely useful.
+        </aside>
+      </section>
+
+      <!-- 12. HOUSHYAR — UDL INTRO -->
+      <section>
+        <h1>Are We Teaching for Our Students?</h1>
+        <p class="slide-subtitle">Houshyar &mdash; Universal Design for Learning</p>
+        <p>Houshyar&rsquo;s opening question: are we teaching for what our <strong>students</strong> need, or for how <em>we</em> learn and were taught?</p>
+        <blockquote>
+          UDL is &ldquo;a set of guiding principles that aims to address the diversity of student needs by ensuring that our course and lesson designs are accessible to all students.&rdquo;
+          <span class="attribution">&mdash; Houshyar</span>
+        </blockquote>
+        <p>Rooted in disability rights, the goal is to &ldquo;remove barriers to learning &hellip; so that students have the agency, freedom of choice, and sense of empowerment to engage with the material on their own terms.&rdquo;</p>
+        <aside class="notes">
+          Houshyar, Sara. &ldquo;Universal Design for Learning: Pleasure, Accessibility, and the Radical Possibilities of Good Design.&rdquo; <em>Visible Pedagogy</em>, CUNY Graduate Center, March 20, 2023.
+          UDL reframes accessibility from &ldquo;accommodations for a few&rdquo; to &ldquo;good design for everyone.&rdquo; The disability-rights lineage matters: barriers are in the design, not the student. The keyword is <em>agency</em> &mdash; giving students real choice in how they engage.
+        </aside>
+      </section>
+
+      <!-- 13. UDL FRAMEWORKS -->
+      <section>
+        <h1>The Three UDL Principles</h1>
+        <p class="slide-subtitle">Houshyar &mdash; multiple means of&hellip;</p>
+        <ol class="principles">
+          <li><strong>Engagement</strong> &mdash; lets students contend with <em>why</em> they&rsquo;re learning this and develop affective attachments to the content.</li>
+          <li><strong>Representation</strong> &mdash; lets students recognize and organize the content they&rsquo;re presented with in a systematic way.</li>
+          <li><strong>Action &amp; Expression</strong> &mdash; enables students to contend with <em>how</em> they&rsquo;re learning, giving them metacognitive recognition.</li>
+        </ol>
+        <aside class="notes">
+          Houshyar. The three UDL networks, in plain terms: the <em>why</em> (engagement), the <em>what</em> (representation), and the <em>how</em> (action &amp; expression). &ldquo;Multiple means&rdquo; is the operative phrase &mdash; not one mandated path, but options. Your AI-policy exercise this week asks you to check your own course against all three.
+        </aside>
+      </section>
+
+      <!-- 14. UDL KEY QUESTIONS -->
+      <section>
+        <h1>UDL + Backwards Design</h1>
+        <p class="slide-subtitle">Houshyar &mdash; the questions to ask</p>
+        <p><strong>Backwards Design</strong> asks:</p>
+        <ul>
+          <li>What do we want students to get out of this semester-long experience? What goals should they accomplish?</li>
+          <li>What activities, materials, or assignments will get them there?</li>
+        </ul>
+        <p><strong>UDL adds:</strong></p>
+        <ul>
+          <li>What <strong>barriers</strong> might prevent students from accomplishing these goals?</li>
+          <li>How can I lower those barriers &mdash; e.g., multiple formats, options for assignments?</li>
+          <li>How can I design the course so it fosters a &ldquo;pleasurable experience&rdquo; for students <em>and</em> me &mdash; opening possibilities for mutual transformation?</li>
+        </ul>
+        <aside class="notes">
+          Houshyar. UDL doesn&rsquo;t replace backwards design &mdash; it layers barrier-thinking on top. The last question is the one people skip: designing for <em>pleasure</em>, not just compliance. That&rsquo;s the through-line to the playful-pedagogy half of this week &mdash; good design and enjoyable design are the same project.
+        </aside>
+      </section>
+
+      <!-- 15. LIMITS OF UDL -->
+      <section>
+        <h1>Limits of UDL</h1>
+        <p class="slide-subtitle">Houshyar &mdash; where it gets hard</p>
+        <ul>
+          <li>Some of the more <strong>hands-on</strong> practices work best face to face and are hard to do online.</li>
+          <li>Projects built on <strong>peer feedback and individualized approaches</strong> don&rsquo;t scale well to large classes.</li>
+        </ul>
+        <aside class="notes">
+          Houshyar. An honest limits slide keeps UDL from becoming a slogan. The tension is real: the most individualized, high-touch UDL practices are exactly the ones that strain online and at scale. Worth naming so your syllabus AI policy accounts for <em>your</em> actual class size and modality, not an idealized one.
+        </aside>
+      </section>
+
+      <!-- 16. UCF DIGITAL ACCESSIBILITY GUIDES -->
+      <section>
+        <h1>UCF Digital Accessibility Guides</h1>
+        <p class="slide-subtitle">Concrete, context-specific how-to</p>
+        <figure class="shot">
+          <img src="images/ucf-accessibility-guides.png" alt="The UCF Digital Accessibility Guides web page, headed 'Digital Accessibility Guides,' with an intro paragraph and a grid of topic cards: Color, Emails, Equations, Headings, Hyperlinks, Images, Lists, Accessible PDFs, PowerPoints, Social Media, Tables, and Typography." />
+          <figcaption>ucf.edu/accessibility/digital-accessibility-guides/ &mdash; per-topic guidance</figcaption>
+        </figure>
+        <p>Resources span writing &amp; formatting, document &amp; file-type guides, and media &amp; platform-specific guides.</p>
+        <aside class="notes">
+          UCF Digital Accessibility Guides. This is the practical companion to UDL&rsquo;s principles: specific, checkable guidance for the artifacts you actually make &mdash; headings, color contrast, alt text, accessible PDFs and slides, captions. UCF policy 2-006 requires WCAG 2.0 AA conformance; these guides are how you meet it. When your AI policy touches accessibility, point students here.
+        </aside>
+      </section>
+
+      <!-- 17. MOLLICK — EXPERT ENOUGH TO CATCH MISTAKES -->
+      <section>
+        <h1>Where AI Is Most Useful</h1>
+        <p class="slide-subtitle">Mollick &mdash; expert enough to catch its mistakes</p>
+        <p>AI is most useful where we are <strong>expert enough to catch its mistakes</strong> &mdash; and can&rsquo;t use it for the very work that makes us experts.</p>
+        <figure class="shot">
+          <figure class="flow" role="group" aria-label="A decision flowchart, after Aleksandr Tiulkanov, for deciding whether to use a generative AI tool for a task.">
+            <div class="step">
+              <span class="node">Does it matter if the output is accurate?</span>
+              <span class="conn"><span class="lbl">No</span></span>
+              <span class="node outcome use">Go ahead &mdash; use it freely</span>
+            </div>
+            <div class="yes"><span class="lbl">Yes</span></div>
+            <div class="step">
+              <span class="node">Do you have the expertise to verify the output is correct?</span>
+              <span class="conn"><span class="lbl">No</span></span>
+              <span class="node outcome avoid">Don&rsquo;t use it</span>
+            </div>
+            <div class="yes"><span class="lbl">Yes</span></div>
+            <div class="step">
+              <span class="node">Are you willing to take responsibility for errors you miss?</span>
+              <span class="conn"><span class="lbl">No</span></span>
+              <span class="node outcome avoid">Don&rsquo;t use it</span>
+            </div>
+            <div class="yes"><span class="lbl">Yes</span></div>
+            <div class="step final">
+              <span class="node outcome use">Use it &mdash; but verify every output</span>
+            </div>
+          </figure>
+          <figcaption>Decision flow, redrawn after Aleksandr Tiulkanov&rsquo;s &ldquo;simple algorithm&rdquo; for using generative AI</figcaption>
+        </figure>
+        <aside class="notes">
+          Mollick, Ethan. &ldquo;15 Times to Use AI, and 5 Not To.&rdquo; <em>One Useful Thing.</em>
+          The paradox: AI helps most exactly where you already have enough expertise to catch its errors &mdash; but you can&rsquo;t outsource the effortful practice that <em>built</em> that expertise. The flowchart (redrawn from Aleksandr Tiulkanov&rsquo;s widely shared version) makes the gate concrete: if accuracy matters, you need both the expertise to verify and the willingness to own the misses. That&rsquo;s a good test to write into a course AI policy.
+        </aside>
+      </section>
+
+      <!-- 18. MOLLICK — VOLUME/VARIANCE + AS ASSISTANT -->
+      <section>
+        <h1>Volume, Variance, and Assistance</h1>
+        <p class="slide-subtitle">Mollick &mdash; two things AI is genuinely good at</p>
+        <ul>
+          <li><strong>Volume and variance:</strong> sheer numbers of options &mdash; more than a person would generate before giving up.</li>
+          <li><strong>As an assistant:</strong> simulate a hostile or friendly audience; take on tasks we <em>could</em> do ourselves but shouldn&rsquo;t waste time on.</li>
+        </ul>
+        <div class="process-figs">
+          <figure>
+            <img src="images/text-notes.png" alt="A plain-text notes file listing slide titles and bullet points for the week, including 'UCF Digital Accessibility Guides' and two 'Mollick' slides with bracketed instructions to add screenshots." />
+            <figcaption>1. The plain-text slide notes</figcaption>
+          </figure>
+          <figure>
+            <img src="images/claude-building.png" alt="A Claude Code terminal session titled 'Build slide deck to GitHub,' showing the prompt 'review week9slides.txt and build the slidedeck to github pages' and Claude beginning to read the source file and generate the deck." />
+            <figcaption>2. AI building this very deck from those notes</figcaption>
+          </figure>
+        </div>
+        <aside class="notes">
+          Mollick. The two durable strengths: generating <em>volume and variance</em> (brainstorm past where you&rsquo;d normally stop) and acting as an <em>assistant</em> for bounded, low-judgment tasks &mdash; including simulating an audience to pressure-test your ideas. The screenshots are this deck&rsquo;s own making-of: the plain-text notes on the left, and the AI assembling the reveal.js slides from them on the right. Assistance on the build; the pedagogical judgment stays with the instructor.
+        </aside>
+      </section>
+
+      <!-- 19. EMBED — GAME SEVEN CHESS -->
+      <section>
+        <h1>An AI-Built Artifact</h1>
+        <p class="slide-subtitle">&ldquo;Game Seven&rdquo; &mdash; a small game about a concept</p>
+        <iframe class="embed-frame" data-src="https://game-seven-chess.netlify.app/" title="Game Seven, a browser chess game" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          A playable chess artifact &mdash;
+          <a href="https://game-seven-chess.netlify.app/" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          A small, playable artifact of the kind Mollick describes &mdash; &ldquo;a game about a concept&rdquo; that a solo instructor can now prototype with AI assistance instead of an EdTech budget. The point isn&rsquo;t that it&rsquo;s a masterpiece; it&rsquo;s that the build barrier is low enough to make the <em>idea</em> testable. Your subject-matter and pedagogical knowledge is the scarce input, not the code.
+        </aside>
+      </section>
+
+      <!-- 20. PROBLEMS AND LIMITATIONS -->
+      <section>
+        <h1>Problems and Limitations</h1>
+        <p class="slide-subtitle">Reading Mollick critically</p>
+        <ul>
+          <li>Mollick is a <strong>business professor</strong>: efficiency and entrepreneurial framings matter more to him than deep, careful thinking and writing.</li>
+          <li>There is a <strong>compounding risk</strong> of AI errors across chains of tasks &mdash; check as you go, not just at the end.</li>
+          <li>The judgment calls matter: is it <em>really</em> a meaningless drudgery task, or is it the work that builds understanding?</li>
+        </ul>
+        <aside class="notes">
+          A deliberate counterweight so we don&rsquo;t take Mollick uncritically. His discipline shapes his values &mdash; &ldquo;don&rsquo;t waste time on drudgery&rdquo; assumes you can cleanly separate drudgery from formative practice, and in teaching you often can&rsquo;t. Errors also compound in multi-step chains, so verification has to happen along the way. These caveats are exactly what your syllabus AI policy should grapple with: copyright, accessibility, equity of access, and the labor behind the models.
+        </aside>
+      </section>
+
+      <!-- 21. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>Workshop Exercise &mdash; Playful Approaches and Creative Code</strong> (30 points, due Sunday, July 12). Draft an <strong>AI policy statement</strong> for your course syllabus that addresses copyright and attribution for AI-generated content. Then critically evaluate it: how does it handle copyright, accessibility, equity of access to AI tools, and the labor behind the models? Apply <strong>UDL</strong> &mdash; does your design offer multiple means of engagement, representation, and action/expression? Keep the student in mind: does the policy leave room for <strong>play and experimentation</strong>, or lean toward prohibition and restriction? How would it shape students&rsquo; attitudes toward the kind of work we&rsquo;ve done with Claude Code? <strong>Reply to at least two peers</strong>, responding to their policies from a student&rsquo;s perspective.</li>
+          <li><strong>NEH Workshop 5</strong> (July 8, 10 AM&ndash;noon, CHDR). Attendees extend the exercise; others complete it asynchronously.</li>
+          <li>Readings: Johnson &amp; Salter, &ldquo;Designing Playfully for a Distant Future&rdquo;; Houshyar, &ldquo;Universal Design for Learning&rdquo;; UCF Digital Accessibility Guides (skim); Mollick, &ldquo;15 Times to Use AI, and 5 Not To.&rdquo;</li>
+        </ul>
+        <p>See <code>weeks/week-09.md</code> on Canvas for the full guidelines and reading links.</p>
+        <aside class="notes">
+          The week ties the two threads together: playful, accessible design (Johnson &amp; Salter, Houshyar, UCF) and disciplined AI use (Mollick). The deliverable &mdash; an AI policy for your own syllabus, critically evaluated through copyright, accessibility, equity, and labor &mdash; is where those threads meet. The reflective turn is the point: a policy is not just compliance, it signals a relationship to technology and literacy. Does yours leave room for play and experimentation, or default to prohibition? That framing shapes how students approach exactly the kind of Claude Code work we&rsquo;ve been doing. Peer replies ask you to read others&rsquo; policies from a student&rsquo;s point of view. Lower-stakes than an assignment, but it feeds your course design directly.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
