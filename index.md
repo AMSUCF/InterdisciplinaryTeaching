@@ -106,7 +106,7 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 | 240 | **Discussion Posts** - Discussions alternate between course design milestones and AI/pedagogy exercises (8 posts, 30 points each). No discussion posts are due in weeks when major assignments are due. | Weekly |
 | 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
 | 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
-| 150 | **Teaching Statement** - A one-page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
+| 150 | **Teaching Statement** - A 1-2 page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
 | 160 | **Final Portfolio & Reflection** - A compiled portfolio of your course materials with a 750-1000 word reflective essay on your growth and next steps. | August 1 |
 
 Grades are calculated out of 1000 following a standard letter scale.
