@@ -9,3 +9,4 @@ slides/*.md
 slides/*.txt
 # Same, for source notes kept at the repo root (e.g. weeksevenslides.txt)
 /*slides*.txt
+Moffit.txt
