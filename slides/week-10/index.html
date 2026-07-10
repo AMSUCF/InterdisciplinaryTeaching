@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 10 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-10/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Numbered-principles list used on the Albakry pitfalls slide. */
+    .reveal ol.principles {
+      text-align: left;
+      max-width: 92%;
+      margin: 0.3em auto 0;
+    }
+    .reveal ol.principles li {
+      margin-bottom: 0.5em;
+    }
+
+    /* Bordered figure used for the MCP diagram. */
+    .reveal figure.shot {
+      margin: 0.4em auto 0;
+      text-align: center;
+    }
+    .reveal figure.shot img {
+      max-height: 420px;
+      width: auto;
+      max-width: 100%;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal figure.shot figcaption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.7em;
+      margin-top: 0.4em;
+    }
+
+    /* Embedded example teaching statements (external sites). */
+    .reveal iframe.embed-frame {
+      display: block;
+      width: 100%;
+      height: 56vh;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal .embed-caption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.72em;
+      margin-top: 0.45em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 10<br/>Interdisciplinarity and<br/>the Academic Job Market</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+        <aside class="notes">
+          This week addresses the professional dimension of interdisciplinary teaching: how does teaching across disciplines position you on the academic job market? We examine the value of DH credentials (Hopwood &amp; Roberts), how to write a teaching philosophy statement (Albakry), and how AI and knowledge institutions can work together (Cohen). No discussion post this week &mdash; the focus is the Course Syllabus assignment (200 points, due July 19): a complete syllabus for a course you could teach, following an institutional template, with at least one AI-integrated element.
+        </aside>
+      </section>
+
+      <!-- 2. HOPWOOD & ROBERTS — THE VALUE OF A DH DEGREE -->
+      <section>
+        <h1>The Value of a DH Degree</h1>
+        <p class="slide-subtitle">Hopwood &amp; Roberts &mdash; what the credential is grounded in</p>
+        <blockquote>
+          &ldquo;The value of DH degrees is ultimately grounded in interdisciplinary training, exposure to a pedagogy rooted in the classroom and hands-on skill building, and preparation for a variety of professional careers.&rdquo;
+          <span class="attribution">&mdash; Hopwood &amp; Roberts</span>
+        </blockquote>
+        <ul>
+          <li>This is true of the <strong>T&amp;T and DHAI programs</strong> you&rsquo;re enrolled in.</li>
+          <li>But it&rsquo;s also true of the kind of <strong>DH courses this class is helping you work toward teaching</strong>.</li>
+        </ul>
+        <aside class="notes">
+          Hopwood, Elizabeth and Kyle Roberts. &ldquo;What&rsquo;s the Value of a Graduate Digital Humanities Degree?&rdquo; <em>What We Teach When We Teach DH.</em>
+          The framing move for the week: the same three things that make a DH <em>degree</em> valuable &mdash; interdisciplinary training, classroom-rooted pedagogy with hands-on skill building, and preparation for varied careers &mdash; are what your own future DH <em>courses</em> should offer students. You&rsquo;re on both sides of this claim at once: earning the credential and learning to teach it.
+        </aside>
+      </section>
+
+      <!-- 3. BALANCING THE DIGITAL AND THE HUMANITIES -->
+      <section>
+        <h1>Balancing the Digital and the Humanities</h1>
+        <p class="slide-subtitle">Hopwood &amp; Roberts &mdash; inquiry first, tools in service of it</p>
+        <ul>
+          <li>DH courses prepare &ldquo;students to work in and with emerging technologies, while foregrounding <strong>DH as interpretive knowledge work</strong>.&rdquo;</li>
+          <li>Alongside the technical, &ldquo;a robust training in DH must foreground <strong>humanities inquiry</strong> within coursework and research.&rdquo;</li>
+          <li>Building stuff is cool and fun &mdash; but understanding <em>why</em> to build it and <em>how</em> is where the work happens, especially when the building is (to whatever extent) offloaded.</li>
+          <li><strong>Humanities inquiry first; tools in service of it.</strong></li>
+        </ul>
+        <aside class="notes">
+          Hopwood &amp; Roberts. The balance question every DH syllabus has to answer. Their formulation &mdash; DH as <em>interpretive knowledge work</em> &mdash; keeps the technical training subordinate to the inquiry it serves. The third bullet is our course&rsquo;s running theme: as AI offloads more of the building, the interpretive &ldquo;why and how&rdquo; becomes a <em>larger</em> share of what we teach, not a smaller one.
+        </aside>
+      </section>
+
+      <!-- 4. DH IN THE HUMANITIES CURRICULUM -->
+      <section>
+        <h1>DH in the Humanities Curriculum</h1>
+        <p class="slide-subtitle">Hopwood &amp; Roberts &mdash; where does your course fit?</p>
+        <ul>
+          <li>Where does your course fit? Will students <strong>already have technical expertise</strong> coming in?</li>
+          <li>In most cases, no: &ldquo;most students in their undergraduate careers &hellip; might only get to take <strong>a course or two</strong> with DH content or work on a project with a DH-engaged faculty member.&rdquo;</li>
+        </ul>
+        <aside class="notes">
+          Hopwood &amp; Roberts. A design constraint for your syllabus assignment: assume your course may be a student&rsquo;s <em>only</em> DH encounter. That argues against building on presumed technical background, and for making the course self-contained &mdash; teach the inquiry and the tools together rather than assuming a pipeline that mostly doesn&rsquo;t exist.
+        </aside>
+      </section>
+
+      <!-- 5. DH AND CAREER READINESS -->
+      <section>
+        <h1>DH and Career Readiness</h1>
+        <p class="slide-subtitle">Hopwood &amp; Roberts &mdash; digital literacies in the labor market</p>
+        <ul>
+          <li>They recommend &ldquo;discussing how traditional humanities degrees and digital literacies can be spoken of (and traded for compensation) in the <strong>labor market</strong>.&rdquo;</li>
+          <li>&ldquo;A perennial anxiety emerges among students, especially those with humanities backgrounds, that they are <strong>not learning enough coding</strong>&rdquo; &mdash; AI can be a bridge for making technology projects, as coding becomes less necessary and this anxiety takes longer to disappear.</li>
+          <li>Some students &ldquo;seek demonstrable technical training and skill sets that they can apply to their own research and careers, such as database design, coding, text mining or machine learning techniques, and geomapping.&rdquo;</li>
+        </ul>
+        <aside class="notes">
+          Hopwood &amp; Roberts. Career readiness is a legitimate part of DH pedagogy, not a corruption of it &mdash; students need language for trading humanities-plus-digital training for compensation. The coding-anxiety point connects to our AI thread: AI assistance lowers the barrier to <em>making</em> technology projects, which means the anxiety outlives its practical basis. But note the last bullet &mdash; some students genuinely want demonstrable technical skills, so &ldquo;AI can do it&rdquo; isn&rsquo;t a complete answer either.
+        </aside>
+      </section>
+
+      <!-- 6. HOPWOOD & ROBERTS — STUDENT LABOR -->
+      <section>
+        <h1>Meaningful Work vs. Exploited Labor</h1>
+        <p class="slide-subtitle">Hopwood &amp; Roberts &mdash; the ethics of student projects</p>
+        <ul>
+          <li>There&rsquo;s a <strong>tension</strong> between giving students real, meaningful work to do and <strong>not exploiting their labor</strong>.</li>
+          <li>Ensure <strong>fair credit</strong>; consider labor requirements and conditions.</li>
+        </ul>
+        <aside class="notes">
+          Hopwood &amp; Roberts. Real projects are motivating precisely because they matter beyond the classroom &mdash; and that&rsquo;s exactly what makes them exploitable. If student work feeds a faculty project, a public archive, or an institutional product, the syllabus should address credit, attribution, and workload honestly. This echoes the labor thread from our AI-policy discussions: the same questions we ask about the labor behind the models apply to the labor in our classrooms.
+        </aside>
+      </section>
+
+      <!-- 7. ALBAKRY — THE BRASS TACKS -->
+      <section>
+        <h1>From the Degree to the Job Letter</h1>
+        <p class="slide-subtitle">Albakry &mdash; four pitfalls to avoid</p>
+        <p>Hopwood &amp; Roberts started us thinking about the job market &mdash; now here&rsquo;s the more brass-tacks version:</p>
+        <ol class="principles">
+          <li>Show <strong>what guides your teaching practice</strong>; don&rsquo;t namedrop theorists.</li>
+          <li>Use <strong>specific anecdotes and examples</strong>; don&rsquo;t write in buzzwords.</li>
+          <li>It&rsquo;s good to show your teaching provides <strong>options and range</strong> &mdash; but &ldquo;learning styles&rdquo; are debunked.</li>
+          <li>Beware of <strong>stereotyping</strong> low-income, first-generation, and other marginalized students; if you go there, do it with your own specific examples.</li>
+        </ol>
+        <aside class="notes">
+          Albakry, Mohammed. &ldquo;Writing a Strong Teaching Philosophy Statement in a Job Search.&rdquo; <em>Inside Higher Ed</em>, February 15, 2024.
+          Four common ways statements go wrong. (1) Committees want your <em>practice</em>, not a bibliography &mdash; theory should be visible in what you do. (2) Buzzwords (&ldquo;student-centered,&rdquo; &ldquo;lifelong learners&rdquo;) are invisible; anecdotes stick. (3) Offering multiple pathways is good UDL practice &mdash; but framing it as &ldquo;visual vs. auditory learners&rdquo; signals you haven&rsquo;t kept up with the research. (4) Generic diversity claims can read as stereotyping; specificity is the antidote here too.
+        </aside>
+      </section>
+
+      <!-- 8. THE TEACHING STATEMENT — WHAT IT IS -->
+      <section>
+        <h1>The Teaching Statement</h1>
+        <p class="slide-subtitle">Not always required &mdash; always useful</p>
+        <ul>
+          <li>Teaching statements are <strong>not always a required</strong> job material.</li>
+          <li>If it&rsquo;s not required, you&rsquo;ll discuss these topics as part of your <strong>cover letter</strong>.</li>
+          <li>It&rsquo;s sometimes called a &ldquo;teaching philosophy,&rdquo; but don&rsquo;t let that fool you: it should still be <strong>evidence-based</strong>, not vibes-based.</li>
+        </ul>
+        <aside class="notes">
+          Albakry / framing. The genre expectations: even when no separate statement is requested, the same material has to live somewhere &mdash; usually compressed into a paragraph or two of the cover letter, so it&rsquo;s worth drafting the full version regardless. And the &ldquo;philosophy&rdquo; label misleads people into abstraction; what committees actually want is evidence &mdash; concrete practices, observed outcomes, specific classroom moments.
+        </aside>
+      </section>
+
+      <!-- 9. THE TEACHING STATEMENT — STRUCTURE -->
+      <section>
+        <h1>Structuring the Statement</h1>
+        <p class="slide-subtitle">Albakry &mdash; a workable shape</p>
+        <ul>
+          <li>Start with an <strong>anecdote as a hook</strong>.</li>
+          <li>Provide a <strong>framework</strong> for your teaching emphasis.</li>
+          <li>Offer <strong>specific examples</strong> of things you do, and how they demonstrate your approach.</li>
+          <li>If you have them, include <strong>citations of sources or methods</strong> that inform your teaching.</li>
+          <li>Conclude by indicating how you&rsquo;ll bring all that to the teaching responsibilities of <strong>this particular role and institution</strong>.</li>
+        </ul>
+        <aside class="notes">
+          Albakry&rsquo;s suggested arc: hook &rarr; framework &rarr; examples &rarr; (citations) &rarr; fit. The anecdote does double duty &mdash; it&rsquo;s memorable and it <em>is</em> evidence. The closing move is the one people skip: tailoring to the actual position. A statement that could be sent anywhere reads like it was. The five examples coming up each realize this arc differently &mdash; watch for the hook and the fit moves in particular.
+        </aside>
+      </section>
+
+      <!-- 10. EXAMPLE — MACKENZIE BROOKS -->
+      <section>
+        <h1>Example: Mackenzie Brooks</h1>
+        <p class="slide-subtitle">A DH librarian&rsquo;s teaching statement</p>
+        <iframe class="embed-frame" data-src="https://mackenziekbrooks.info/teaching/statement.html" title="Teaching statement by Mackenzie Brooks" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          mackenziekbrooks.info &mdash;
+          <a href="https://mackenziekbrooks.info/teaching/statement.html" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          First of five real examples. Mackenzie Brooks is a digital humanities librarian &mdash; note how a librarian&rsquo;s teaching statement handles the balance of technical instruction and humanities inquiry we saw in Hopwood &amp; Roberts. As you read each example, apply the Albakry checklist: where&rsquo;s the hook, what&rsquo;s the framework, how specific are the examples, and does it close with fit?
+        </aside>
+      </section>
+
+      <!-- 11. EXAMPLE — TAYLOR ELYSE MILLS -->
+      <section>
+        <h1>Example: Taylor Elyse Mills</h1>
+        <p class="slide-subtitle">A statement built as part of a portfolio</p>
+        <iframe class="embed-frame" data-src="https://taylorelysemills.org/cct-part-4/" title="Teaching statement by Taylor Elyse Mills" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          taylorelysemills.org &mdash;
+          <a href="https://taylorelysemills.org/cct-part-4/" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          Taylor Elyse Mills&rsquo;s statement sits inside a larger teaching portfolio &mdash; a reminder that the statement rarely travels alone. Notice how the surrounding portfolio (syllabi, artifacts, evidence) lets the statement itself stay focused: claims made here can point to proof elsewhere. Your Course Syllabus assignment is exactly the kind of artifact a portfolio like this showcases.
+        </aside>
+      </section>
+
+      <!-- 12. EXAMPLE — RYAN CORDELL -->
+      <section>
+        <h1>Example: Ryan Cordell</h1>
+        <p class="slide-subtitle">A senior DH scholar&rsquo;s statement</p>
+        <iframe class="embed-frame" data-src="https://ryancordell.org/statements/#teaching" title="Teaching statement by Ryan Cordell" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          ryancordell.org &mdash;
+          <a href="https://ryancordell.org/statements/#teaching" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          Ryan Cordell is a well-known DH scholar (book history, computational text analysis). His statement is worth reading for how an established researcher connects research and teaching &mdash; the interdisciplinary training argument from Hopwood &amp; Roberts made personal and specific. Also note that he publishes his statements openly on his site: the teaching statement as public scholarly genre, not just a private job document.
+        </aside>
+      </section>
+
+      <!-- 13. EXAMPLE — AUBREE MARSHALL -->
+      <section>
+        <h1>Example: Aubree Marshall</h1>
+        <p class="slide-subtitle">A DH-specific teaching statement</p>
+        <iframe class="embed-frame" data-src="https://www.aubreemarshall.com/dh-teaching-statement.html" title="DH teaching statement by Aubree Marshall" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          aubreemarshall.com &mdash;
+          <a href="https://www.aubreemarshall.com/dh-teaching-statement.html" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          Aubree Marshall&rsquo;s is explicitly a <em>DH</em> teaching statement &mdash; useful as a model if you&rsquo;re applying for positions where the digital component is the selling point. Watch how it names specific tools and methods without letting the tool list displace the pedagogical argument &mdash; the &ldquo;humanities inquiry first&rdquo; balance again.
+        </aside>
+      </section>
+
+      <!-- 14. EXAMPLE — BRENNA KEEGAN -->
+      <section>
+        <h1>Example: Brennan Keegan</h1>
+        <p class="slide-subtitle">One more model to compare</p>
+        <iframe class="embed-frame" data-src="https://www.brennakeegan.com/teachingstatement" title="Teaching statement by Brennan Keegan" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          brennakeegan.com &mdash;
+          <a href="https://www.brennakeegan.com/teachingstatement" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          Last example: Brennan Keegan. With five models in view, the comparative question is the useful one: they share the Albakry arc but differ sharply in voice, length, and evidence. Which one sounds like a person you&rsquo;d want in the classroom &mdash; and what, concretely, creates that impression? That&rsquo;s the craft to steal for your own statement.
+        </aside>
+      </section>
+
+      <!-- 15. COHEN — AI AND KNOWLEDGE INSTITUTIONS -->
+      <section>
+        <h1>AI and Knowledge Institutions</h1>
+        <p class="slide-subtitle">Cohen &mdash; loosely coupled collaboration</p>
+        <p>Like the reading from earlier in the semester, Cohen flags the potentials of <strong>AI&ndash;knowledge institution collaboration</strong>:</p>
+        <ul>
+          <li>AI gets <strong>better underlying data</strong>.</li>
+          <li>Knowledge institutions get <strong>better ways to explore and work with their collections</strong>.</li>
+        </ul>
+        <aside class="notes">
+          Cohen, Dan. &ldquo;AI and Libraries, Archives, and Museums, Loosely Coupled.&rdquo; <em>Humane Ingenuity.</em>
+          The pivot to the week&rsquo;s third thread. Cohen&rsquo;s framing is mutual benefit: models trained or grounded on curated library/archive/museum collections are better than models scraping the open web, and institutions gain new interfaces to their own holdings. The operative phrase is <em>loosely coupled</em> &mdash; collaboration without absorption, which the next slide makes concrete.
+        </aside>
+      </section>
+
+      <!-- 16. COHEN — MCP AS THE MECHANISM -->
+      <section>
+        <h1>Loosely Coupled, Concretely: MCP</h1>
+        <p class="slide-subtitle">Cohen &mdash; configurable access, institutional control</p>
+        <ul>
+          <li>One way to concretely do AI&ndash;knowledge institution collaboration is through <strong>MCP</strong>, which allows any organization to provide access to their collections in <strong>specific, configurable ways</strong>.</li>
+          <li>MCP allows institutions to <strong>maintain control</strong> over what is accessible, in what format, and to what degree &mdash; such as metadata only, not full text, encouraging users to visit the source itself.</li>
+        </ul>
+        <aside class="notes">
+          Cohen. MCP (Model Context Protocol) is the technical mechanism for &ldquo;loosely coupled&rdquo;: instead of handing over a corpus for training, an institution runs a server that answers AI requests on its own terms. The metadata-only example matters &mdash; the institution can act as a discovery layer that routes people <em>back to the source</em>, preserving both control and visits. This is the difference between collaboration and extraction.
+        </aside>
+      </section>
+
+      <!-- 17. WHAT IS MCP? -->
+      <section>
+        <h1>What Is MCP?</h1>
+        <p class="slide-subtitle">One protocol between AI and many sources</p>
+        <figure class="shot">
+          <img src="images/mcp-diagram.png" alt="A hand-drawn architecture diagram labeled 'Your Computer.' A pink box labeled 'Host with MCP Client' connects via arrows labeled 'MCP Protocol' to three blue boxes: MCP Server A, MCP Server B, and MCP Server C. Servers A and B each connect with two-way arrows to yellow database cylinders labeled Local Data Source 1 and 2; Server C connects via an arrow labeled 'Web APIs' to a green box labeled 'Remote Service 3' on the internet." />
+          <figcaption>
+            MCP architecture &mdash; diagram from
+            <a href="https://medium.com/@elisowski/mcp-explained-the-new-standard-connecting-ai-to-everything-79c5a1c98288" target="_blank" rel="noopener">Edwin Lisowski, &ldquo;MCP Explained&rdquo; (Medium)</a>
+          </figcaption>
+        </figure>
+        <aside class="notes">
+          The one-diagram version: an AI application (the host, with an MCP client) speaks one standard protocol to any number of MCP servers, and each server mediates access to its own data &mdash; local sources or remote services. For a library or archive, the server is the institution&rsquo;s: it decides what questions it will answer and with what. We&rsquo;ve been on the client side of this all semester &mdash; the Zotero and Canvas connections in our Claude Code work are MCP servers. Diagram credit: Edwin Lisowski&rsquo;s &ldquo;MCP Explained: The New Standard Connecting AI to Everything&rdquo; on Medium (linked on slide).
+        </aside>
+      </section>
+
+      <!-- 18. COHEN — PROS AND CONS -->
+      <section>
+        <h1>Promise and Problems</h1>
+        <p class="slide-subtitle">Cohen &mdash; reading the proposal critically</p>
+        <ul>
+          <li><strong>Pro:</strong> Local models don&rsquo;t present the same extraction or data-privacy problems, and they use fewer resources.</li>
+          <li><strong>Con:</strong> This approach may not be feasible for <strong>small institutions</strong> with few resources.</li>
+          <li><strong>Con:</strong> The improvement of AI outputs is only as good as the <strong>quality and variety</strong> of the knowledge institution&rsquo;s corpus.</li>
+          <li><strong>Con:</strong> Knowledge institutions are often <strong>extractive too</strong>!</li>
+        </ul>
+        <aside class="notes">
+          The critical-reading slide for Cohen. Local models keep data in-house and shrink the resource footprint &mdash; genuine advantages. But the vision assumes institutional capacity that small archives don&rsquo;t have; it inherits whatever gaps and biases the collection itself carries; and the premise that knowledge institutions are the virtuous party deserves scrutiny &mdash; collections built through colonial acquisition or unpaid labor are extractive in their own right. Same habit as with Mollick last week: take the useful mechanism, question the framing.
+        </aside>
+      </section>
+
+      <!-- 19. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>No discussion post this week.</strong> Focus on completing your Course Syllabus.</li>
+          <li><strong>Course Syllabus</strong> (200 points, due Sunday, July 19). A complete syllabus for a course you could teach, following an institutional template, incorporating at least one <strong>AI-integrated element</strong>.</li>
+          <li>Readings: Hopwood &amp; Roberts, &ldquo;What&rsquo;s the Value of a Graduate Digital Humanities Degree?&rdquo;; Albakry, &ldquo;Writing a Strong Teaching Philosophy Statement in a Job Search&rdquo; (<em>Inside Higher Ed</em>); Cohen, &ldquo;AI and Libraries, Archives, and Museums, Loosely Coupled&rdquo; (<em>Humane Ingenuity</em>).</li>
+        </ul>
+        <p>See <code>weeks/week-10.md</code> on Canvas for the full guidelines and reading links.</p>
+        <aside class="notes">
+          The week&rsquo;s three threads converge on the syllabus assignment: Hopwood &amp; Roberts give the curricular argument (what a DH course is for, who it serves, how it handles labor), Albakry gives the professional genre your syllabus will someday sit beside, and Cohen models the critical stance toward AI infrastructure that your AI-integrated element should reflect. The syllabus is the capstone deliverable &mdash; everything from the AI-policy exercise last week feeds directly into it. Due Sunday, July 19; 200 points.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
