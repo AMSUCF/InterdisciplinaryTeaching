@@ -3,6 +3,7 @@ week: 10
 title: "Interdisciplinarity and the Academic Job Market"
 starts: 2026-07-13
 slides: week-10
+live: true
 assignments:
   - title: "Course Syllabus"
     points: 200
