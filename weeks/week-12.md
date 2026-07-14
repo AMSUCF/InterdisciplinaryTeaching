@@ -2,6 +2,7 @@
 week: 12
 title: "Final Portfolio"
 starts: 2026-07-27
+slides: week-12
 assignments:
   - title: "Final Portfolio & Reflection"
     points: 160
