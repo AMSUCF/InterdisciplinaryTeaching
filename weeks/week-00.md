@@ -83,7 +83,7 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 | 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
 | 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
 | 150 | **Teaching Statement** - A 1-2 page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
-| 160 | **Final Portfolio & Reflection** - A compiled portfolio of your course materials with a 750-1000 word reflective essay on your growth and next steps. | August 1 |
+| 160 | **Final Portfolio & Reflection** - A portfolio of your course materials built with Claude Code and deployed to GitHub Pages, with a 750-1000 word reflective essay on your process and growth. | August 1 |
 
 Grades are calculated out of 1000 following a standard letter scale.
 

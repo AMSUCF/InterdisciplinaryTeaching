@@ -107,7 +107,7 @@ Students will need a paid subscription to [Anthropic's Claude](https://claude.ai
 | 200 | **Signature Assignment** - A fully developed assignment with rubric and AI-integrated exercise for your designed course. | Week 8 (July 5) |
 | 200 | **Course Syllabus** - A complete syllabus for a course you could teach, following an institutional template, incorporating at least one AI-integrated element. | Week 10 (July 19) |
 | 150 | **Teaching Statement** - A 1-2 page teaching philosophy for job applications reflecting your approach to AI and the humanities. | Week 11 (July 26) |
-| 160 | **Final Portfolio & Reflection** - A compiled portfolio of your course materials with a 750-1000 word reflective essay on your growth and next steps. | August 1 |
+| 160 | **Final Portfolio & Reflection** - A portfolio of your course materials built with Claude Code and deployed to GitHub Pages, with a 750-1000 word reflective essay on your process and growth. | August 1 |
 
 Grades are calculated out of 1000 following a standard letter scale.
 
@@ -223,7 +223,7 @@ This course uses a fully asynchronous online format and relies upon students to 
 -   Mollick, Ethan. ["On Holding Back the Strange AI Tide."](https://www.oneusefulthing.org/p/on-holding-back-the-strange-ai-tide) *One Useful Thing.*
 -   Mollick, Ethan. ["The Future of Education in a World of AI."](https://www.oneusefulthing.org/p/the-future-of-education-in-a-world) *One Useful Thing.*
 -   **Due: Final Portfolio & Reflection (August 1)**
--   Your final portfolio should compile: your course syllabus, your signature assignment with rubric, your AI exercise, and your teaching statement. The accompanying 750-1000 word reflection should address what you learned about teaching in the age of AI, how your thinking changed over the semester, and what you plan to do next.
+-   Compile your completed syllabus, teaching statement, signature assignment, and anything else you've created this semester into a new GitHub repository, and use Claude Code workflows to build and deploy a portfolio site on GitHub Pages. Submit the portfolio link with a 750-1000 word reflection connecting the semester's readings and your evolving position on AI and pedagogy. No late work can be accepted on this assignment.
 
 ## Course Policies
 
