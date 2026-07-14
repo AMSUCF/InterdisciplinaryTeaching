@@ -2,6 +2,7 @@
 week: 11
 title: "Sharing, Sustaining, and Best Practices"
 starts: 2026-07-20
+slides: week-11
 workshop:
   title: "Workshop 6: Agentic Futures, Curricular Sustainability"
   date: 2026-07-22

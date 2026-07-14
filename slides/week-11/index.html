@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG 6813 &mdash; Week 11 Slides</title>
+
+  <!-- reveal.js 5.2.1 (structural CSS only; cosmetic theme is our custom file) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css" />
+
+  <!-- Custom site-matching theme. Use a relative path so it works at /slides/week-11/. -->
+  <link rel="stylesheet" href="../../assets/css/reveal-theme.css" />
+
+  <style>
+    /* Embedded external site (DH Now). */
+    .reveal iframe.embed-frame {
+      display: block;
+      width: 100%;
+      height: 56vh;
+      border: 4px solid var(--text-muted);
+      background: #fff;
+    }
+    .reveal .embed-caption {
+      font-family: 'VT323', monospace;
+      color: var(--text-muted);
+      font-size: 0.72em;
+      margin-top: 0.45em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button class="deck-theme-toggle" id="deck-theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="light-icon">&#9728;</span><span class="dark-icon">&#9789;</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="title-slide">
+        <h1>Week 11<br/>Sharing, Sustaining,<br/>and Best Practices</h1>
+        <p class="subtitle">ENG 6813 &middot; Salter &amp; Stanfill</p>
+        <aside class="notes">
+          How do we share and sustain the courses and materials we build? This week explores open-access publishing, curricular sustainability, and the rapidly evolving AI landscape through Cohen&rsquo;s work on DH Now and public-good AI and Willison&rsquo;s year-in-review of LLMs. NEH Workshop 6: Agentic Futures, Curricular Sustainability (July 22, 10 AM&ndash;noon, CHDR). No discussion post this week &mdash; the focus is completing the Teaching Statement (150 points, due July 26).
+        </aside>
+      </section>
+
+      <!-- 2. COHEN AND DH NOW — KEEPING UP -->
+      <section>
+        <h1>Cohen and DH Now</h1>
+        <p class="slide-subtitle">How do you keep up with this after the course ends?</p>
+        <ul>
+          <li>DH Now&rsquo;s <strong>Editors&rsquo; Choice</strong> items showcase scholarship in various forms that drives the digital humanities field forward &mdash; a place to look for <strong>cutting-edge examples</strong> you might like to adapt, and thoughts on AI that might help you plan for the future.</li>
+          <li>A key goal is to surface important <strong>gray literature</strong> &mdash; white papers, presentations, research reports, and essays that may not otherwise have a formal venue for publication &mdash; making that range of sources more visible.</li>
+        </ul>
+        <aside class="notes">
+          Cohen, Dan. &ldquo;The Reboot of Digital Humanities Now.&rdquo; <em>Humane Ingenuity.</em>
+          The sustainability question this week starts with your own reading diet: once this course ends, where does the stream of examples and ideas come from? DH Now&rsquo;s Editors&rsquo; Choice curation is one answer &mdash; it filters the field&rsquo;s ongoing conversation into adaptable models. The gray-literature point matters for pedagogy too: much of the best DH teaching material (white papers, reports, talks) never hits a journal, so a venue that surfaces it is a teaching resource, not just a research one.
+        </aside>
+      </section>
+
+      <!-- 3. COHEN AND DH NOW — IN THE CLASSROOM -->
+      <section>
+        <h1>DH Now in the Classroom</h1>
+        <p class="slide-subtitle">Cohen &mdash; curation as pedagogy</p>
+        <ul>
+          <li>Another option is to have <strong>students explore</strong>: when thinking about what something like Claude Code can make possible, current DH projects provide <strong>specific examples and models</strong>.</li>
+          <li>The <strong>Guest Editor</strong> model makes visible the <strong>labor of curation</strong> and the decisions that shape what a field pays attention to &mdash; useful for courses that teach curation.</li>
+          <li>DH Now also shows the <strong>range</strong> of things that happen under DH. It has limits &mdash; it&rsquo;s not the entire field, just a pretty decent slice &mdash; but it&rsquo;s got some nice breadth.</li>
+        </ul>
+        <aside class="notes">
+          Cohen, &ldquo;The Reboot of Digital Humanities Now.&rdquo; Three classroom uses: (1) as an exploration assignment &mdash; when students wonder what tools like Claude Code make possible, real current projects beat hypotheticals; (2) as a case study in curation &mdash; the Guest Editor model surfaces the usually invisible labor and judgment behind &ldquo;what the field pays attention to&rdquo;; (3) as a map of DH&rsquo;s breadth &mdash; with the honest caveat that it&rsquo;s a slice, not the whole field. Good habit to model for students: name what a resource shows <em>and</em> what it leaves out.
+        </aside>
+      </section>
+
+      <!-- 4. DH NOW — EXPLORE -->
+      <section>
+        <h1>Explore: Digital Humanities Now</h1>
+        <p class="slide-subtitle">What&rsquo;s in the current Editors&rsquo; Choice?</p>
+        <iframe class="embed-frame" data-src="https://digitalhumanitiesnow.org/" title="Digital Humanities Now" loading="lazy" allowfullscreen></iframe>
+        <p class="embed-caption">
+          digitalhumanitiesnow.org &mdash;
+          <a href="https://digitalhumanitiesnow.org/" target="_blank" rel="noopener">open in a new tab</a>
+        </p>
+        <aside class="notes">
+          A quick live browse: look at what&rsquo;s currently in Editors&rsquo; Choice and the News feed. Worth asking as we scan: which of these could you imagine adapting for the course you&rsquo;ve designed this semester &mdash; and which would have been invisible to you without a curated venue like this? (If the embed doesn&rsquo;t load, use the open-in-a-new-tab link.)
+        </aside>
+      </section>
+
+      <!-- 5. COHEN — BOOKS, AI, AND THE PUBLIC GOOD: THE REFRAME -->
+      <section>
+        <h1>Books, AI, and the Public Good</h1>
+        <p class="slide-subtitle">Cohen &mdash; a reorientation</p>
+        <blockquote>
+          Cohen&rsquo;s project is interested in reorienting toward &ldquo;small language models and non-generative use cases for AI, to AI that isn&rsquo;t about producing any kind of text on the fly but on the many other aspects of research and learning.&rdquo;
+          <span class="attribution">&mdash; Dan Cohen, &ldquo;Books, AI, and the Public Good&rdquo;</span>
+        </blockquote>
+        <p>He raises some interesting use cases:</p>
+        <ul>
+          <li>What can book-informed AI do for the creation of <strong>library metadata</strong> and comprehensive search?</li>
+          <li>How can AI help <strong>locate works for careful human reading</strong> rather than summarization?</li>
+          <li>Can AI help with the use of <strong>special collections that are not yet indexed</strong>?</li>
+        </ul>
+        <aside class="notes">
+          Cohen, Dan. &ldquo;Books, AI, and the Public Good.&rdquo; <em>Humane Ingenuity.</em>
+          These are teaching-relevant questions: they position AI as a tool that supports human reading and scholarship rather than replacing it &mdash; a significant reframe for students who may assume AI&rsquo;s primary use is text generation. Notice how each use case ends with a human reader: metadata and search that get people <em>to</em> books, discovery that feeds careful reading rather than substituting a summary for it.
+        </aside>
+      </section>
+
+      <!-- 6. COHEN — OPEN QUESTIONS -->
+      <section>
+        <h1>The Project&rsquo;s Own Questions</h1>
+        <p class="slide-subtitle">Cohen &mdash; limitations he recognizes</p>
+        <p>Cohen recognizes the project&rsquo;s own limitations, with key questions like:</p>
+        <ul>
+          <li>How do we <strong>sustainably fund</strong> such a commons &mdash; including a model for long-term maintenance, transformation, and growth of the corpus over time?</li>
+          <li>How to <strong>respect the interests of authors and rightsholders</strong> by accounting for concerns about consent, credit, and compensation?</li>
+        </ul>
+        <aside class="notes">
+          Cohen, &ldquo;Books, AI, and the Public Good.&rdquo; Worth pausing on the fact that these questions come from <em>inside</em> the proposal &mdash; Cohen names them himself. The sustainability question echoes this week&rsquo;s broader theme: building the thing is the easy part; funding its maintenance, transformation, and growth over time is where commons projects usually fail. And consent, credit, compensation is the same triad we&rsquo;ve used all semester to evaluate commercial AI training &mdash; a public-interest project doesn&rsquo;t get to skip it.
+        </aside>
+      </section>
+
+      <!-- 7. COHEN — A MODEL FOR AI GOVERNANCE -->
+      <section>
+        <h1>A Model for Thinking About AI Governance</h1>
+        <p class="slide-subtitle">Cohen &mdash; who controls the data, who is served?</p>
+        <ul>
+          <li>The example of this grant offers students a useful model for thinking about <strong>AI governance</strong>: who controls training data, whose interests are served, and what institutional structures produce more equitable outcomes.</li>
+          <li>The public-interest commons proposal is a concrete example of an <strong>alternative to commercial AI development</strong> &mdash; and the list of stakeholders (authors, publishers, librarians, technologists, scholars, students) helps understand broadly who is impacted.</li>
+          <li>This is a way to <strong>embrace the possibilities of AI</strong> while remaining skeptical of AI as a substitute for human creativity (as our students rightly are!).</li>
+        </ul>
+        <aside class="notes">
+          Cohen, &ldquo;Books, AI, and the Public Good.&rdquo; The pedagogical payoff: governance questions usually stay abstract in classroom AI discussions, and this grant makes them concrete &mdash; an actual funded attempt to structure training data, stakeholders, and institutions differently. The stakeholder list is itself a teachable artifact: have students map who&rsquo;s at the table and who isn&rsquo;t. And the last point is the balance we keep returning to &mdash; possibility <em>and</em> skepticism, held at the same time.
+        </aside>
+      </section>
+
+      <!-- 8. COHEN — NOT A PERFECT SOLUTION -->
+      <section>
+        <h1>Is Cohen&rsquo;s Project a Perfect Solution?</h1>
+        <p class="slide-subtitle">No.</p>
+        <ul>
+          <li><strong>Philanthropy can&rsquo;t substitute for actual regulation</strong> of these companies for the public good.</li>
+          <li>As we&rsquo;ve talked about before, <strong>knowledge institutions also have biases and limitations</strong>.</li>
+        </ul>
+        <p>But it <em>is</em> an interesting reframing of the issues.</p>
+        <aside class="notes">
+          The critical-reading slide for Cohen, same habit as with Mollick and with last week&rsquo;s &ldquo;loosely coupled&rdquo; piece: take the useful mechanism, question the framing. A foundation-funded commons doesn&rsquo;t remove the need for regulation, and libraries and archives carry their own histories of bias, exclusion, and extraction &mdash; we&rsquo;ve covered collections built through colonial acquisition and unpaid labor. The value of the project is as a <em>reframing</em>: proof that commercial development isn&rsquo;t the only imaginable shape for AI.
+        </aside>
+      </section>
+
+      <!-- 9. WILLISON — POWER AND POTENTIAL -->
+      <section>
+        <h1>Willison on the Power and Potential of LLMs</h1>
+        <p class="slide-subtitle">&ldquo;2025: The Year in LLMs&rdquo;</p>
+        <p>Willison gets into a lot of what we&rsquo;ve been showing you as the power and potential of these tools:</p>
+        <ul>
+          <li>Reasoning models are quite good at <strong>producing and debugging code</strong>.</li>
+          <li>&ldquo;Terminal commands with obscure syntax &hellip; are <strong>no longer a barrier to entry</strong> when an LLM can spit out the right command for you.&rdquo;</li>
+          <li><strong>Vibe coding</strong> is extremely useful for prototyping, though risky for production.</li>
+        </ul>
+        <aside class="notes">
+          Willison, Simon. &ldquo;2025: The Year in LLMs.&rdquo; <em>simonwillison.net</em>, December 31, 2025.
+          This is the survey view of what we&rsquo;ve been demonstrating hands-on all semester. The terminal-commands point is exactly the workshop experience: the command line stopped being a gatekeeper. And the vibe-coding caveat maps onto your portfolio assignment &mdash; prototyping a portfolio site is precisely the low-stakes context where vibe coding shines; shipping unreviewed code to production is where it bites.
+        </aside>
+      </section>
+
+      <!-- 10. WILLISON — AGENTS AND OVERSIGHT -->
+      <section>
+        <h1>The Big Advance: Models Driving Tools</h1>
+        <p class="slide-subtitle">Willison &mdash; agents, with a caveat</p>
+        <ul>
+          <li>The big advance is that models can increasingly <strong>drive tools</strong>, enabling multi-step <strong>planning, execution, and course correction</strong>.</li>
+          <li><strong>BUT</strong> this is only as good as the <strong>oversight</strong> around it &mdash; so build in habits of <strong>verification</strong>, not just prompting.</li>
+        </ul>
+        <aside class="notes">
+          Willison, &ldquo;2025: The Year in LLMs.&rdquo; This is the agentic turn the whole course has been tracking: the shift from models that answer to models that <em>act</em> &mdash; planning, executing, and correcting course across multiple steps. The second bullet is the pedagogical core: what we owe students isn&rsquo;t prompting technique, it&rsquo;s verification habits. Checking outputs, testing claims, reviewing diffs &mdash; the oversight layer is the skill, and it&rsquo;s the same skill whether the agent is writing code or a bibliography.
+        </aside>
+      </section>
+
+      <!-- 11. WILLISON — RISKS: SLOP -->
+      <section>
+        <h1>Willison on the Risks: Slop</h1>
+        <p class="slide-subtitle">Volume is the new problem</p>
+        <ul>
+          <li><strong>Slop is a genuine problem</strong>: the internet has always had low-quality content, but AI dramatically increases <strong>volume</strong>.</li>
+          <li><strong>BUT</strong> it is a great example from which to teach <strong>curation and critical evaluation</strong>.</li>
+        </ul>
+        <aside class="notes">
+          Willison, &ldquo;2025: The Year in LLMs.&rdquo; The honest framing: low-quality content isn&rsquo;t new, but the economics changed &mdash; slop is now effectively free to produce at scale. For our purposes, note how this connects back to the DH Now slides: a flood of machine-generated content makes human curation <em>more</em> valuable, not less. Slop is a live, familiar object for teaching source evaluation &mdash; students encounter it daily and have opinions about it.
+        </aside>
+      </section>
+
+      <!-- 12. WILLISON — RISKS: NORMALIZATION OF DEVIANCE -->
+      <section>
+        <h1>&ldquo;Normalization of Deviance&rdquo;</h1>
+        <p class="slide-subtitle">Willison &mdash; when risky stops feeling risky</p>
+        <ul>
+          <li>A term from sociology about how &ldquo;repeated exposure to risky behaviour without negative consequences leads people and organizations to <strong>accept that risky behaviour as normal</strong>.&rdquo;</li>
+          <li>Sociologist Diane Vaughan&rsquo;s example: the faulty O-ring that caused the <strong>Challenger disaster</strong> was a known problem &mdash; but it hadn&rsquo;t broken yet, so they stopped paying attention to the risk.</li>
+          <li><strong>Slopsquatting</strong>: &ldquo;where an LLM hallucinates an incorrect package name which is then <strong>maliciously registered to deliver malware</strong>.&rdquo;</li>
+        </ul>
+        <aside class="notes">
+          Willison, &ldquo;2025: The Year in LLMs,&rdquo; drawing on Diane Vaughan&rsquo;s sociology. The concept is the takeaway: every time an unverified AI output works out fine, the habit of not verifying gets a little more normal &mdash; until the O-ring fails. Slopsquatting is the concrete case: a hallucinated package name is harmless right up until someone registers it with malware attached. Connect this to the previous slide&rsquo;s verification habits &mdash; the risk isn&rsquo;t hypothetical, and it compounds through complacency, not through any single failure.
+        </aside>
+      </section>
+
+      <!-- 13. WILLISON — RISKS: TRUST AND FOOTPRINT -->
+      <section>
+        <h1>More Risks: Trust, Injection, Environment</h1>
+        <p class="slide-subtitle">Willison &mdash; the fine print</p>
+        <ul>
+          <li>Many LLMs will also <strong>snitch on you</strong> if they think you&rsquo;re doing something wrong &mdash; and what <em>it</em> thinks is wrong and what <em>you</em> think is wrong might not match!</li>
+          <li><strong>Prompt injection</strong> and the <strong>&ldquo;lethal trifecta&rdquo;</strong>: &ldquo;where malicious instructions trick an agent into stealing private data on behalf of an attacker.&rdquo;</li>
+          <li>The <strong>water usage</strong> argument about data centers is probably overblown &mdash; but the <strong>energy and carbon footprint</strong> issues aren&rsquo;t.</li>
+        </ul>
+        <aside class="notes">
+          Willison, &ldquo;2025: The Year in LLMs.&rdquo; Three fine-print items. The &ldquo;snitching&rdquo; finding matters for classroom policy: a model&rsquo;s judgment of wrongdoing is not yours, and students should know agents may act on their own interpretation. Prompt injection and the lethal trifecta are why agentic tools with access to private data plus untrusted content plus outbound communication are dangerous in combination. And the environmental point models good critical practice: sorting the overblown claim (water) from the substantiated one (energy and carbon) rather than accepting or dismissing the whole critique.
+        </aside>
+      </section>
+
+      <!-- 14. THINKING AND PLAYING LOCALLY -->
+      <section>
+        <h1>Thinking and Playing Locally</h1>
+        <p class="slide-subtitle">Beyond frontier models and other people&rsquo;s servers</p>
+        <ul>
+          <li>Both Willison and Cohen offer us reasons to think more about <strong>local models and tools</strong> going forward.</li>
+          <li>In this week&rsquo;s workshop, we&rsquo;ll demo how you can work <strong>outside of frontier models</strong> and other people&rsquo;s servers.</li>
+          <li>After the class, students can request access to the <strong>Spark in CHDR</strong> for local model experiments and digital humanities projects.</li>
+        </ul>
+        <aside class="notes">
+          The convergence slide: Cohen&rsquo;s small-model, non-generative reorientation and Willison&rsquo;s privacy and injection concerns both point the same direction &mdash; local models keep data in-house, cost less, and sidestep some of the extraction questions. Workshop 6 (Agentic Futures, Curricular Sustainability &mdash; July 22, 10 AM&ndash;noon, CHDR) includes the hands-on demo. The Spark access offer is real and continues past the course: local model experiments and DH projects, by request through CHDR.
+        </aside>
+      </section>
+
+      <!-- 15. YOUR PORTFOLIO -->
+      <section>
+        <h1>Your Portfolio</h1>
+        <p class="slide-subtitle">The final project &mdash; agentic tools, your pedagogy</p>
+        <ul>
+          <li>The final project in this class is an opportunity to use the <strong>agentic tools we&rsquo;ve been exploring</strong> towards showcasing your approach to pedagogy.</li>
+          <li>Plan to revisit the workflow for using <strong>Claude Code</strong> (Web, Desktop, or CLI) and <strong>GitHub Pages</strong> to deploy a portfolio.</li>
+          <li><strong>Don&rsquo;t worry about getting the portfolio perfect</strong> &mdash; we&rsquo;re looking to see that you understand the tools we&rsquo;ve been working with, and that you can position your own pedagogy in relationship to these rapidly changing technologies!</li>
+        </ul>
+        <aside class="notes">
+          The lead-in to the final assignment (160 points, due August 1). The workflow: gather your syllabus, teaching statement, signature assignment, and anything else you&rsquo;re happy with into a new GitHub repository; use Claude Code with planning mode and specific style guidance to build the site; deploy to GitHub Pages. The grading weight is on the 750&ndash;1000 word reflection &mdash; a working link (50), engagement with at least three of the semester&rsquo;s readings (50), and your evolving position on AI and pedagogy (60). Full guidelines are on the Week 12 page. Note: no late work on this one &mdash; final grades are due right after.
+        </aside>
+      </section>
+
+      <!-- 16. CLOSING — THIS WEEK -->
+      <section>
+        <h1>This Week</h1>
+        <ul>
+          <li><strong>No discussion post this week.</strong> Focus on completing your Teaching Statement.</li>
+          <li><strong>Teaching Statement</strong> (150 points, due Sunday, July 26). A 1-2 page teaching philosophy for job applications reflecting your approach to AI and the humanities.</li>
+          <li><strong>Workshop 6: Agentic Futures, Curricular Sustainability</strong> &mdash; Wednesday, July 22, 10 AM&ndash;noon, CHDR.</li>
+          <li>Readings: Cohen, &ldquo;The Reboot of Digital Humanities Now&rdquo; and &ldquo;Books, AI, and the Public Good&rdquo; (<em>Humane Ingenuity</em>); Willison, &ldquo;2025: The Year in LLMs&rdquo; (<em>simonwillison.net</em>).</li>
+        </ul>
+        <p>See <code>weeks/week-11.md</code> on Canvas for the full guidelines and reading links.</p>
+        <aside class="notes">
+          The week&rsquo;s threads converge on sharing and sustaining: Cohen shows where curated DH scholarship lives and what a public-interest alternative to commercial AI could look like; Willison gives the clear-eyed inventory of what these tools can do and where they fail. Both feed the Teaching Statement &mdash; your statement&rsquo;s AI position should sound like someone who has read this material, not someone reacting to headlines. Teaching Statement due Sunday, July 26; 150 points; full guidelines on the Week 11 page. Portfolio guidance follows next week.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js 5.2.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide'
+    });
+
+    // In-deck dark-mode toggle. Uses the same localStorage key ("theme")
+    // and same data-theme values ("light"/"dark") as the parent site,
+    // so the deck and site stay in sync via shared origin localStorage.
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('deck-theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var current = html.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
