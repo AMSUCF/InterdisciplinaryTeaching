@@ -31,3 +31,8 @@ No late work can be accepted on this assignment, as final grades are due very so
 
 - Mollick, Ethan. ["On Holding Back the Strange AI Tide."](https://www.oneusefulthing.org/p/on-holding-back-the-strange-ai-tide) *One Useful Thing.*
 - Mollick, Ethan. ["The Future of Education in a World of AI."](https://www.oneusefulthing.org/p/the-future-of-education-in-a-world) *One Useful Thing.*
+
+### Recommended
+
+- Cohen, Dan. ["Perils of the New Armchair Scholarship."](https://newsletter.dancohen.org/archive/perils-of-the-new-armchair-scholarship/) *Humane Ingenuity.*
+- Fiesler, Casey [@professorcasey]. ["The Brown University AI cheating scandal."](https://www.tiktok.com/@professorcasey/video/7661701946629197087) *TikTok.*
